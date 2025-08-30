@@ -7,16 +7,36 @@ google-ID: 'UA-112060364-1'
 
 menu:
   - name: 'CV'
+    path: ""      # Blank means root
     url: 'cv.html'
+    
   - name: 'Publications'
+    path: 'menu'
     url: 'publications.html'
+    
   - name: 'Current Research'
+    path:  'menu'
     url: 'currentresearch.html'
+    
   - name: 'Presentations'
+    path: 'menu'
     url: 'presentations.html'
+    
   - name: 'Art & Science'
+    path: 'menu'
+   # submenu:
+   #   - name: Illustrated Summaries
+   #     url: 
+   #   - name:
+   #     url:
     url: 'artandscience.html'
+
+  - name: 'California GRASS-Net'
+    path: 'menu'
+    url: grassnet.html
+    
   - name: 'Contact'
+    path: 'menu'
     url: 'contact.html'
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
