@@ -24,11 +24,11 @@ menu:
     
   - name: 'Art & Science'
     path: 'menu'
-   # submenu:
-   #   - name: Illustrated Summaries
-   #     url: 
-   #   - name:
-   #     url:
+    submenu:
+      - name: 'Illustrated Summaries'
+        url: 'illustratedsummaries.html'
+      - name: 'Infographics'
+        url: 'infograhics.html'
     url: 'artandscience.html'
 
   - name: 'California GRASS-Net'
