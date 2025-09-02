@@ -25,7 +25,7 @@ plugins:             [
 ]
 
 title:		           'Luong Restoration & Rangeland Ecology Lab       '  
-description:	         'Department of Forestry, Fire & Rangeland Management - Cal Poly Humboldt'
+description:	         'UC Berkeley - Environmental Science, Policy and Management (ESPM)'
 author:              'Justin Luong'
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
