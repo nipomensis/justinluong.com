@@ -6,7 +6,8 @@ image: lab_kneeland2024.jpg
 
 ORC-ID = [0000-0003-2118-4788](https://orcid.org/0000-0003-2118-4788)
 
-If you are interested in hearing more about any of my research, or think that you may want to collaborate on a future or current project do not hesitate to contact me ([justin.luong@humboldt.edu](mailto:justin.luong@humboldt.edu)). The Lab will not be accepting any new graduate students until Spring 2026. Dr. Luong invites potential postdoctoral scholars to develop and submit USDA or NSF fellowships to collaborate on current research interests.  
+If you are interested in hearing more about any of my research, or think that you may want to collaborate on a future or current project do not hesitate to contact me ([justinluong@berkeley.edu](mailto:justinluong@berkeley.edu)). I am not accepting any new graduate students until Fall 2027.   
+Dr. Luong invites potential postdoctoral scholars to develop and submit USDA or NSF fellowships to collaborate on current research interests.  
 
 [Google Scholar](https://scholar.google.com/citations?user=YSOJb-wAAAAJ&hl=en)  
 
