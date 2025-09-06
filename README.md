@@ -1,29 +1,53 @@
 _This is the ReadMe for the master tree of the justinluong.com repository_
 **Site Map**
 
-tweet-cache(
-)
+tweet-cache
 
-_data(
-  {settings.yml}
-  )
+data 
+  settings.yml
   
-_includes(
-  {ReadMe} {Disqus} {footer} {google-analytics} {head} {header} {menu} {read-time} {related-posts} {scoial sharing}
-  )
+includes
+  ReadMe
+  Disqus
+  footer
+  google-analytics
+  head
+  header
+  menu
+  read-time
+  related-posts
+  scoial sharing
   
-_layout(
-  {ReadMe} {about} {contact} {current-research} {default} {page} {post}
-)
+  
+layout
+  ReadMe
+  about
+  contact
+  current-research
+  default
+  page
+  post
 
-_posts(
-)
+posts
+  example
 
-assets(
-)
+assets
+  css
+    main - menu page directory
+    syntax
+  img
+  pdf
 
-menu(
-)
+menu
+  Illustrated Summaries
+  Infographics
+  ReadMe
+  artandscience
+  contact
+  currentresearch
+  cv
+  presentations
+  publications
 
 # justinluong
 Personal Website for Justin Luong.
