@@ -4,7 +4,7 @@ _This is the ReadMe for the master tree of the justinluong.com repository_
 tweet-cache
 
 data 
-  settings.yml
+  settings
   
 includes
   ReadMe
