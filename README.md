@@ -3,10 +3,10 @@ _This is the ReadMe for the master tree of the justinluong.com repository_
 
 _tweet-cache_ -
 
-_data_ 
+_data_ -
   settings
   
-_includes_
+_includes_ -
   ReadMe
   Disqus
   footer
@@ -19,7 +19,7 @@ _includes_
   scoial sharing
   
   
-_layout_
+_layout_ -
   ReadMe
   about
   contact
@@ -28,17 +28,17 @@ _layout_
   page
   post
 
-_posts_
+_posts_ -
   example
 
-_assets_
+_assets_ -
   css
     main - menu page directory
     syntax
   img
   pdf
 
-_menu_
+_menu_ -
   Illustrated Summaries
   Infographics
   ReadMe
