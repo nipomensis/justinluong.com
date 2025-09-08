@@ -7,12 +7,12 @@ disqus:
 google-ID: 'UA-112060364-1'
 
 menu:
-  - name: 'CV'
-    path: ""      # Blank means root
+  - name: CV
+    path: 'menu'      # Blank means root | root = cv.html
     url: 'cv.html'
     
   - name: 'Publications'
-    path: 'menu'
+    path: 'menu'   # = /menu/publications.html
     url: 'publications.html'
     
   - name: 'Current Research'
@@ -22,6 +22,10 @@ menu:
   - name: 'Presentations'
     path: 'menu'
     url: 'presentations.html'
+
+  - name: 'People'
+    path: 'menu'
+    url: 'people.html'
     
   - name: 'Art & Science'
     path: 'menu'
@@ -29,12 +33,12 @@ menu:
       - name: 'Illustrated Summaries'
         url: 'illustratedsummaries.html'
       - name: 'Infographics'
-        url: 'infograhics.html'
-    url: 'artandscience.html'
+        url: 'infographics.html'
+    #removing parent URL links dropdown
 
   - name: 'California GRASS-Net'
     path: 'menu'
-    url: grassnet.html
+    url: 'grassnet.html'
     
   - name: 'Contact'
     path: 'menu'

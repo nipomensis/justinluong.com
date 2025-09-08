@@ -1,28 +1,29 @@
 <div class="menu">
-  <!-- NEW -->
+  <!-- Mobile toggle -->
   <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu">
     Menu <span class="sr-only">Toggle navigation</span>
   </button>
 
+  <!-- Main nav -->
   <nav id="site-menu" class="menu-content" data-collapsed="true" aria-label="Main">
     {% for item in site.data.settings.menu %}
-      {%- comment -%} resolve base path {%- endcomment -%}
-      {% assign path = item.path | default: 'menu' %}
+      {% assign path = item.path | default: '' %}
 
       {% if item.url %}
-        <a class="menu-link" href="{{ site.baseurl }}/{{ path }}/{{ item.url }}">{{ item.name }}</a>
-      {% else %}
+        {% capture href %}{% if path != '' %}/{{ path }}{% endif %}/{{ item.url }}{% endcapture %}
+        <a class="menu-link" href="{{ href | relative_url }}">{{ item.name }}</a>
+
+      {% elsif item.submenu %}
         <div class="dropdown" data-open="false">
-          <!-- CHANGED: span -> button + ARIA -->
-          <button class="submenu-toggle"
-                  aria-expanded="false"
-                  aria-controls="submenu-{{ forloop.index }}">
+          <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-{{ forloop.index }}">
             {{ item.name }}
           </button>
 
           <div id="submenu-{{ forloop.index }}" class="dropdown-content" role="menu">
             {% for subitem in item.submenu %}
-              <a role="menuitem" href="{{ site.baseurl }}/{{ path }}/{{ subitem.url }}">{{ subitem.name }}</a>
+              {% assign subpath = subitem.path | default: path %}
+              {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+              <a role="menuitem" href="{{ subhref | relative_url }}">{{ subitem.name }}</a>
             {% endfor %}
           </div>
         </div>
@@ -30,6 +31,7 @@
     {% endfor %}
   </nav>
 
+  <!-- Social -->
   <nav class="social-icons" aria-label="Social">
     {% for item in site.data.settings.social %}
       <a href="{{ item.link }}" target="_blank" rel="noopener">
@@ -39,3 +41,4 @@
     {% endfor %}
   </nav>
 </div>
+
