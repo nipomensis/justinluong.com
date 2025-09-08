@@ -1,5 +1,23 @@
 # Change to true for Disqus comments
 # This would be the main block for adding subpages
+
+#Sub page menu breakout
+# Grassnet 
+# about grassnet (home page)
+# Reousrces (last)
+# get involved
+#
+# people
+# Current mmebres 
+#past membners 
+#
+#research
+# current publications
+# past publications
+#
+#
+#
+
 disqus:
   comments: false
   disqus_shortname: 'https-lenpaul-github-io-lagrange'
