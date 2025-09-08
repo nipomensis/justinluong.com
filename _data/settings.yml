@@ -35,6 +35,11 @@ menu:
     
   - name: 'Current Research'
     path: 'menu'
+  #  submenu:
+  #    - name: 'Current Research'
+  #     url:
+  #    - name: 'Past Research'
+  #      url:
     url: 'currentresearch.html'
     
   - name: 'Presentations'
@@ -56,6 +61,13 @@ menu:
 
   - name: 'California GRASS-Net'
     path: 'menu'
+  #  submenu: 
+  #   - name: 'About GrassNet'     #Home and first subpage
+  #     url:
+  #   - name: 'get Involved'       #Middle subpage
+  #     url:
+  #   - name: 'Resources'          #Last subpage
+  #     url:
     url: 'grassnet.html'
     
   - name: 'Contact'
