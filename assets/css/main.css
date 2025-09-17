@@ -228,13 +228,14 @@ hr {
 }
 
 /*
-  Menu  (UPDATED)
-  - Converts floats to flex
-  - Adds click-to-open dropdown via [data-open]
-  - Adds mobile collapse via [data-collapsed] on #site-menu
-  - Keeps your existing colors/spacing vibe
+  Menu (FIXED)
+  - Flex layout for nav + socials
+  - Top-down dropdown with animation
+  - Forgiving hover buffer to prevent accidental close
+  - Mobile collapse with data-collapsed + data-open attributes
 */
 
+/* container */
 .menu {
   padding-top: 0.5rem;
   display: flex;
@@ -244,9 +245,8 @@ hr {
   position: relative; /* anchors the mobile panel */
 }
 
-/* remove legacy floats and use flex for the links row */
+/* links row */
 .menu-content {
-  float: none;                 /* override old float */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -255,26 +255,31 @@ hr {
   padding-right: 10px;
 }
 
-/* link color/hover consistent with original */
-.menu-content > :hover {
-  color: #111;
-}
-
+/* top-level links */
 .menu-content a {
   color: #999;
   font-size: 1rem;
   padding-right: 10px;
   text-decoration: none;
 }
+.menu-content a:hover { color: #111; }
 
 /* dropdown wrapper */
 .dropdown {
   position: relative;
-  display: inline-block;
-  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* clickable label (in HTML this is a <button class="submenu-toggle">) */
+/* parent that is also a link */
+.parent-link {
+  color: #999;
+  text-decoration: none;
+  padding-right: 10px;
+}
+
+/* button label for non-link parents (keyboard/mobile) */
 .submenu-toggle {
   border: 0;
   background: transparent;
@@ -282,42 +287,72 @@ hr {
   color: inherit;
   cursor: pointer;
   padding: 0;
+  line-height: 1.2;
 }
 
-/* panel */
+/* dropdown panel (closed state) */
 .dropdown-content {
-  display: none; /* default hidden; JS toggles [data-open] */
   position: absolute;
   left: 0;
   top: 100%;
-  background-color: #f9f9f9;
-  min-width: 150px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
-  padding: 8px 12px;
+  margin-top: 8px;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 6px 8px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px) scaleY(0.98);
+  transform-origin: top;
+  transition: opacity .18s ease, transform .2s ease, visibility 0s linear .18s;
+
+  pointer-events: none; /* prevents flicker */
   z-index: 1000;
-  border-radius: 5px;
 }
 
-/* items */
+/* invisible hover bridge so tiny cursor slips don't close it */
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -8px; left: 0; right: 0;
+  height: 8px;
+}
+
+/* submenu items */
 .dropdown-content a {
-  color: #888;
   display: block;
-  padding: 6px 4px;
+  padding: 8px 6px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.dropdown-content a:hover { background: #f5f5f5; }
+
+/* OPEN states (JS/keyboard) */
+.dropdown[data-open="true"] > .dropdown-content,
+.dropdown:focus-within > .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scaleY(1);
+  transition: opacity .18s ease, transform .2s ease;
+  pointer-events: auto;
 }
 
-/* OPEN STATE (set by JS): .dropdown[data-open="true"] */
-.dropdown[data-open="true"] > .dropdown-content {
-  display: block;
-}
-
-/* Keep hover-to-open for desktop users with a mouse, without breaking touch */
+/* Desktop hover open (kept separate for valid CSS) */
 @media (hover: hover) and (pointer: fine) {
   .dropdown:hover > .dropdown-content {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scaleY(1);
+    transition: opacity .18s ease, transform .2s ease;
+    pointer-events: auto;
   }
 }
 
-/* mobile toggle button (HTML: .nav-toggle) */
+/* mobile toggle button */
 .nav-toggle {
   display: none;
   border: 1px solid #e0e0e0;
@@ -328,31 +363,23 @@ hr {
   cursor: pointer;
 }
 
-/* social icons row: align to the right via flex instead of float */
+/* social row */
 .social-icons {
-  float: none;             /* override old float */
-  margin-left: auto;       /* push to the right within .menu flex row */
+  margin-left: auto;
   display: flex;
   gap: 8px;
 }
+.social-icons a { color: #999; font-size: 1rem; }
 
-.social-icons a {
-  color: #999;
-  font-size: 1rem;
-}
-
-/* Responsive: collapse the menu links into a panel */
+/* Responsive: collapse links into a panel */
 @media (max-width: 56.25em) { /* 900px */
   .nav-toggle { display: inline-block; }
 
-  .menu {
-    position: relative;
-  }
+  .menu { position: relative; }
 
   .menu-content {
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 0; right: 0;
     top: calc(100% + 8px);
     flex-direction: column;
     align-items: stretch;
@@ -367,51 +394,46 @@ hr {
   /* collapsed state controlled by [data-collapsed] on #site-menu */
   .menu-content[data-collapsed="true"] { display: none; }
 
-  /* dropdown panels render inline in the mobile panel */
+  /* dropdown panels render inline inside the mobile panel */
+  .dropdown { width: 100%; }
   .dropdown-content {
     position: static;
+    margin-top: 4px;
+    border: 0;
+    border-radius: 6px;
     box-shadow: none;
-    background: transparent;
-    border-radius: 0;
-    padding: 4px 0 0 8px; /* slight indent for submenu items */
-    display: none;
+    padding-left: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    pointer-events: none;
   }
   .dropdown[data-open="true"] > .dropdown-content {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
-  /* tidy up spacing for touch targets */
+  /* bigger touch targets */
   .menu-content a,
   .submenu-toggle,
-  .dropdown-content a {
-    padding: 0.5rem 0.25rem;
-  }
+  .dropdown-content a { padding: 0.5rem 0.25rem; }
 
-  /* social icons drop under or align left on narrow screens */
   .social-icons {
     margin-left: 0;
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 
-/* Keep your original tiny breakpoint rules */
+/* tiny screens */
 @media (max-width: 30em) {
-  .social-icons {
-    float: left;
-    padding-top: 0px;
-  }
-  .menu-content {
-    margin-bottom: 5px;
-  }
+  .social-icons { padding-top: 0; }
+  .menu-content { margin-bottom: 5px; }
 }
 
-.about-image {
-  max-height: 415px;
-  float: left;
-  margin: 28px 20px 10px 0px;
-}
-
-/* a11y helper for visually-hidden text (e.g., in the toggle button) */
+/* a11y helper */
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
@@ -419,6 +441,7 @@ hr {
   overflow: hidden; clip: rect(0,0,0,0);
   white-space: nowrap; border: 0;
 }
+
 
 /*
   Code
