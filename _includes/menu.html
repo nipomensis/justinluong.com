@@ -1,9 +1,12 @@
+<!-- _includes/menu -->
 <div class="nav-band">
-  <div class="menu">
-    <!-- remove 'open' so mobile starts tucked away -->
-    <details class="menu-collapsible">
-      <summary class="menu-summary">Menu</summary>
+  <div class="menu" role="navigation" aria-label="Site">
 
+    <!-- Mobile starts CLOSED; JS below auto-opens on desktop -->
+    <details class="menu-collapsible" data-autotoggle>
+      <summary class="menu-summary" aria-label="Open main menu">Menu</summary>
+
+      <!-- MAIN NAV -->
       <nav class="menu-content" aria-label="Main">
         {% for item in site.data.settings.menu %}
           {% assign path = item.path | default: '' %}
@@ -13,14 +16,19 @@
             <div class="dropdown">
               {% if item.url %}
                 {% capture href %}{{ base_href }}/{{ item.url | relative_url }}{% endcapture %}
-                <a class="menu-link parent-link has-sub{% if page.url == href %} active{% endif %}"
-                   href="{{ href }}"
-                   {% if page.url == href %}aria-current="page"{% endif %}>
+                <a
+                  class="menu-link parent-link has-sub{% if page.url == href %} active{% endif %}"
+                  href="{{ href }}"
+                  {% if page.url == href %}aria-current="page"{% endif %}
+                >
                   {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
                 </a>
               {% else %}
-                <span class="menu-link has-sub{% if page.url contains base_href %} active{% endif %}"
-                      {% if page.url contains base_href %}aria-current="page"{% endif %} tabindex="0">
+                <span
+                  class="menu-link has-sub{% if page.url contains base_href %} active{% endif %}"
+                  {% if page.url contains base_href %}aria-current="page"{% endif %}
+                  tabindex="0"
+                >
                   {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
                 </span>
               {% endif %}
@@ -29,10 +37,12 @@
                 {% for subitem in item.submenu %}
                   {% assign subpath = subitem.path | default: path %}
                   {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
-                  <a role="menuitem"
-                     href="{{ subhref | relative_url }}"
-                     class="{% if page.url == subhref %}active{% endif %}"
-                     {% if page.url == subhref %}aria-current="page"{% endif %}>
+                  <a
+                    role="menuitem"
+                    href="{{ subhref | relative_url }}"
+                    class="{% if page.url == subhref %}active{% endif %}"
+                    {% if page.url == subhref %}aria-current="page"{% endif %}
+                  >
                     {{ subitem.name }}
                   </a>
                 {% endfor %}
@@ -41,9 +51,11 @@
           {% else %}
             {% if item.url %}
               {% capture href %}{{ base_href }}/{{ item.url | relative_url }}{% endcapture %}
-              <a class="menu-link{% if page.url == href %} active{% endif %}"
-                 href="{{ href }}"
-                 {% if page.url == href %}aria-current="page"{% endif %}>
+              <a
+                class="menu-link{% if page.url == href %} active{% endif %}"
+                href="{{ href }}"
+                {% if page.url == href %}aria-current="page"{% endif %}
+              >
                 {{ item.name }}
               </a>
             {% endif %}
@@ -52,6 +64,7 @@
       </nav>
     </details>
 
+    <!-- SOCIAL ICONS (hidden whenever details[open]) -->
     <nav class="social-icons" aria-label="Social">
       {% for item in site.data.settings.social %}
         <a href="{{ item.link }}" target="_blank" rel="noopener">
@@ -62,3 +75,22 @@
     </nav>
   </div>
 </div>
+
+<!-- Auto-open the menu on desktop; keep it tucked on mobile -->
+<script>
+(function () {
+  var d = document.querySelector('.menu-collapsible');
+  if (!d) return;
+  var mq = window.matchMedia('(min-width: 761px)');
+  function apply(){ d.open = mq.matches; }
+  apply();
+  (mq.addEventListener ? mq.addEventListener('change', apply) : mq.addListener(apply));
+
+  // Close the menu after clicking a link on mobile (nice UX)
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.menu-content a') && window.matchMedia('(max-width: 760px)').matches) {
+      d.open = false;
+    }
+  });
+})();
+</script>
