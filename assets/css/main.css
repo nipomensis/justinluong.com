@@ -493,4 +493,3 @@ h1{ font-size:var(--h1); }
   /* keep main nav visible on desktop regardless of <details> state */
   .menu-collapsible + .menu-content{ display:flex !important; }
 }
-
