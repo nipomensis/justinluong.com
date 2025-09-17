@@ -356,51 +356,6 @@ th, td { padding: 15px; text-align: left; }
   font-weight: 600;     /* keeps "Art & Science" same weight as links */
 }
 
-/* === Small screens: show left-aligned toggle; vertical centered list === */
-@media (max-width: 760px) {
-  /* show the text toggle, place it at the LEFT, not inline with menu items */
-  .menu-collapsible { display: block; width: 100%; }
-  .menu-summary {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    align-self: flex-start;
-    margin: 0;                /* keep it at left edge of the band */
-  }
-  .menu-collapsible[open] .menu-summary::after { content: "▲"; font-size: .8em; opacity: .8; }
-  .menu-collapsible:not([open]) .menu-summary::after { content: "▼"; font-size: .8em; opacity: .8; }
-
-  /* vertical centered list */
-  .nav-band .menu { justify-content: center; }
-  .nav-band .menu-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    padding-top: 8px;
-  }
-  .nav-band .menu-content > a,
-  .nav-band .menu-content > .dropdown {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* push-down dropdowns under their parent */
-  .nav-band .dropdown { position: static; }
-  .nav-band .dropdown-content { position: static; display: none; margin-top: 6px; }
-  .nav-band .dropdown:hover > .dropdown-content,
-  .nav-band .dropdown:focus-within > .dropdown-content { display: block; }
-
-  /* center social icons under the list */
-  .nav-band .social-icons { margin: 8px auto 0; }
-}
-
-/* Desktop: the toggle disappears (already hidden by default).
-   Ensure the details stays open on wide screens. No extra CSS needed. */
-
-/* Belt-and-suspenders: remove any hamburger artifacts anywhere */
-.nav-toggle, .menu-toggle, .site-nav-toggle, .hamburger, .navicon, .mobile-menu {
-  display: none !important;
-}
 /* ===== NAV tweaks: alignment, folded size, hide socials when open ===== */
 
 /* 1) Keep menu button and socials on one line */
@@ -439,15 +394,11 @@ html{ scrollbar-gutter:stable both-edges; }   /* prevents width jump from scroll
   line-height:1.6;
 }
 .nav-band .dropdown-content a{ font-weight:400; }  /* submenu items stable */
-.nav-band .dropdown{ position:relative; min-width:fit-content; }
-.nav-band .dropdown-content{
-  will-change:opacity;
-  transition:opacity .12s ease;
+
+/* IMPORTANT: scope fit-content to desktop so mobile can fill width */
+@media (min-width:761px){
+  .nav-band .dropdown{ position:relative; min-width:fit-content; }
 }
-@media (hover:hover) and (pointer:fine){
-  .nav-band .dropdown:hover > .dropdown-content{ display:block; opacity:1; }
-}
-.nav-band .dropdown:focus-within > .dropdown-content{ display:block; opacity:1; }
 
 /* 5) Mobile: keep Menu + socials on one row; stacked links when open */
 @media (max-width:760px){
@@ -470,7 +421,6 @@ html{ scrollbar-gutter:stable both-edges; }   /* prevents width jump from scroll
   padding:0 1rem;
 }
 :root{
-  /* clamp keeps size steady but adapts a bit with viewport */
   --h1: clamp(1.75rem, 1.2rem + 1.2vw, 2.25rem);
   --body: clamp(16px, 15px + .4vw, 18px);
 }
@@ -493,6 +443,7 @@ h1{ font-size:var(--h1); }
   /* keep main nav visible on desktop regardless of <details> state */
   .menu-collapsible + .menu-content{ display:flex !important; }
 }
+
 /* ===== FINAL OVERRIDES ===== */
 
 /* DESKTOP: always show the horizontal menu; hide the text toggle */
@@ -524,7 +475,6 @@ h1{ font-size:var(--h1); }
 
 /* (Optional) smaller icons when they are visible */
 .nav-band .social-icons i{ font-size:18px !important; opacity:.9; }
-
 
 /* summary looks like plain text; no box */
 .menu-summary{
@@ -568,39 +518,28 @@ h1{ font-size:var(--h1); }
     color:var(--accent); background:var(--accent-bg); border-radius:8px;
   }
 }
-/* ===== Center the vertical (mobile) menu ===== */
+
+/* --- FINAL MOBILE CENTERING FIX --- */
 @media (max-width: 760px) {
-  /* Make the stack a column and center its children */
-  .menu .menu-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;   /* <- centers the items horizontally */
-    text-align: center;    /* <- centers the link text */
-    padding-left: 0;       /* remove any inherited left padding */
-  }
+  /* let the column fill the band */
+  .nav-band .menu-content { align-items: stretch; }
 
-  /* Make each link a block that centers itself */
-  .menu .menu-content a,
-  .menu .menu-content .menu-link {
-    display: block;
-    width: 100%;
-    max-width: 36rem;      /* optional: keeps the menu from getting too wide */
-    margin: 0 auto;
-  }
+  /* each top-level item should take the full width */
+  .nav-band .menu-content > a,
+  .nav-band .menu-content > .dropdown { width: 100%; }
 
-  /* Parent item that shows the caret */
-  .menu .menu-content .dropdown > .menu-link {
-    justify-content: center;        /* if it's flex in your base CSS */
-    text-align: center;
-  }
-
-  /* Submenu items inside the dropdown */
-  .menu .menu-content .dropdown,
-  .menu .menu-content .dropdown-content,
-  .menu .menu-content .dropdown-content a {
+  /* center the actual link text/caret (links are flex items) */
+  .nav-band .menu-content > a,
+  .nav-band .menu-content > .dropdown > .menu-link,
+  .nav-band .menu-content > .dropdown > .parent-link {
+    display: flex;            /* override inline-flex */
+    justify-content: center;  /* center text + caret */
+    align-items: center;
     width: 100%;
     text-align: center;
-    margin: 0 auto;
   }
+
+  /* remove the fit-content that keeps the row from centering */
+  .nav-band .dropdown { min-width: 0; width: 100%; }
 }
 
