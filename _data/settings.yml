@@ -1,4 +1,22 @@
 # Change to true for Disqus comments
+# This would be the main block for adding subpages
+
+#Sub page menu breakout
+# Grassnet 
+# about grassnet (home page)
+# Reousrces (last)
+# get involved
+#
+# people
+# Current mmebres 
+#past membners 
+#
+#research
+# current publications
+# past publications
+#
+#
+#
 disqus:
   comments: false
   disqus_shortname: 'https-lenpaul-github-io-lagrange'
@@ -7,18 +25,25 @@ google-ID: 'UA-112060364-1'
 
 menu:
   - name: 'CV'
+    path: 'menu'     #Blank means root | root = cv.html
     url: 'cv.html'
+    
   - name: 'Publications'
     url: 'publications.html'
+    
   - name: 'Current Research'
     url: 'currentresearch.html'
+    
   - name: 'People'
     url: 'people.html'
+    
   - name: 'Art & Science'
     #- submenu: Art
     url: 'artandscience.html'
+    
   - name: 'California GRASS-Net'
     url: 'grassnet.html'
+    
   - name: 'Contact'
     url: 'contact.html'
 
