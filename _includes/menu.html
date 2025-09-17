@@ -1,32 +1,43 @@
 <div class="menu">
-  <nav class="menu-content">
+  <!-- Mobile toggle -->
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu">
+    Menu <span class="sr-only">Toggle navigation</span>
+  </button>
+
+  <!-- Main nav -->
+  <nav id="site-menu" class="menu-content" data-collapsed="true" aria-label="Main">
     {% for item in site.data.settings.menu %}
-    <!-- default menu path -->
-      {% if item.path == nil %}
-        {% assign path = 'menu' %}
-      {% else %}
-        {% assign path = item.path %}
-      {% endif %}
+      {% assign path = item.path | default: '' %}
 
       {% if item.url %}
-        <a href="{{ site.baseurl }}/{{ path }}/{{ item.url }}">{{ item.name }}</a>
-      {% else %}
-      <div class="dropdown">
-        <span>
-          {{ item.name }}
-        </span>
-          <div class="dropdown-content">
+        {% capture href %}{% if path != '' %}/{{ path }}{% endif %}/{{ item.url }}{% endcapture %}
+        <a class="menu-link" href="{{ href | relative_url }}">{{ item.name }}</a>
+
+      {% elsif item.submenu %}
+        <div class="dropdown" data-open="false">
+          <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-{{ forloop.index }}">
+            {{ item.name }}
+          </button>
+
+          <div id="submenu-{{ forloop.index }}" class="dropdown-content" role="menu">
             {% for subitem in item.submenu %}
-              <a href="{{ site.baseurl }}/{{ path }}/{{ subitem.url }}">{{ subitem.name }}</a>
+              {% assign subpath = subitem.path | default: path %}
+              {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+              <a role="menuitem" href="{{ subhref | relative_url }}">{{ subitem.name }}</a>
             {% endfor %}
           </div>
-      </div>
+        </div>
       {% endif %}
     {% endfor %}
   </nav>
-  <nav class="social-icons">
+
+  <!-- Social -->
+  <nav class="social-icons" aria-label="Social">
     {% for item in site.data.settings.social %}
-      <a href="{{ item.link }}" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
+      <a href="{{ item.link }}" target="_blank" rel="noopener">
+        <i class="fa fa-{{ item.icon }}" aria-hidden="true"></i>
+        <span class="sr-only">{{ item.icon }}</span>
+      </a>
     {% endfor %}
   </nav>
 </div>
