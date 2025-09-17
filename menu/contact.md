@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Contact
 image: lab_kneeland2024.jpg
 ---
 
