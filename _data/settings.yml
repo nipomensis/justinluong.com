@@ -29,23 +29,50 @@ menu:
     url: 'cv.html'
     
   - name: 'Publications'
+    path: 'menu'   # = /menu/publications.html
     url: 'publications.html'
     
   - name: 'Current Research'
+    path: 'menu'
+  #  submenu:
+  #    - name: 'Current Research'
+  #     url:
+  #    - name: 'Past Research'
+  #      url:
     url: 'currentresearch.html'
     
+  - name: 'Presentations'
+    path: 'menu'
+    url: 'presentations.html'
+
   - name: 'People'
+    path: 'menu'
     url: 'people.html'
     
   - name: 'Art & Science'
-    #- submenu: Art
-    url: 'artandscience.html'
-    
+    path: 'menu'
+    submenu:
+      - name: 'Illustrated Summaries'
+        url: 'illustratedsummaries.html'
+      - name: 'Infographics'
+        url: 'infographics.html'
+    #removing parent URL links dropdown
+
   - name: 'California GRASS-Net'
+    path: 'menu'
+  #  submenu: 
+  #   - name: 'About GrassNet'     #Home and first subpage
+  #     url:
+  #   - name: 'get Involved'       #Middle subpage
+  #     url:
+  #   - name: 'Resources'          #Last subpage
+  #     url:
     url: 'grassnet.html'
     
   - name: 'Contact'
+    path: 'menu'
     url: 'contact.html'
+
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
