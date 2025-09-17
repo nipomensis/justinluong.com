@@ -1,25 +1,24 @@
 <div class="menu">
-  <!-- Mobile toggle -->
-  <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu">
-    Menu <span class="sr-only">Toggle navigation</span>
-  </button>
-
-  <!-- Main nav -->
-  <nav id="site-menu" class="menu-content" data-collapsed="true" aria-label="Main">
+  <nav class="menu-content" aria-label="Main">
     {% for item in site.data.settings.menu %}
       {% assign path = item.path | default: '' %}
+      {% capture base_href %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
 
-      {% if item.url %}
-        {% capture href %}{% if path != '' %}/{{ path }}{% endif %}/{{ item.url }}{% endcapture %}
-        <a class="menu-link" href="{{ href | relative_url }}">{{ item.name }}</a>
+      {% if item.submenu %}
+        <div class="dropdown">
+          {% if item.url %}
+            <a class="menu-link parent-link has-sub"
+               href="{{ base_href }}/{{ item.url | relative_url }}">
+              {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
+            </a>
+          {% else %}
+            <!-- Non-link parent still keyboard-focusable -->
+            <span class="menu-link has-sub" tabindex="0">
+              {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
+            </span>
+          {% endif %}
 
-      {% elsif item.submenu %}
-        <div class="dropdown" data-open="false">
-          <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-{{ forloop.index }}">
-            {{ item.name }}
-          </button>
-
-          <div id="submenu-{{ forloop.index }}" class="dropdown-content" role="menu">
+          <div class="dropdown-content" role="menu">
             {% for subitem in item.submenu %}
               {% assign subpath = subitem.path | default: path %}
               {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
@@ -27,11 +26,14 @@
             {% endfor %}
           </div>
         </div>
+      {% else %}
+        {% if item.url %}
+          <a class="menu-link" href="{{ base_href }}/{{ item.url | relative_url }}">{{ item.name }}</a>
+        {% endif %}
       {% endif %}
     {% endfor %}
   </nav>
 
-  <!-- Social -->
   <nav class="social-icons" aria-label="Social">
     {% for item in site.data.settings.social %}
       <a href="{{ item.link }}" target="_blank" rel="noopener">
@@ -41,3 +43,4 @@
     {% endfor %}
   </nav>
 </div>
+
