@@ -50,7 +50,7 @@ menu:
     url: 'people.html'
     
   - name: 'Art & Science'
-    path: ''
+    path: 'menu'
     submenu:
       - name: 'Illustrated Summaries'
         url: 'illustratedsummaries.html'
