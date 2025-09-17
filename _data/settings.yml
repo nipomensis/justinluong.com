@@ -64,10 +64,10 @@ menu:
     submenu: 
      - name: 'About GrassNet'     #Home and first subpage
        url:  'aboutgrassnet.html'
-  #   - name: 'get Involved'       #Middle subpage
-  #     url:
-  #   - name: 'Resources'          #Last subpage
-  #     url:
+     - name: 'get Involved'       #Middle subpage
+       url:  'getinvolved.html'
+     - name: 'Resources'          #Last subpage
+       url:  'resources.html'
     url: 'grassnet.html'
     
   - name: 'Contact'
