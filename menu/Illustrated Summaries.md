@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Illustrated Summaries
+permalink: /menu/illustratedsummaries.html
 
 ---
 
