@@ -1,6 +1,5 @@
 ---
 layout: current-research
-title: People
 sections: 
 
     - title: "Dr. Justin Luong (Principal Investigator)"
