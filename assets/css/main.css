@@ -677,3 +677,35 @@ th, td {
 .fa-rss-square:hover {
 	color: #ff6600;
 }
+
+/* ===== NAV OVERRIDES (place at very end of CSS) ===== */
+
+/* Always show desktop bar ≥ 901px */
+@media (min-width: 56.251em) { /* just above your 900px breakpoint */
+  .nav-toggle { display: none !important; }
+  #site-menu.menu-content { display: flex !important; }
+}
+
+/* If something leaves data-collapsed="true" on desktop, ignore it */
+@media (min-width: 56.251em) {
+  #site-menu.menu-content[data-collapsed="true"] { display: flex !important; }
+}
+
+/* Make sure hover opens dropdowns on desktop */
+@media (hover: hover) and (pointer: fine) {
+  .dropdown:hover > .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scaleY(1);
+    pointer-events: auto;
+  }
+}
+
+/* Optional: show a small caret on items with submenus */
+.dropdown > .parent-link::after,
+.dropdown > .submenu-toggle::after {
+  content: "▾";
+  font-size: 0.8em;
+  margin-left: 4px;
+  opacity: .7;
+}
