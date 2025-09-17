@@ -510,17 +510,46 @@ h1{ font-size:var(--h1); }
   }
 }
 
-/* MOBILE: default tucked—only "Menu ▾" shows until opened */
-@media (max-width: 760px){
-  .nav-band details.menu-collapsible:not([open]) .menu-content{
-    display:none !important;
+/* summary looks like plain text; no box */
+.menu-summary{
+  background:transparent;border:none;box-shadow:none;padding:2px 0;margin:0;
+  font-size:.95rem;line-height:1.2;color:#444;display:inline-flex;gap:6px;cursor:pointer;
+}
+.menu-summary::marker{content:""} .menu-summary::-webkit-details-marker{display:none}
+.menu-collapsible[open] .menu-summary::after{content:"▲";font-size:.8em;opacity:.8}
+.menu-collapsible:not([open]) .menu-summary::after{content:"▼";font-size:.8em;opacity:.8}
+
+/* layout: Menu on left, small icons on right, one line */
+.nav-band .menu{display:flex;align-items:center;gap:10px 12px;flex-wrap:wrap}
+.menu-collapsible{order:0}
+.nav-band .menu-content{order:2;display:flex;flex-wrap:wrap;gap:8px 12px;justify-content:center;flex:1 1 auto}
+.nav-band .social-icons{order:1;margin-left:auto;display:flex;gap:6px}
+.nav-band .social-icons i{font-size:18px;opacity:.9}
+
+/* hide socials whenever the menu is open (both sizes) */
+.menu-collapsible[open] ~ .social-icons{display:none !important}
+
+/* MOBILE: stay tucked until user opens */
+@media (max-width:760px){
+  .nav-band .menu-content{flex-direction:column;align-items:center;width:100%;gap:8px;padding-top:8px}
+  .nav-band .menu-content > a, .nav-band .menu-content > .dropdown{width:100%;text-align:center}
+}
+
+/* DESKTOP: hide summary text, show horizontal menu (JS sets details.open=true) */
+@media (min-width:761px){
+  .menu-summary{display:none}
+}
+
+/* Active-page highlight (same blue as hover) */
+:root{ --accent:#0a66ff; --accent-bg:rgba(10,102,255,.12); }
+@media (min-width:761px){
+  .nav-band .menu-link[aria-current="page"],
+  .nav-band .dropdown > .menu-link[aria-current="page"],
+  .nav-band .dropdown > .parent-link[aria-current="page"],
+  .nav-band .dropdown-content a[aria-current="page"],
+  .nav-band .menu-link.active,
+  .nav-band .dropdown-content a.active{
+    color:var(--accent); background:var(--accent-bg); border-radius:8px;
   }
 }
 
-/* HIDE SOCIAL ICONS any time the menu is toggled open (all sizes) */
-.nav-band details.menu-collapsible[open] ~ .social-icons{
-  display:none !important;
-}
-
-/* (Optional) smaller icons when they are visible */
-.nav-band .social-icons i{ font-size:18px !important; opacity:.9; }
