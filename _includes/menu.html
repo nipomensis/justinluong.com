@@ -1,36 +1,51 @@
 <div class="nav-band">
   <div class="menu">
-    <details class="menu-collapsible" open>
+    <!-- remove 'open' so mobile starts tucked away -->
+    <details class="menu-collapsible">
       <summary class="menu-summary">Menu</summary>
 
       <nav class="menu-content" aria-label="Main">
-        <!-- your current loop stays the same -->
         {% for item in site.data.settings.menu %}
           {% assign path = item.path | default: '' %}
           {% capture base_href %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
+
           {% if item.submenu %}
             <div class="dropdown">
               {% if item.url %}
-                <a class="menu-link parent-link has-sub"
-                   href="{{ base_href }}/{{ item.url | relative_url }}">
+                {% capture href %}{{ base_href }}/{{ item.url | relative_url }}{% endcapture %}
+                <a class="menu-link parent-link has-sub{% if page.url == href %} active{% endif %}"
+                   href="{{ href }}"
+                   {% if page.url == href %}aria-current="page"{% endif %}>
                   {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
                 </a>
               {% else %}
-                <span class="menu-link has-sub" tabindex="0">
+                <span class="menu-link has-sub{% if page.url contains base_href %} active{% endif %}"
+                      {% if page.url contains base_href %}aria-current="page"{% endif %} tabindex="0">
                   {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
                 </span>
               {% endif %}
+
               <div class="dropdown-content" role="menu">
                 {% for subitem in item.submenu %}
                   {% assign subpath = subitem.path | default: path %}
                   {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
-                  <a role="menuitem" href="{{ subhref | relative_url }}">{{ subitem.name }}</a>
+                  <a role="menuitem"
+                     href="{{ subhref | relative_url }}"
+                     class="{% if page.url == subhref %}active{% endif %}"
+                     {% if page.url == subhref %}aria-current="page"{% endif %}>
+                    {{ subitem.name }}
+                  </a>
                 {% endfor %}
               </div>
             </div>
           {% else %}
             {% if item.url %}
-              <a class="menu-link" href="{{ base_href }}/{{ item.url | relative_url }}">{{ item.name }}</a>
+              {% capture href %}{{ base_href }}/{{ item.url | relative_url }}{% endcapture %}
+              <a class="menu-link{% if page.url == href %} active{% endif %}"
+                 href="{{ href }}"
+                 {% if page.url == href %}aria-current="page"{% endif %}>
+                {{ item.name }}
+              </a>
             {% endif %}
           {% endif %}
         {% endfor %}
