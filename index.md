@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Home
 image: lab.png
 image: LuongLabPotluckNov2024.jpg
 ---
