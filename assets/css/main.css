@@ -493,23 +493,7 @@ h1{ font-size:var(--h1); }
   /* keep main nav visible on desktop regardless of <details> state */
   .menu-collapsible + .menu-content{ display:flex !important; }
 }
-/* ===== FINAL OVERRIDES (place at the VERY end of your CSS) ===== */
-
-/* DESKTOP: always show the horizontal menu; hide the text toggle */
-@media (min-width: 761px){
-  .nav-band .menu-summary{ display:none !important; }
-  .nav-band details.menu-collapsible .menu-content{
-    display:flex !important;
-    flex-wrap:wrap !important;
-    align-items:center !important;
-    gap:8px 12px !important;
-    visibility:visible !important;
-    opacity:1 !important;
-    position:static !important;
-    height:auto !important;
-  }
-}
-/* ===== FINAL OVERRIDES (place at the VERY end of your CSS) ===== */
+/* ===== FINAL OVERRIDES ===== */
 
 /* DESKTOP: always show the horizontal menu; hide the text toggle */
 @media (min-width: 761px){
