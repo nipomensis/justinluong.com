@@ -26,7 +26,7 @@ google-ID: 'UA-112060364-1'
 
 menu:
   - name: CV
-    path: ''      # Blank means root | root = cv.html
+    path: 'menu'      # Blank means root | root = cv.html
     url: 'cv.html'
     
   - name: 'Publications'
