@@ -1,38 +1,41 @@
 <div class="nav-band">
   <div class="menu">
-    <nav class="menu-content" aria-label="Main">
-      {% for item in site.data.settings.menu %}
-        {% assign path = item.path | default: '' %}
-        {% capture base_href %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
+    <details class="menu-collapsible" open>
+      <summary class="menu-summary">Menu</summary>
 
-        {% if item.submenu %}
-          <div class="dropdown">
-            {% if item.url %}
-              <a class="menu-link parent-link has-sub"
-                 href="{{ base_href }}/{{ item.url | relative_url }}">
-                {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
-              </a>
-            {% else %}
-              <span class="menu-link has-sub" tabindex="0">
-                {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
-              </span>
-            {% endif %}
-
-            <div class="dropdown-content" role="menu">
-              {% for subitem in item.submenu %}
-                {% assign subpath = subitem.path | default: path %}
-                {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
-                <a role="menuitem" href="{{ subhref | relative_url }}">{{ subitem.name }}</a>
-              {% endfor %}
+      <nav class="menu-content" aria-label="Main">
+        <!-- your current loop stays the same -->
+        {% for item in site.data.settings.menu %}
+          {% assign path = item.path | default: '' %}
+          {% capture base_href %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
+          {% if item.submenu %}
+            <div class="dropdown">
+              {% if item.url %}
+                <a class="menu-link parent-link has-sub"
+                   href="{{ base_href }}/{{ item.url | relative_url }}">
+                  {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
+                </a>
+              {% else %}
+                <span class="menu-link has-sub" tabindex="0">
+                  {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
+                </span>
+              {% endif %}
+              <div class="dropdown-content" role="menu">
+                {% for subitem in item.submenu %}
+                  {% assign subpath = subitem.path | default: path %}
+                  {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+                  <a role="menuitem" href="{{ subhref | relative_url }}">{{ subitem.name }}</a>
+                {% endfor %}
+              </div>
             </div>
-          </div>
-        {% else %}
-          {% if item.url %}
-            <a class="menu-link" href="{{ base_href }}/{{ item.url | relative_url }}">{{ item.name }}</a>
+          {% else %}
+            {% if item.url %}
+              <a class="menu-link" href="{{ base_href }}/{{ item.url | relative_url }}">{{ item.name }}</a>
+            {% endif %}
           {% endif %}
-        {% endif %}
-      {% endfor %}
-    </nav>
+        {% endfor %}
+      </nav>
+    </details>
 
     <nav class="social-icons" aria-label="Social">
       {% for item in site.data.settings.social %}
@@ -44,4 +47,3 @@
     </nav>
   </div>
 </div>
-
