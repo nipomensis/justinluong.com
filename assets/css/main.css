@@ -227,141 +227,127 @@ hr {
   color: #333;
 }
 
-/*
-  Menu (FIXED)
-  - Flex layout for nav + socials
-  - Top-down dropdown with animation
-  - Forgiving hover buffer to prevent accidental close
-  - Mobile collapse with data-collapsed + data-open attributes
-*/
+/* ===== MENU: always visible, wraps, pure CSS dropdowns ===== */
 
-/* container */
+/* container can wrap so socials drop below if needed */
 .menu {
-  padding-top: 0.5rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  position: relative; /* anchors the mobile panel */
+  gap: 10px 12px;
 }
 
-/* links row */
+/* main row: wraps into multiple lines automatically */
 .menu-content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  color: #999;
-  font-size: 1rem;
-  padding-right: 10px;
+  gap: 8px 12px;          /* row x column gap */
+  flex: 1 1 auto;         /* take available width */
+  min-width: 260px;
 }
 
-/* top-level links */
-.menu-content a {
-  color: #999;
-  font-size: 1rem;
-  padding-right: 10px;
-  text-decoration: none;
-}
-.menu-content a:hover { color: #111; }
-
-/* dropdown wrapper */
-.dropdown {
-  position: relative;
+/* top-level items (links or dropdown parents) */
+.menu-link,
+.dropdown > .menu-link,
+.dropdown > .parent-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-}
-
-/* parent that is also a link */
-.parent-link {
-  color: #999;
+  gap: 4px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  color: #444;
   text-decoration: none;
-  padding-right: 10px;
-}
-
-/* button label for non-link parents (keyboard/mobile) */
-.submenu-toggle {
-  border: 0;
-  background: transparent;
-  font: inherit;
-  color: inherit;
   cursor: pointer;
-  padding: 0;
-  line-height: 1.2;
+  user-select: none;
+}
+.menu-link:hover,
+.dropdown > .menu-link:hover,
+.dropdown > .parent-link:hover {
+  color: #0a66ff;                             /* blue on hover */
+  background: rgba(10,102,255,0.08);          /* subtle blue bg */
 }
 
-/* dropdown panel (closed state) */
+/* caret */
+.caret { font-size: .8em; opacity: .75; }
+
+/* each dropdown is positioned relative to its own cell (works even when wrapped) */
+.dropdown { position: relative; }
+
+/* panel (closed) */
 .dropdown-content {
   position: absolute;
   left: 0;
-  top: 100%;
-  margin-top: 8px;
+  top: calc(100% + 8px);
   min-width: 180px;
   background: #fff;
   border: 1px solid #e6e6e6;
   border-radius: 8px;
-  padding: 6px 8px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  padding: 6px;
+  box-shadow: 0 12px 24px rgba(0,0,0,.08);
+  z-index: 1000;
 
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-6px) scaleY(0.98);
+  transform: translateY(-6px) scaleY(.98);
   transform-origin: top;
   transition: opacity .18s ease, transform .2s ease, visibility 0s linear .18s;
-
-  pointer-events: none; /* prevents flicker */
-  z-index: 1000;
+  pointer-events: none;
 }
 
-/* invisible hover bridge so tiny cursor slips don't close it */
+/* tiny hover bridge to prevent accidental close */
 .dropdown-content::before {
   content: "";
-  position: absolute;
-  top: -8px; left: 0; right: 0;
-  height: 8px;
+  position: absolute; left: 0; right: 0; top: -8px; height: 8px;
 }
 
 /* submenu items */
 .dropdown-content a {
   display: block;
-  padding: 8px 6px;
+  padding: 8px 10px;
+  border-radius: 6px;
   color: #333;
   text-decoration: none;
-  border-radius: 6px;
 }
-.dropdown-content a:hover { background: #f5f5f5; }
-
-/* OPEN states (JS/keyboard) */
-.dropdown[data-open="true"] > .dropdown-content,
-.dropdown:focus-within > .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scaleY(1);
-  transition: opacity .18s ease, transform .2s ease;
-  pointer-events: auto;
+.dropdown-content a:hover {
+  background: #f5f7ff;                        /* light blue-ish */
+  color: #0a66ff;
 }
 
-/* Desktop hover open (kept separate for valid CSS) */
+/* OPEN states: hover (desktop) and focus-within (keyboard/touch) */
 @media (hover: hover) and (pointer: fine) {
   .dropdown:hover > .dropdown-content {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1; visibility: visible;
     transform: translateY(0) scaleY(1);
-    transition: opacity .18s ease, transform .2s ease;
     pointer-events: auto;
   }
 }
-
-/* mobile toggle button */
-.nav-toggle {
-  display: none;
-  border: 1px solid #e0e0e0;
-  background: #fff;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  font: inherit;
-  cursor: pointer;
+/* keyboard / touch open */
+.dropdown:focus-within > .dropdown-content {
+  opacity: 1; visibility: visible;
+  transform: translateY(0) scaleY(1);
+  pointer-events: auto;
 }
+
+/* social icons align right on first row if space, otherwise wrap under */
+.social-icons { margin-left: auto; display: flex; gap: 8px; }
+
+/* Remove any hamburger remnants if present */
+.nav-toggle { display: none !important; }
+
+/* --- OPTIONAL: Bias to ~two rows on smaller screens --- */
+/* Uncomment this block if you want items to lay out in ~two columns,
+   which usually produces two visual rows for most menus. */
+/*
+@media (max-width: 900px) {
+  .menu-content > a,
+  .menu-content > .dropdown {
+    flex: 1 1 calc(50% - 12px);   // two columns
+    min-width: 180px;
+  }
+}
+*/
+
 
 /* social row */
 .social-icons {
