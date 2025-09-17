@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Infographics
+permalink: /menu/infographics
 
 ---
 # Infographics
