@@ -493,22 +493,34 @@ h1{ font-size:var(--h1); }
   /* keep main nav visible on desktop regardless of <details> state */
   .menu-collapsible + .menu-content{ display:flex !important; }
 }
-/* --- FIX: show the horizontal menu on desktop even though it's inside <details> --- */
+/* ===== FINAL OVERRIDES (place at the VERY end of your CSS) ===== */
+
+/* DESKTOP: always show the horizontal menu; hide the text toggle */
 @media (min-width: 761px){
-  .menu-summary{ display:none; }                          /* hide the text toggle on desktop */
-  .menu-collapsible > .menu-content{
-    display: flex !important;                             /* force the menu visible */
+  .nav-band .menu-summary{ display:none !important; }
+  .nav-band details.menu-collapsible .menu-content{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    align-items:center !important;
+    gap:8px 12px !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    position:static !important;
+    height:auto !important;
   }
 }
 
-/* --- FIX: keep the menu tucked on phones by default (details closed) --- */
+/* MOBILE: default tucked—only "Menu ▾" shows until opened */
 @media (max-width: 760px){
-  .menu-collapsible:not([open]) > .menu-content{
-    display: none !important;                             /* only "Menu ▾" shows */
+  .nav-band details.menu-collapsible:not([open]) .menu-content{
+    display:none !important;
   }
 }
 
-/* --- Hide social icons whenever the menu is open (all breakpoints) --- */
-.menu-collapsible[open] ~ .social-icons{
-  display: none !important;
+/* HIDE SOCIAL ICONS any time the menu is toggled open (all sizes) */
+.nav-band details.menu-collapsible[open] ~ .social-icons{
+  display:none !important;
 }
+
+/* (Optional) smaller icons when they are visible */
+.nav-band .social-icons i{ font-size:18px !important; opacity:.9; }
