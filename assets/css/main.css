@@ -493,3 +493,22 @@ h1{ font-size:var(--h1); }
   /* keep main nav visible on desktop regardless of <details> state */
   .menu-collapsible + .menu-content{ display:flex !important; }
 }
+/* --- FIX: show the horizontal menu on desktop even though it's inside <details> --- */
+@media (min-width: 761px){
+  .menu-summary{ display:none; }                          /* hide the text toggle on desktop */
+  .menu-collapsible > .menu-content{
+    display: flex !important;                             /* force the menu visible */
+  }
+}
+
+/* --- FIX: keep the menu tucked on phones by default (details closed) --- */
+@media (max-width: 760px){
+  .menu-collapsible:not([open]) > .menu-content{
+    display: none !important;                             /* only "Menu ▾" shows */
+  }
+}
+
+/* --- Hide social icons whenever the menu is open (all breakpoints) --- */
+.menu-collapsible[open] ~ .social-icons{
+  display: none !important;
+}
