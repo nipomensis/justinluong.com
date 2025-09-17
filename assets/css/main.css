@@ -509,6 +509,38 @@ h1{ font-size:var(--h1); }
     height:auto !important;
   }
 }
+/* ===== FINAL OVERRIDES (place at the VERY end of your CSS) ===== */
+
+/* DESKTOP: always show the horizontal menu; hide the text toggle */
+@media (min-width: 761px){
+  .nav-band .menu-summary{ display:none !important; }
+  .nav-band details.menu-collapsible .menu-content{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    align-items:center !important;
+    gap:8px 12px !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    position:static !important;
+    height:auto !important;
+  }
+}
+
+/* MOBILE: default tucked—only "Menu ▾" shows until opened */
+@media (max-width: 760px){
+  .nav-band details.menu-collapsible:not([open]) .menu-content{
+    display:none !important;
+  }
+}
+
+/* HIDE SOCIAL ICONS any time the menu is toggled open (all sizes) */
+.nav-band details.menu-collapsible[open] ~ .social-icons{
+  display:none !important;
+}
+
+/* (Optional) smaller icons when they are visible */
+.nav-band .social-icons i{ font-size:18px !important; opacity:.9; }
+
 
 /* summary looks like plain text; no box */
 .menu-summary{
