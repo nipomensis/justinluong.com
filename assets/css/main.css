@@ -346,3 +346,59 @@ th, td { padding: 15px; text-align: left; }
 .fa-medium:hover { color:#00AB6C; }
 .fa-codepen:hover { color:black; }
 .fa-rss-square:hover { color:#ff6600; }
+
+/* === Uniform size for ALL top-level items (anchor or span) === */
+.nav-band .menu-link,
+.nav-band .dropdown > .menu-link,
+.nav-band .dropdown > .parent-link {
+  font-size: 1.25rem;   /* tweak to taste */
+  line-height: 1.6;
+  font-weight: 600;     /* keeps "Art & Science" same weight as links */
+}
+
+/* === Small screens: show left-aligned toggle; vertical centered list === */
+@media (max-width: 760px) {
+  /* show the text toggle, place it at the LEFT, not inline with menu items */
+  .menu-collapsible { display: block; width: 100%; }
+  .menu-summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    margin: 0;                /* keep it at left edge of the band */
+  }
+  .menu-collapsible[open] .menu-summary::after { content: "▲"; font-size: .8em; opacity: .8; }
+  .menu-collapsible:not([open]) .menu-summary::after { content: "▼"; font-size: .8em; opacity: .8; }
+
+  /* vertical centered list */
+  .nav-band .menu { justify-content: center; }
+  .nav-band .menu-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+  }
+  .nav-band .menu-content > a,
+  .nav-band .menu-content > .dropdown {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* push-down dropdowns under their parent */
+  .nav-band .dropdown { position: static; }
+  .nav-band .dropdown-content { position: static; display: none; margin-top: 6px; }
+  .nav-band .dropdown:hover > .dropdown-content,
+  .nav-band .dropdown:focus-within > .dropdown-content { display: block; }
+
+  /* center social icons under the list */
+  .nav-band .social-icons { margin: 8px auto 0; }
+}
+
+/* Desktop: the toggle disappears (already hidden by default).
+   Ensure the details stays open on wide screens. No extra CSS needed. */
+
+/* Belt-and-suspenders: remove any hamburger artifacts anywhere */
+.nav-toggle, .menu-toggle, .site-nav-toggle, .hamburger, .navicon, .mobile-menu {
+  display: none !important;
+}
+
