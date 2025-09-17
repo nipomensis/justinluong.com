@@ -62,8 +62,8 @@ menu:
   - name: 'California GRASS-Net'
     path: 'menu'
     submenu: 
-    - name: 'About GrassNet'     #Home and first subpage
-      url:  'aboutgrassnet.html
+     - name: 'About GrassNet'     #Home and first subpage
+       url:  'aboutgrassnet.html'
   #   - name: 'get Involved'       #Middle subpage
   #     url:
   #   - name: 'Resources'          #Last subpage
