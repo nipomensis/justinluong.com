@@ -568,4 +568,39 @@ h1{ font-size:var(--h1); }
     color:var(--accent); background:var(--accent-bg); border-radius:8px;
   }
 }
+/* ===== Center the vertical (mobile) menu ===== */
+@media (max-width: 760px) {
+  /* Make the stack a column and center its children */
+  .menu .menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* <- centers the items horizontally */
+    text-align: center;    /* <- centers the link text */
+    padding-left: 0;       /* remove any inherited left padding */
+  }
+
+  /* Make each link a block that centers itself */
+  .menu .menu-content a,
+  .menu .menu-content .menu-link {
+    display: block;
+    width: 100%;
+    max-width: 36rem;      /* optional: keeps the menu from getting too wide */
+    margin: 0 auto;
+  }
+
+  /* Parent item that shows the caret */
+  .menu .menu-content .dropdown > .menu-link {
+    justify-content: center;        /* if it's flex in your base CSS */
+    text-align: center;
+  }
+
+  /* Submenu items inside the dropdown */
+  .menu .menu-content .dropdown,
+  .menu .menu-content .dropdown-content,
+  .menu .menu-content .dropdown-content a {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
 
