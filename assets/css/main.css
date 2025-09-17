@@ -401,4 +401,96 @@ th, td { padding: 15px; text-align: left; }
 .nav-toggle, .menu-toggle, .site-nav-toggle, .hamburger, .navicon, .mobile-menu {
   display: none !important;
 }
+/* ===== NAV tweaks: alignment, folded size, hide socials when open ===== */
+
+/* 1) Keep menu button and socials on one line */
+.nav-band .menu{
+  display:flex;
+  align-items:center;
+  gap:10px 12px;
+  flex-wrap:wrap;
+}
+.menu-collapsible{ order:0; }               /* Menu button block */
+.nav-band .social-icons{ order:1; margin-left:auto; display:flex; gap:8px; }
+.nav-band .menu-content{ order:2; }
+
+/* 2) Folded state = tiny: hide links when <details> is closed */
+.menu-collapsible:not([open]) + nav.menu-content,
+.menu-collapsible:not([open]) ~ nav.menu-content{
+  display:none !important;
+}
+/* compact Menu button */
+.menu-summary{
+  padding:4px 8px;
+  font-size:0.95rem;
+  line-height:1.2;
+  border-radius:8px;
+}
+
+/* 3) When OPEN, hide social icons on both desktop & mobile */
+.menu-collapsible[open] ~ .social-icons{ display:none !important; }
+
+/* 4) Stop layout shift “glitch” in dropdowns */
+html{ scrollbar-gutter:stable both-edges; }   /* prevents width jump from scrollbar */
+.nav-band .menu-link,
+.nav-band .dropdown > .menu-link,
+.nav-band .dropdown > .parent-link{
+  font-weight:600;           /* lock weight so hover doesn’t change width */
+  line-height:1.6;
+}
+.nav-band .dropdown-content a{ font-weight:400; }  /* submenu items stable */
+.nav-band .dropdown{ position:relative; min-width:fit-content; }
+.nav-band .dropdown-content{
+  will-change:opacity;
+  transition:opacity .12s ease;
+}
+@media (hover:hover) and (pointer:fine){
+  .nav-band .dropdown:hover > .dropdown-content{ display:block; opacity:1; }
+}
+.nav-band .dropdown:focus-within > .dropdown-content{ display:block; opacity:1; }
+
+/* 5) Mobile: keep Menu + socials on one row; stacked links when open */
+@media (max-width:760px){
+  .menu-summary{ display:inline-flex; gap:6px; align-items:center; }
+  .menu-collapsible[open] .menu-summary::after{ content:"▲"; font-size:.8em; opacity:.8; }
+  .menu-collapsible:not([open]) .menu-summary::after{ content:"▼"; font-size:.8em; opacity:.8; }
+
+  .nav-band .menu{ justify-content:stretch; }
+  .nav-band .menu-content{
+    flex-direction:column; align-items:center; gap:8px; padding-top:8px;
+    width:100%;
+  }
+  .nav-band .menu-content > a,
+  .nav-band .menu-content > .dropdown{ width:100%; text-align:center; }
+}
+
+/* 6) Use more desktop real-estate + snap-y type sizes */
+.container{
+  width:min(100%, 68rem);      /* ~1088px max */
+  padding:0 1rem;
+}
+:root{
+  /* clamp keeps size steady but adapts a bit with viewport */
+  --h1: clamp(1.75rem, 1.2rem + 1.2vw, 2.25rem);
+  --body: clamp(16px, 15px + .4vw, 18px);
+}
+body{ font-size:var(--body); }
+h1{ font-size:var(--h1); }
+
+/* 7) Make dropdown items and “Art & Science” match size with top level */
+.nav-band .menu-link,
+.nav-band .dropdown > .menu-link,
+.nav-band .dropdown > .parent-link{
+  font-size:1.1rem; /* uniform size for all top-level labels */
+}
+.nav-band .dropdown-content a{
+  font-size:1rem;   /* submenu size (kept stable, no hover growth) */
+}
+
+/* 8) Keep the text toggle off on large screens (belt & suspenders) */
+@media (min-width:761px){
+  .menu-summary{ display:none; }
+  /* keep main nav visible on desktop regardless of <details> state */
+  .menu-collapsible + .menu-content{ display:flex !important; }
+}
 
