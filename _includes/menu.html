@@ -2,33 +2,38 @@
 <div class="nav-band">
   <div class="menu" role="navigation" aria-label="Site">
 
-    <!-- Mobile starts CLOSED; JS below auto-opens on desktop -->
     <details class="menu-collapsible" data-autotoggle>
       <summary class="menu-summary" aria-label="Open main menu">Menu</summary>
 
-      <!-- MAIN NAV -->
       <nav class="menu-content" aria-label="Main">
+        {% assign current_url = page.url | replace: 'index.html','' %}
+
         {% for item in site.data.settings.menu %}
           {% assign path = item.path | default: '' %}
           {% capture base_href %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
 
           {% if item.submenu %}
+            {% assign sub_active = false %}
+            {% for subitem in item.submenu %}
+              {% assign subpath = subitem.path | default: path %}
+              {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+              {% if current_url == subhref %}{% assign sub_active = true %}{% endif %}
+            {% endfor %}
+
             <div class="dropdown">
               {% if item.url %}
                 {% capture href %}{{ base_href }}/{{ item.url | relative_url }}{% endcapture %}
-                <a
-                  class="menu-link parent-link has-sub{% if page.url == href %} active{% endif %}"
-                  href="{{ href }}"
-                  {% if page.url == href %}aria-current="page"{% endif %}
-                >
+                {% assign is_parent_active = (current_url == href) or sub_active %}
+                <a class="menu-link parent-link has-sub{% if is_parent_active %} active{% endif %}"
+                   href="{{ href }}"
+                   {% if is_parent_active %}aria-current="page"{% endif %}>
                   {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
                 </a>
               {% else %}
-                <span
-                  class="menu-link has-sub{% if page.url contains base_href %} active{% endif %}"
-                  {% if page.url contains base_href %}aria-current="page"{% endif %}
-                  tabindex="0"
-                >
+                {% assign is_parent_active = sub_active %}
+                <span class="menu-link has-sub{% if is_parent_active %} active{% endif %}"
+                      {% if is_parent_active %}aria-current="page"{% endif %}
+                      tabindex="0">
                   {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
                 </span>
               {% endif %}
@@ -37,12 +42,10 @@
                 {% for subitem in item.submenu %}
                   {% assign subpath = subitem.path | default: path %}
                   {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
-                  <a
-                    role="menuitem"
-                    href="{{ subhref | relative_url }}"
-                    class="{% if page.url == subhref %}active{% endif %}"
-                    {% if page.url == subhref %}aria-current="page"{% endif %}
-                  >
+                  <a role="menuitem"
+                     href="{{ subhref | relative_url }}"
+                     class="{% if current_url == subhref %}active{% endif %}"
+                     {% if current_url == subhref %}aria-current="page"{% endif %}>
                     {{ subitem.name }}
                   </a>
                 {% endfor %}
@@ -51,11 +54,9 @@
           {% else %}
             {% if item.url %}
               {% capture href %}{{ base_href }}/{{ item.url | relative_url }}{% endcapture %}
-              <a
-                class="menu-link{% if page.url == href %} active{% endif %}"
-                href="{{ href }}"
-                {% if page.url == href %}aria-current="page"{% endif %}
-              >
+              <a class="menu-link{% if current_url == href %} active{% endif %}"
+                 href="{{ href }}"
+                 {% if current_url == href %}aria-current="page"{% endif %}>
                 {{ item.name }}
               </a>
             {% endif %}
@@ -64,7 +65,6 @@
       </nav>
     </details>
 
-    <!-- SOCIAL ICONS (hidden whenever details[open]) -->
     <nav class="social-icons" aria-label="Social">
       {% for item in site.data.settings.social %}
         <a href="{{ item.link }}" target="_blank" rel="noopener">
@@ -76,7 +76,6 @@
   </div>
 </div>
 
-<!-- Auto-open the menu on desktop; keep it tucked on mobile -->
 <script>
 (function () {
   var d = document.querySelector('.menu-collapsible');
@@ -86,7 +85,7 @@
   apply();
   (mq.addEventListener ? mq.addEventListener('change', apply) : mq.addListener(apply));
 
-  // Close the menu after clicking a link on mobile (nice UX)
+  // Close the menu after a tap on mobile
   document.addEventListener('click', function (e) {
     if (e.target.closest('.menu-content a') && window.matchMedia('(max-width: 760px)').matches) {
       d.open = false;
@@ -94,3 +93,4 @@
   });
 })();
 </script>
+
