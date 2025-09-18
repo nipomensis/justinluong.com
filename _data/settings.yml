@@ -44,7 +44,7 @@ menu:
     
   - name: 'Presentations'
     path: 'menu'
-    url: 'presentations.html'
+    url:  'presentations.html'
 
   - name: 'People'
     path: 'menu'
