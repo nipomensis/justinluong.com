@@ -1,6 +1,9 @@
 ---
 layout: page
+permalink: /menu/publications.html
 ---
+
+
 [Google Scholar](https://scholar.google.com/citations?user=YSOJb-wAAAAJ&hl=en)  
 
 19)  **Luong JC**, Mejia-Muñoz J, & Krone P. 2025. Compost and Native Seeding Interactively Increase Bulk Soil Carbon, but Compost Addition Favors Nonnative Plants. *Rangeland Ecology & Management*, 103, 104-112. <https://doi.org/10.1016/j.rama.2025.07.010>  
