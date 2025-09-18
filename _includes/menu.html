@@ -2,57 +2,87 @@
 <div class="nav-band">
   <div class="menu" role="navigation" aria-label="Site">
 
+    <!-- Mobile collapsible wrapper -->
     <details class="menu-collapsible" data-autotoggle>
       <summary class="menu-summary" aria-label="Open main menu">Menu</summary>
 
       <nav class="menu-content" aria-label="Main">
-        {% comment %}
-        Normalize current page URL:
-        - relative to site
-        - strip index.html
-        - compare both with and without trailing slash
-        {% endcomment %}
+        {%- comment -%}
+        Normalize current page URL for exact matching:
+        - relative to site (honors baseurl)
+        - strip trailing "index.html"
+        - we’ll compare both with and without a trailing slash
+        {%- endcomment -%}
         {% assign current = page.url | relative_url | replace:'index.html','' %}
         {% assign current_slash = current | append:'/' %}
 
-        {% for item in site.data.settings.menu %}
-          {% assign path = item.path | default: '' %}
-          {% capture base_href %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
+        {%- for item in site.data.settings.menu -%}
+          {%- assign path = item.path | default: '' -%}
+          {%- capture base_href -%}{% if path != '' %}/{{ path }}{% endif %}{%- endcapture -%}
 
-          {% if item.submenu %}
+          {%- if item.submenu -%}
+            {%- comment -%}
+            First pass: detect if ANY child matches, so the parent can highlight.
+            {%- endcomment -%}
+            {% assign any_child_active = false %}
+            {%- for subitem in item.submenu -%}
+              {% assign subpath = subitem.path | default: path %}
+              {% capture subhref_raw %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+              {% assign subhref = subhref_raw | relative_url | replace:'index.html','' %}
+              {% assign subhref_slash = subhref | append:'/' %}
+              {% if current == subhref or current == subhref_slash or current_slash == subhref or current_slash == subhref_slash %}
+                {% assign any_child_active = true %}
+              {% endif %}
+            {%- endfor -%}
+
+            {%- comment -%}
+            Parent href (if present). Parent is considered current if:
+            - exact parent match, OR
+            - any child is current (section highlight)
+            {%- endcomment -%}
+            {% assign parent_is_exact = false %}
+            {% assign parent_href = nil %}
             {% if item.url %}
               {% capture href_raw %}{{ base_href }}/{{ item.url }}{% endcapture %}
-              {% assign href = href_raw | relative_url | replace:'index.html','' %}
-              {% assign href_slash = href | append:'/' %}
-              {% assign parent_is_exact = current == href or current == href_slash or current_slash == href or current_slash == href_slash %}
-              <a class="menu-link parent-link has-sub"
-                 href="{{ href | relative_url }}"
-                 {% if parent_is_exact %}aria-current="page"{% endif %}>
-                {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
-              </a>
-            {% else %}
-              <span class="menu-link has-sub" tabindex="0">
-                {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
-              </span>
+              {% assign parent_href = href_raw | relative_url | replace:'index.html','' %}
+              {% assign parent_href_slash = parent_href | append:'/' %}
+              {% if current == parent_href or current == parent_href_slash or current_slash == parent_href or current_slash == parent_href_slash %}
+                {% assign parent_is_exact = true %}
+              {% endif %}
             {% endif %}
 
-            <div class="dropdown-content" role="menu">
-              {% for subitem in item.submenu %}
-                {% assign subpath = subitem.path | default: path %}
-                {% capture subhref_raw %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
-                {% assign subhref = subhref_raw | relative_url | replace:'index.html','' %}
-                {% assign subhref_slash = subhref | append:'/' %}
-                {% assign is_child_exact = current == subhref or current == subhref_slash or current_slash == subhref or current_slash == subhref_slash %}
-                <a role="menuitem"
-                   href="{{ subhref | relative_url }}"
-                   {% if is_child_exact %}aria-current="page"{% endif %}>
-                  {{ subitem.name }}
+            <div class="dropdown">
+              {% if parent_href %}
+                <a class="menu-link has-sub"
+                   href="{{ parent_href | relative_url }}"
+                   {% if parent_is_exact or any_child_active %}aria-current="page"{% endif %}>
+                  {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
                 </a>
-              {% endfor %}
+              {% else %}
+                <button class="menu-link has-sub" type="button" aria-haspopup="true"
+                        aria-expanded="{{ any_child_active | default: false }}">
+                  {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
+                </button>
+              {% endif %}
+
+              <div class="dropdown-content" role="menu">
+                {%- for subitem in item.submenu -%}
+                  {% assign subpath = subitem.path | default: path %}
+                  {% capture subhref_raw %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+                  {% assign subhref = subhref_raw | relative_url | replace:'index.html','' %}
+                  {% assign subhref_slash = subhref | append:'/' %}
+                  {% assign is_child_exact = current == subhref or current == subhref_slash or current_slash == subhref or current_slash == subhref_slash %}
+                  <a role="menuitem"
+                     href="{{ subhref | relative_url }}"
+                     {% if is_child_exact %}aria-current="page"{% endif %}>
+                    {{ subitem.name }}
+                  </a>
+                {%- endfor -%}
+              </div>
             </div>
 
-          {% else %}
-            {% if item.url %}
+          {%- else -%}
+            {%- if item.url -%}
               {% capture href_raw %}{{ base_href }}/{{ item.url }}{% endcapture %}
               {% assign href = href_raw | relative_url | replace:'index.html','' %}
               {% assign href_slash = href | append:'/' %}
@@ -62,9 +92,9 @@
                  {% if is_exact %}aria-current="page"{% endif %}>
                 {{ item.name }}
               </a>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
       </nav>
     </details>
 
@@ -82,6 +112,7 @@
 </div>
 
 <script>
+/* Desktop = open; Mobile = closed; close after selecting */
 (function () {
   var d = document.querySelector('.menu-collapsible');
   if (!d) return;
