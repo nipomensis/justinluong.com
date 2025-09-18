@@ -48,7 +48,12 @@ menu:
 
   - name: 'People'
     path: 'menu'
-    url: 'people.html'
+    submenu:
+      - name: 'Current People'
+        url:  'currentpeople.html'
+      - name: 'Past People'
+        url:  'pastpeople.html'
+
     
   - name: 'Art & Science'
     path: 'menu'
