@@ -1,64 +1,76 @@
 /*
-  Contents:
-    Base
-    Site container
-    Masthead
-    Thumbnail
-    Post
-    Pagination
-    Footer
-    Menu (push-down dropdown + small-screen text toggle)
-    Code
-    Tables
-    Social media icons
+  Site CSS — Clean rewrite
+  - Base typography & layout
+  - Container, masthead, posts
+  - Full-bleed nav band with overlay dropdowns (no reflow)
+  - Mobile text toggle on left; desktop = banner (toggle hidden)
+  - One active highlight style (exact/parent set via Liquid)
+  - Code, tables, social icons
 */
 
 /* -------------------- Base -------------------- */
 
-body {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  color: #515151;
-  line-height: 1.75rem;
-}
-@media (max-width: 30em) {
-  body { font-size: 14px; line-height: 1.5rem; }
-  body h1 { font-size: 1.5rem; }
+html { scrollbar-gutter: stable both-edges; } /* prevent width jump on scrollbars */
+
+:root{
+  --accent: #0a66ff;
+  --accent-bg: rgba(10,102,255,.12);
+  --text: #333;
+  --muted: #999;
+  --border: #e6e6e6;
+  --band-bg: #f8fbff;
+  --band-border: #e6efff;
+
+  --h1: clamp(1.75rem, 1.2rem + 1.2vw, 2.25rem);
+  --body: clamp(16px, 15px + .4vw, 18px);
 }
 
-h1 { font-size: 2rem; }
+* { box-sizing: border-box; }
+body {
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size: var(--body);
+  color: #515151;
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+h1 { font-size: var(--h1); margin: 0.5rem 0 0.75rem; }
 h1 a { text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Quattrocento Sans", sans-serif;
-  color: #333;
+  color: var(--text);
+  margin: 0.25rem 0 0.5rem;
 }
 
-a { text-decoration: underline; color: #333; }
+a { text-decoration: underline; color: var(--text); }
 a:hover { color: black; border-bottom: none; }
 
 img { max-width: 100%; height: auto; border-radius: 5px; }
 
 blockquote {
-  margin: 10px 20px 10px;
-  padding: 0px 15px;
+  margin: 10px 20px;
+  padding: 0 15px;
   border-left: 0.25em solid #ccc;
   color: #999;
   line-height: 1.5;
 }
 
-hr { border-top: 1px solid #ccc; }
+hr { border: 0; border-top: 1px solid #ccc; margin: 2rem 0; }
 
 /* -------------------- Site container -------------------- */
 
-.container { margin-left: auto; margin-right: auto; width: 50%; }
+.container {
+  width: min(100%, 68rem);
+  padding: 0 1rem;
+  margin: 0 auto;
+}
 @media (max-width: 768px) { .container { width: 90vw; } }
 
 /* -------------------- Masthead -------------------- */
 
 .masthead {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
   margin-bottom: 2.5rem;
   font-family: "Quattrocento Sans", sans-serif;
 }
@@ -79,8 +91,7 @@ hr { border-top: 1px solid #ccc; }
 /* -------------------- Post -------------------- */
 
 .post-container { margin-bottom: 4rem; }
-
-.posts { margin-bottom: 5rem; padding: 0px; list-style: none; }
+.posts { margin-bottom: 5rem; padding: 0; list-style: none; }
 
 .post-date {
   display: block;
@@ -93,14 +104,13 @@ hr { border-top: 1px solid #ccc; }
 @media (max-width: 30rem) { .posts h1 { font-size: 1.5rem; } }
 
 .related { padding-bottom: 2rem; }
-.related-posts { padding-left: 0px; list-style: none; }
+.related-posts { padding-left: 0; list-style: none; }
 .related-posts a { text-decoration: none; }
 
 /* -------------------- Pagination -------------------- */
 
 .pagination { overflow: hidden; font-family: 'Quattrocento Sans', sans-serif; text-align: center; }
 .pagination a { text-decoration: none; }
-
 .pagination-button {
   color: #999;
   border: 1px solid #e0e0e0;
@@ -119,8 +129,8 @@ hr { border-top: 1px solid #ccc; }
 .footer a:hover { color: #333; }
 
 /* =========================================================
-   NAV: Full-bleed band, centered wrapping desktop menu,
-   push-down dropdowns, and small-screen text toggle
+   NAV: Full-bleed band + overlay dropdowns (no layout shift)
+   Mobile = text toggle on left; Desktop = banner (toggle hidden)
    ========================================================= */
 
 .nav-band {
@@ -131,60 +141,76 @@ hr { border-top: 1px solid #ccc; }
   margin-left: -50vw;
   margin-right: -50vw;
 
-  background: #f8fbff;
-  border-top: 1px solid #e6efff;
-  border-bottom: 1px solid #e6efff;
-  /* sticky option:
-     position: sticky; top: 0; z-index: 200; */
+  background: var(--band-bg);
+  border-top: 1px solid var(--band-border);
+  border-bottom: 1px solid var(--band-border);
+  /* sticky option: position: sticky; top: 0; z-index: 200; */
 }
 
-/* inner container */
-.nav-band .menu {
+/* inner flex line: [Menu toggle] [centered links] [socials-right] */
+.nav-band .menu{
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 16px;
 
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 10px 12px;
+  flex-wrap: wrap;
 }
 
-/* collapsible wrapper (requires <details class="menu-collapsible">) */
-.menu-collapsible { width: 100%; }
+/* collapsible wrapper for mobile */
+.menu-collapsible{ order: 0; }
 
-/* summary text button (hidden on desktop) */
-.menu-summary {
-  display: none;
+/* summary text button (visible on mobile, hidden desktop) */
+.menu-summary{
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
   cursor: pointer;
-  padding: 6px 10px;
-  border-radius: 8px;
+  background: transparent;
+  border: none;
+  padding: 2px 0;
+  margin: 0;
   font-weight: 600;
   color: #444;
-  background: #fff;
-  border: 1px solid #e6e6e6;
   user-select: none;
+  line-height: 1.2;
 }
+.menu-summary::marker{ content: ""; }
+.menu-summary::-webkit-details-marker{ display: none; }
+.menu-collapsible[open] .menu-summary::after{ content: "▲"; font-size: .8em; opacity: .8; }
+.menu-collapsible:not([open]) .menu-summary::after{ content: "▼"; font-size: .8em; opacity: .8; }
 
 /* main nav content */
-.nav-band .menu-content {
+.nav-band .menu-content{
+  order: 2;
   display: flex;
-  flex-wrap: wrap;        /* wraps into new rows on desktop */
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px 12px;
+  justify-content: center;   /* centered links on desktop */
   flex: 1 1 auto;
   min-width: 260px;
-  justify-content: center; /* centered desktop */
 }
 
-/* keep items from stretching full width on desktop */
-.nav-band .menu-content > a,
-.nav-band .menu-content > .dropdown { flex: 0 0 auto; }
+/* social icons flush right */
+.nav-band .social-icons{
+  order: 1;
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
 
-/* top-level link styles */
+/* hide a bunch of legacy hamburger classes if present */
+.nav-toggle, .menu-toggle, .site-nav-toggle, .hamburger, .navicon, .mobile-menu {
+  display: none !important;
+}
+
+/* top-level link styles (uniform size for all items) */
 .nav-band .menu-link,
 .nav-band .dropdown > .menu-link,
-.nav-band .dropdown > .parent-link {
+.nav-band .dropdown > .parent-link{
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -194,88 +220,109 @@ hr { border-top: 1px solid #ccc; }
   text-decoration: none;
   cursor: pointer;
   user-select: none;
+
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 600; /* lock weight so hover doesn’t shift width */
 }
+
 .nav-band .menu-link:hover,
 .nav-band .dropdown > .menu-link:hover,
-.nav-band .dropdown > .parent-link:hover {
-  color: #0a66ff;
-  background: rgba(10,102,255,0.10);
+.nav-band .dropdown > .parent-link:hover{
+  color: var(--accent);
+  background: var(--accent-bg);
 }
 
 .caret { font-size: .8em; opacity: .75; }
 
-/* P U S H – D O W N  dropdowns (never overlay the page) */
-.nav-band .dropdown { position: static; }
+/* --- Overlay dropdowns (NO reflow/pushdown) --- */
+.nav-band .dropdown { position: relative; }
 .nav-band .dropdown-content{
-  position: static;        /* key: participates in flow */
-  display: none;           /* hidden until open */
-  margin-top: 8px;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  display: none;
   min-width: 220px;
   background: #fff;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 6px;
   box-shadow: 0 8px 18px rgba(0,0,0,.06);
+  z-index: 1000;
 }
-.nav-band .dropdown-content a {
+.nav-band .dropdown-content a{
   display: block;
   padding: 8px 10px;
   border-radius: 6px;
-  color: #333;
+  color: var(--text);
   text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
 }
-.nav-band .dropdown-content a:hover { background: #f5f7ff; color: #0a66ff; }
-
-/* open states (hover desktop, focus/keyboard everywhere) */
-@media (hover: hover) and (pointer: fine) {
-  .nav-band .dropdown:hover > .dropdown-content { display: block; }
-}
-.nav-band .dropdown:focus-within > .dropdown-content { display: block; }
-
-/* social icons on the right; wrap under if needed */
-.nav-band .social-icons { margin-left: auto; display: flex; gap: 8px; }
-
-/* remove any hamburger/mobile menus globally */
-.nav-toggle, .menu-toggle, .site-nav-toggle, .hamburger, .navicon, .mobile-menu {
-  display: none !important;
+.nav-band .dropdown-content a:hover{
+  background: #f5f7ff;
+  color: var(--accent);
 }
 
-/* ---------- Responsive nav behavior ---------- */
+/* open states (hover desktop, focus/keyboard anywhere) */
+@media (hover: hover) and (pointer: fine){
+  .nav-band .dropdown:hover > .dropdown-content{ display: block; }
+}
+.nav-band .dropdown:focus-within > .dropdown-content{ display: block; }
 
-/* Small screens: show summary toggle + vertical centered stack */
+/* Active-page highlight (one item; Liquid ensures exclusivity) */
+.nav-band .menu-link[aria-current="page"],
+.nav-band .dropdown > .menu-link[aria-current="page"],
+.nav-band .dropdown > .parent-link[aria-current="page"],
+.nav-band .dropdown-content a[aria-current="page"],
+.nav-band .menu-link.active,
+.nav-band .dropdown-content a.active{
+  color: var(--accent);
+  background: var(--accent-bg);
+  border-radius: 8px;
+}
+
+/* ---------- Responsive behavior ---------- */
+
+/* Desktop: keep nav visible, hide the text toggle */
+@media (min-width: 761px){
+  .menu-summary{ display: none !important; }
+  .menu-collapsible + .menu-content{ display: flex !important; }
+}
+
+/* Mobile: vertical stack, dropdown overlays centered; menu closed by default */
 @media (max-width: 760px){
-  .menu-summary { display: inline-flex; gap: 6px; align-items: center; }
-  .menu-collapsible[open] .menu-summary::after { content: "▲"; font-size: .8em; opacity: .8; }
-  .menu-collapsible:not([open]) .menu-summary::after { content: "▼"; font-size: .8em; opacity: .8; }
+  .nav-band .menu{ justify-content: stretch; }
+  .nav-band details.menu-collapsible:not([open]) .menu-content{ display: none !important; }
 
-  .nav-band .menu { justify-content: center; }
-  .nav-band .menu-content {
-    flex-direction: column;   /* vertical list */
-    align-items: center;      /* centered */
+  .nav-band .menu-content{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     gap: 8px;
     padding-top: 8px;
   }
   .nav-band .menu-content > a,
-  .nav-band .menu-content > .dropdown {
+  .nav-band .menu-content > .dropdown{
     width: 100%;
     text-align: center;
   }
 
-  /* dropdowns still push down beneath parent */
-  .nav-band .dropdown { position: static; }
-  .nav-band .dropdown-content { position: static; display: none; margin-top: 6px; }
-  .nav-band .dropdown:hover > .dropdown-content,
-  .nav-band .dropdown:focus-within > .dropdown-content { display: block; }
+  /* dropdown overlay width on mobile (do not push layout) */
+  .nav-band .dropdown{ width: 100%; }
+  .nav-band .dropdown-content{
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(92vw, 28rem);
+  }
 
-  /* center social icons under the menu */
-  .nav-band .social-icons { margin: 8px auto 0; }
+  /* hide socials when menu is open (avoids wrapping jitter) */
+  .menu-collapsible[open] ~ .social-icons{ display: none !important; }
 }
 
-/* Very narrow: nudge layout center */
-@media (max-width: 420px) { .nav-band .menu { justify-content: center; } }
+/* -------------------- a11y helper -------------------- */
 
-/* a11y helper */
-.sr-only {
+.sr-only{
   position: absolute;
   width: 1px; height: 1px;
   padding: 0; margin: -1px;
@@ -286,26 +333,24 @@ hr { border-top: 1px solid #ccc; }
 /* -------------------- Code -------------------- */
 
 code, pre { font-family: "Source Code Pro", monospace; }
-code {
+code{
   padding: .25em .5em;
   font-size: .8rem;
   background-color: #f5f5f5;
   border-radius: 3px;
 }
-pre {
+pre{
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
   padding: 1rem;
   font-size: .8rem;
   line-height: 1.4;
-  white-space: pre;
   white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
+  word-break: break-word;
   background-color: #f5f5f5;
 }
-pre code { padding: 0; font-size: 100%; color: inherit; background-color: transparent; }
+pre code{ padding: 0; font-size: 100%; color: inherit; background: transparent; }
 
 /* Pygments via Jekyll */
 .highlight { margin-bottom: 1rem; border-radius: 4px; }
@@ -330,9 +375,9 @@ th, td { padding: 15px; text-align: left; }
 
 .fa-envelope, .fa-twitter, .fa-instagram, .fa-github, .fa-linkedin,
 .fa-facebook, .fa-google-plus, .fa-pinterest, .fa-medium, .fa-codepen,
-.fa-rss-square {
+.fa-rss-square{
   padding: 5px;
-  -o-transition:.5s; -ms-transition:.5s; -moz-transition:.5s; -webkit-transition:.5s; transition:.5s;
+  transition: .5s;
 }
 
 .fa-envelope:hover { color:#f39c12; }
@@ -346,200 +391,4 @@ th, td { padding: 15px; text-align: left; }
 .fa-medium:hover { color:#00AB6C; }
 .fa-codepen:hover { color:black; }
 .fa-rss-square:hover { color:#ff6600; }
-
-/* === Uniform size for ALL top-level items (anchor or span) === */
-.nav-band .menu-link,
-.nav-band .dropdown > .menu-link,
-.nav-band .dropdown > .parent-link {
-  font-size: 1.25rem;   /* tweak to taste */
-  line-height: 1.6;
-  font-weight: 600;     /* keeps "Art & Science" same weight as links */
-}
-
-/* ===== NAV tweaks: alignment, folded size, hide socials when open ===== */
-
-/* 1) Keep menu button and socials on one line */
-.nav-band .menu{
-  display:flex;
-  align-items:center;
-  gap:10px 12px;
-  flex-wrap:wrap;
-}
-.menu-collapsible{ order:0; }               /* Menu button block */
-.nav-band .social-icons{ order:1; margin-left:auto; display:flex; gap:8px; }
-.nav-band .menu-content{ order:2; }
-
-/* 2) Folded state = tiny: hide links when <details> is closed */
-.menu-collapsible:not([open]) + nav.menu-content,
-.menu-collapsible:not([open]) ~ nav.menu-content{
-  display:none !important;
-}
-/* compact Menu button */
-.menu-summary{
-  padding:4px 8px;
-  font-size:0.95rem;
-  line-height:1.2;
-  border-radius:8px;
-}
-
-/* 3) When OPEN, hide social icons on both desktop & mobile */
-.menu-collapsible[open] ~ .social-icons{ display:none !important; }
-
-/* 4) Stop layout shift “glitch” in dropdowns */
-html{ scrollbar-gutter:stable both-edges; }   /* prevents width jump from scrollbar */
-.nav-band .menu-link,
-.nav-band .dropdown > .menu-link,
-.nav-band .dropdown > .parent-link{
-  font-weight:600;           /* lock weight so hover doesn’t change width */
-  line-height:1.6;
-}
-.nav-band .dropdown-content a{ font-weight:400; }  /* submenu items stable */
-
-/* IMPORTANT: scope fit-content to desktop so mobile can fill width */
-@media (min-width:761px){
-  .nav-band .dropdown{ position:relative; min-width:fit-content; }
-}
-
-/* 5) Mobile: keep Menu + socials on one row; stacked links when open */
-@media (max-width:760px){
-  .menu-summary{ display:inline-flex; gap:6px; align-items:center; }
-  .menu-collapsible[open] .menu-summary::after{ content:"▲"; font-size:.8em; opacity:.8; }
-  .menu-collapsible:not([open]) .menu-summary::after{ content:"▼"; font-size:.8em; opacity:.8; }
-
-  .nav-band .menu{ justify-content:stretch; }
-  .nav-band .menu-content{
-    flex-direction:column; align-items:center; gap:8px; padding-top:8px;
-    width:100%;
-  }
-  .nav-band .menu-content > a,
-  .nav-band .menu-content > .dropdown{ width:100%; text-align:center; }
-}
-
-/* 6) Use more desktop real-estate + snap-y type sizes */
-.container{
-  width:min(100%, 68rem);      /* ~1088px max */
-  padding:0 1rem;
-}
-:root{
-  --h1: clamp(1.75rem, 1.2rem + 1.2vw, 2.25rem);
-  --body: clamp(16px, 15px + .4vw, 18px);
-}
-body{ font-size:var(--body); }
-h1{ font-size:var(--h1); }
-
-/* 7) Make dropdown items and “Art & Science” match size with top level */
-.nav-band .menu-link,
-.nav-band .dropdown > .menu-link,
-.nav-band .dropdown > .parent-link{
-  font-size:1.1rem; /* uniform size for all top-level labels */
-}
-.nav-band .dropdown-content a{
-  font-size:1rem;   /* submenu size (kept stable, no hover growth) */
-}
-
-/* 8) Keep the text toggle off on large screens (belt & suspenders) */
-@media (min-width:761px){
-  .menu-summary{ display:none; }
-  /* keep main nav visible on desktop regardless of <details> state */
-  .menu-collapsible + .menu-content{ display:flex !important; }
-}
-
-/* ===== FINAL OVERRIDES ===== */
-
-/* DESKTOP: always show the horizontal menu; hide the text toggle */
-@media (min-width: 761px){
-  .nav-band .menu-summary{ display:none !important; }
-  .nav-band details.menu-collapsible .menu-content{
-    display:flex !important;
-    flex-wrap:wrap !important;
-    align-items:center !important;
-    gap:8px 12px !important;
-    visibility:visible !important;
-    opacity:1 !important;
-    position:static !important;
-    height:auto !important;
-  }
-}
-
-/* MOBILE: default tucked—only "Menu ▾" shows until opened */
-@media (max-width: 760px){
-  .nav-band details.menu-collapsible:not([open]) .menu-content{
-    display:none !important;
-  }
-}
-
-/* HIDE SOCIAL ICONS any time the menu is toggled open (all sizes) */
-.nav-band details.menu-collapsible[open] ~ .social-icons{
-  display:none !important;
-}
-
-/* (Optional) smaller icons when they are visible */
-.nav-band .social-icons i{ font-size:18px !important; opacity:.9; }
-
-/* summary looks like plain text; no box */
-.menu-summary{
-  background:transparent;border:none;box-shadow:none;padding:2px 0;margin:0;
-  font-size:.95rem;line-height:1.2;color:#444;display:inline-flex;gap:6px;cursor:pointer;
-}
-.menu-summary::marker{content:""} .menu-summary::-webkit-details-marker{display:none}
-.menu-collapsible[open] .menu-summary::after{content:"▲";font-size:.8em;opacity:.8}
-.menu-collapsible:not([open]) .menu-summary::after{content:"▼";font-size:.8em;opacity:.8}
-
-/* layout: Menu on left, small icons on right, one line */
-.nav-band .menu{display:flex;align-items:center;gap:10px 12px;flex-wrap:wrap}
-.menu-collapsible{order:0}
-.nav-band .menu-content{order:2;display:flex;flex-wrap:wrap;gap:8px 12px;justify-content:center;flex:1 1 auto}
-.nav-band .social-icons{order:1;margin-left:auto;display:flex;gap:6px}
-.nav-band .social-icons i{font-size:18px;opacity:.9}
-
-/* hide socials whenever the menu is open (both sizes) */
-.menu-collapsible[open] ~ .social-icons{display:none !important}
-
-/* MOBILE: stay tucked until user opens */
-@media (max-width:760px){
-  .nav-band .menu-content{flex-direction:column;align-items:center;width:100%;gap:8px;padding-top:8px}
-  .nav-band .menu-content > a, .nav-band .menu-content > .dropdown{width:100%;text-align:center}
-}
-
-/* DESKTOP: hide summary text, show horizontal menu (JS sets details.open=true) */
-@media (min-width:761px){
-  .menu-summary{display:none}
-}
-
-/* Active-page highlight (same blue as hover) */
-:root{ --accent:#0a66ff; --accent-bg:rgba(10,102,255,.12); }
-@media (min-width:761px){
-  .nav-band .menu-link[aria-current="page"],
-  .nav-band .dropdown > .menu-link[aria-current="page"],
-  .nav-band .dropdown > .parent-link[aria-current="page"],
-  .nav-band .dropdown-content a[aria-current="page"],
-  .nav-band .menu-link.active,
-  .nav-band .dropdown-content a.active{
-    color:var(--accent); background:var(--accent-bg); border-radius:8px;
-  }
-}
-
-/* --- FINAL MOBILE CENTERING FIX --- */
-@media (max-width: 760px) {
-  /* let the column fill the band */
-  .nav-band .menu-content { align-items: stretch; }
-
-  /* each top-level item should take the full width */
-  .nav-band .menu-content > a,
-  .nav-band .menu-content > .dropdown { width: 100%; }
-
-  /* center the actual link text/caret (links are flex items) */
-  .nav-band .menu-content > a,
-  .nav-band .menu-content > .dropdown > .menu-link,
-  .nav-band .menu-content > .dropdown > .parent-link {
-    display: flex;            /* override inline-flex */
-    justify-content: center;  /* center text + caret */
-    align-items: center;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* remove the fit-content that keeps the row from centering */
-  .nav-band .dropdown { min-width: 0; width: 100%; }
-}
 
