@@ -2,6 +2,7 @@
 layout: current-research
 permalink: /menu/currentpeople.html
 ---
+---
 sections: 
 
     - title: "Dr. Justin Luong (Principal Investigator)"
