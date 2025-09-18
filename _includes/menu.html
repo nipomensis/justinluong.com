@@ -6,12 +6,12 @@
       <summary class="menu-summary" aria-label="Open main menu">Menu</summary>
 
       <nav class="menu-content" aria-label="Main">
-        {%- comment -%}
-        Normalize the current page URL to compare against links:
-        - make relative to site base
-        - strip "index.html"
-        - allow both with and without a trailing slash when comparing
-        {%- endcomment -%}
+        {% comment %}
+        Normalize current page URL:
+        - relative to site
+        - strip index.html
+        - compare both with and without trailing slash
+        {% endcomment %}
         {% assign current = page.url | relative_url | replace:'index.html','' %}
         {% assign current_slash = current | append:'/' %}
 
@@ -20,22 +20,17 @@
           {% capture base_href %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
 
           {% if item.submenu %}
-
-            <!-- Parent with dropdown -->
             {% if item.url %}
               {% capture href_raw %}{{ base_href }}/{{ item.url }}{% endcapture %}
               {% assign href = href_raw | relative_url | replace:'index.html','' %}
               {% assign href_slash = href | append:'/' %}
               {% assign parent_is_exact = current == href or current == href_slash or current_slash == href or current_slash == href_slash %}
-              <a
-                class="menu-link parent-link has-sub"
-                href="{{ href | relative_url }}"
-                {% if parent_is_exact %}aria-current="page"{% endif %}
-              >
+              <a class="menu-link parent-link has-sub"
+                 href="{{ href | relative_url }}"
+                 {% if parent_is_exact %}aria-current="page"{% endif %}>
                 {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
               </a>
             {% else %}
-              <!-- Parent label only (no URL) — never marked current -->
               <span class="menu-link has-sub" tabindex="0">
                 {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
               </span>
@@ -48,28 +43,23 @@
                 {% assign subhref = subhref_raw | relative_url | replace:'index.html','' %}
                 {% assign subhref_slash = subhref | append:'/' %}
                 {% assign is_child_exact = current == subhref or current == subhref_slash or current_slash == subhref or current_slash == subhref_slash %}
-                <a
-                  role="menuitem"
-                  href="{{ subhref | relative_url }}"
-                  {% if is_child_exact %}aria-current="page"{% endif %}
-                >
+                <a role="menuitem"
+                   href="{{ subhref | relative_url }}"
+                   {% if is_child_exact %}aria-current="page"{% endif %}>
                   {{ subitem.name }}
                 </a>
               {% endfor %}
             </div>
 
           {% else %}
-            <!-- Plain top-level link -->
             {% if item.url %}
               {% capture href_raw %}{{ base_href }}/{{ item.url }}{% endcapture %}
               {% assign href = href_raw | relative_url | replace:'index.html','' %}
               {% assign href_slash = href | append:'/' %}
               {% assign is_exact = current == href or current == href_slash or current_slash == href or current_slash == href_slash %}
-              <a
-                class="menu-link"
-                href="{{ href | relative_url }}"
-                {% if is_exact %}aria-current="page"{% endif %}
-              >
+              <a class="menu-link"
+                 href="{{ href | relative_url }}"
+                 {% if is_exact %}aria-current="page"{% endif %}>
                 {{ item.name }}
               </a>
             {% endif %}
@@ -78,7 +68,16 @@
       </nav>
     </details>
 
-    {# Social icons removed per your note. Add back here if needed. #}
+    <!-- Social icons (kept) -->
+    <nav class="social-icons" aria-label="Social">
+      {% for item in site.data.settings.social %}
+        <a href="{{ item.link }}" target="_blank" rel="noopener">
+          <i class="fa fa-{{ item.icon }}" aria-hidden="true"></i>
+          <span class="sr-only">{{ item.icon }}</span>
+        </a>
+      {% endfor %}
+    </nav>
+
   </div>
 </div>
 
@@ -86,14 +85,10 @@
 (function () {
   var d = document.querySelector('.menu-collapsible');
   if (!d) return;
-
-  // Desktop: menu open (banner). Mobile: menu closed (toggle).
   var mq = window.matchMedia('(min-width: 761px)');
   function apply(){ d.open = mq.matches; }
   apply();
   (mq.addEventListener ? mq.addEventListener('change', apply) : mq.addListener(apply));
-
-  // Close menu after tapping a link on mobile
   document.addEventListener('click', function (e) {
     if (e.target.closest('.menu-content a') && window.matchMedia('(max-width: 760px)').matches) {
       d.open = false;
