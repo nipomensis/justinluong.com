@@ -1,22 +1,6 @@
 # Change to true for Disqus comments
 # This would be the main block for adding subpages
 
-#Sub page menu breakout
-# Grassnet 
-# about grassnet (home page)
-# Reousrces (last)
-# get involved
-#
-# people
-# Current mmebres 
-#past membners 
-#
-#research
-# current publications
-# past publications
-#
-#
-#
 
 disqus:
   comments: false
@@ -28,24 +12,39 @@ menu:
   - name: CV
     path: 'menu'      # Blank means root | root = cv.html
     url: 'cv.html'
+
     
   - name: 'Publications'
     path: 'menu'   # = /menu/publications.html
     url: 'publications.html'
     
-  - name: 'Current Research'
+    
+  - name: 'Presentations'
+    path: 'menu'
+    url:  'presentations.html'
+
+
+ - name: 'Current Research'
     path: 'menu'
     submenu:
       - name: 'Current Research'
         url:  'currentresearch.html'
       - name: 'Past Research'
         url:  'pastresearch'
-   
-    
-  - name: 'Presentations'
-    path: 'menu'
-    url:  'presentations.html'
 
+   
+  - name: 'California GRASS-Net'
+    path: 'menu'
+    submenu: 
+     - name: 'About GrassNet'     #Home and first subpage
+       url:  'aboutgrassnet.html'
+     - name: 'get Involved'       #Middle subpage
+       url:  'getinvolved.html'
+     - name: 'Resources'          #Last subpage
+       url:  'resources.html'
+    url: 'grassnet.html'
+
+    
   - name: 'People'
     path: 'menu'
     submenu:
@@ -64,16 +63,7 @@ menu:
         url: 'infographics.html'
     #removing parent URL links dropdown
 
-  - name: 'California GRASS-Net'
-    path: 'menu'
-    submenu: 
-     - name: 'About GrassNet'     #Home and first subpage
-       url:  'aboutgrassnet.html'
-     - name: 'get Involved'       #Middle subpage
-       url:  'getinvolved.html'
-     - name: 'Resources'          #Last subpage
-       url:  'resources.html'
-    url: 'grassnet.html'
+
     
   - name: 'Contact'
     path: 'menu'
