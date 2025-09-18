@@ -24,24 +24,24 @@ menu:
     url:  'presentations.html'
 
 
- - name: 'Current Research'
+  - name: 'Current Research'
     path: 'menu'
     submenu:
-      - name: 'Current Research'
-        url:  'currentresearch.html'
-      - name: 'Past Research'
-        url:  'pastresearch'
+    - name: 'Current Research'
+      url:  'currentresearch.html'
+    - name: 'Past Research'
+      url:  'pastresearch'
 
    
   - name: 'California GRASS-Net'
     path: 'menu'
     submenu: 
-     - name: 'About GrassNet'     #Home and first subpage
-       url:  'aboutgrassnet.html'
-     - name: 'get Involved'       #Middle subpage
-       url:  'getinvolved.html'
-     - name: 'Resources'          #Last subpage
-       url:  'resources.html'
+    - name: 'About GrassNet'     #Home and first subpage
+      url:  'aboutgrassnet.html'
+    - name: 'get Involved'       #Middle subpage
+      url:  'getinvolved.html'
+    - name: 'Resources'          #Last subpage
+      url:  'resources.html'
     url: 'grassnet.html'
 
     
