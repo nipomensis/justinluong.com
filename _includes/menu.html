@@ -6,34 +6,51 @@
       <summary class="menu-summary" aria-label="Open main menu">Menu</summary>
 
       <nav class="menu-content" aria-label="Main">
-        {% assign current_url = page.url | replace: 'index.html','' %}
+        {%- comment -%}
+        Normalize current page URL:
+        - make relative to site base
+        - strip "index.html"
+        {%- endcomment -%}
+        {% assign current = page.url | relative_url | replace: 'index.html','' %}
 
         {% for item in site.data.settings.menu %}
           {% assign path = item.path | default: '' %}
           {% capture base_href %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
 
           {% if item.submenu %}
+
+            {%- comment -%} Is any child exactly active? {%- endcomment -%}
             {% assign sub_active = false %}
             {% for subitem in item.submenu %}
               {% assign subpath = subitem.path | default: path %}
-              {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
-              {% if current_url == subhref %}{% assign sub_active = true %}{% endif %}
+              {% capture subhref_raw %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+              {% assign subhref = subhref_raw | relative_url | replace: 'index.html','' %}
+              {% assign subhref_alt = subhref | append: '/' %}
+              {% if current == subhref or current == subhref_alt %}
+                {% assign sub_active = true %}
+              {% endif %}
             {% endfor %}
 
             <div class="dropdown">
               {% if item.url %}
-                {% capture href %}{{ base_href }}/{{ item.url | relative_url }}{% endcapture %}
-                {% assign is_parent_active = (current_url == href) or sub_active %}
-                <a class="menu-link parent-link has-sub{% if is_parent_active %} active{% endif %}"
-                   href="{{ href }}"
-                   {% if is_parent_active %}aria-current="page"{% endif %}>
+                {% capture href_raw %}{{ base_href }}/{{ item.url }}{% endcapture %}
+                {% assign href = href_raw | relative_url | replace: 'index.html','' %}
+                {% assign href_alt = href | append: '/' %}
+                {% assign is_parent_active = (current == href or current == href_alt) or sub_active %}
+                <a
+                  class="menu-link parent-link has-sub{% if is_parent_active %} active{% endif %}"
+                  href="{{ href | relative_url }}"
+                  {% if is_parent_active %}aria-current="page"{% endif %}
+                >
                   {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
                 </a>
               {% else %}
                 {% assign is_parent_active = sub_active %}
-                <span class="menu-link has-sub{% if is_parent_active %} active{% endif %}"
-                      {% if is_parent_active %}aria-current="page"{% endif %}
-                      tabindex="0">
+                <span
+                  class="menu-link has-sub{% if is_parent_active %} active{% endif %}"
+                  {% if is_parent_active %}aria-current="page"{% endif %}
+                  tabindex="0"
+                >
                   {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
                 </span>
               {% endif %}
@@ -41,22 +58,33 @@
               <div class="dropdown-content" role="menu">
                 {% for subitem in item.submenu %}
                   {% assign subpath = subitem.path | default: path %}
-                  {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
-                  <a role="menuitem"
-                     href="{{ subhref | relative_url }}"
-                     class="{% if current_url == subhref %}active{% endif %}"
-                     {% if current_url == subhref %}aria-current="page"{% endif %}>
+                  {% capture subhref_raw %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+                  {% assign subhref = subhref_raw | relative_url | replace: 'index.html','' %}
+                  {% assign subhref_alt = subhref | append: '/' %}
+                  {% assign is_active_child = current == subhref or current == subhref_alt %}
+                  <a
+                    role="menuitem"
+                    href="{{ subhref | relative_url }}"
+                    class="{% if is_active_child %}active{% endif %}"
+                    {% if is_active_child %}aria-current="page"{% endif %}
+                  >
                     {{ subitem.name }}
                   </a>
                 {% endfor %}
               </div>
             </div>
+
           {% else %}
             {% if item.url %}
-              {% capture href %}{{ base_href }}/{{ item.url | relative_url }}{% endcapture %}
-              <a class="menu-link{% if current_url == href %} active{% endif %}"
-                 href="{{ href }}"
-                 {% if current_url == href %}aria-current="page"{% endif %}>
+              {% capture href_raw %}{{ base_href }}/{{ item.url }}{% endcapture %}
+              {% assign href = href_raw | relative_url | replace: 'index.html','' %}
+              {% assign href_alt = href | append: '/' %}
+              {% assign is_active = current == href or current == href_alt %}
+              <a
+                class="menu-link{% if is_active %} active{% endif %}"
+                href="{{ href | relative_url }}"
+                {% if is_active %}aria-current="page"{% endif %}
+              >
                 {{ item.name }}
               </a>
             {% endif %}
@@ -85,7 +113,7 @@
   apply();
   (mq.addEventListener ? mq.addEventListener('change', apply) : mq.addListener(apply));
 
-  // Close the menu after a tap on mobile
+  // Close menu after tapping a link on mobile
   document.addEventListener('click', function (e) {
     if (e.target.closest('.menu-content a') && window.matchMedia('(max-width: 760px)').matches) {
       d.open = false;
