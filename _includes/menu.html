@@ -20,35 +20,37 @@
           {% capture base_href %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
 
           {% if item.submenu %}
-            {% if item.url %}
-              {% capture href_raw %}{{ base_href }}/{{ item.url }}{% endcapture %}
-              {% assign href = href_raw | relative_url | replace:'index.html','' %}
-              {% assign href_slash = href | append:'/' %}
-              {% assign parent_is_exact = current == href or current == href_slash or current_slash == href or current_slash == href_slash %}
-              <a class="menu-link parent-link has-sub"
-                 href="{{ href | relative_url }}"
-                 {% if parent_is_exact %}aria-current="page"{% endif %}>
-                {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
-              </a>
-            {% else %}
-              <span class="menu-link has-sub" tabindex="0">
-                {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
-              </span>
-            {% endif %}
-
-            <div class="dropdown-content" role="menu">
-              {% for subitem in item.submenu %}
-                {% assign subpath = subitem.path | default: path %}
-                {% capture subhref_raw %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
-                {% assign subhref = subhref_raw | relative_url | replace:'index.html','' %}
-                {% assign subhref_slash = subhref | append:'/' %}
-                {% assign is_child_exact = current == subhref or current == subhref_slash or current_slash == subhref or current_slash == subhref_slash %}
-                <a role="menuitem"
-                   href="{{ subhref | relative_url }}"
-                   {% if is_child_exact %}aria-current="page"{% endif %}>
-                  {{ subitem.name }}
+            <div class="dropdown">
+              {% if item.url %}
+                {% capture href_raw %}{{ base_href }}/{{ item.url }}{% endcapture %}
+                {% assign href = href_raw | relative_url | replace:'index.html','' %}
+                {% assign href_slash = href | append:'/' %}
+                {% assign parent_is_exact = current == href or current == href_slash or current_slash == href or current_slash == href_slash %}
+                <a class="menu-link parent-link has-sub"
+                   href="{{ href | relative_url }}"
+                   {% if parent_is_exact %}aria-current="page"{% endif %}>
+                  {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
                 </a>
-              {% endfor %}
+              {% else %}
+                <span class="menu-link has-sub" tabindex="0">
+                  {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
+                </span>
+              {% endif %}
+
+              <div class="dropdown-content" role="menu">
+                {% for subitem in item.submenu %}
+                  {% assign subpath = subitem.path | default: path %}
+                  {% capture subhref_raw %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+                  {% assign subhref = subhref_raw | relative_url | replace:'index.html','' %}
+                  {% assign subhref_slash = subhref | append:'/' %}
+                  {% assign is_child_exact = current == subhref or current == subhref_slash or current_slash == subhref or current_slash == subhref_slash %}
+                  <a role="menuitem"
+                     href="{{ subhref | relative_url }}"
+                     {% if is_child_exact %}aria-current="page"{% endif %}>
+                    {{ subitem.name }}
+                  </a>
+                {% endfor %}
+              </div>
             </div>
 
           {% else %}
@@ -85,10 +87,13 @@
 (function () {
   var d = document.querySelector('.menu-collapsible');
   if (!d) return;
+  // Desktop shows the menu bar; mobile collapses
   var mq = window.matchMedia('(min-width: 761px)');
   function apply(){ d.open = mq.matches; }
   apply();
   (mq.addEventListener ? mq.addEventListener('change', apply) : mq.addListener(apply));
+
+  // Close mobile menu after selecting a link
   document.addEventListener('click', function (e) {
     if (e.target.closest('.menu-content a') && window.matchMedia('(max-width: 760px)').matches) {
       d.open = false;
