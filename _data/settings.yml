@@ -35,12 +35,12 @@ menu:
     
   - name: 'Current Research'
     path: 'menu'
-  #  submenu:
-  #    - name: 'Current Research'
-  #     url:
-  #    - name: 'Past Research'
-  #      url:
-    url: 'currentresearch.html'
+    submenu:
+      - name: 'Current Research'
+        url:  'currentresearch.html'
+      - name: 'Past Research'
+        url:  'pastresearch'
+   
     
   - name: 'Presentations'
     path: 'menu'
