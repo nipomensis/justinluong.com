@@ -7,39 +7,37 @@
 
       <nav class="menu-content" aria-label="Main">
         {%- comment -%}
-        Normalize current page URL:
-        - make relative to site base
-        - strip "index.html"
+        Normalize the current page path once (raw path, no base/host)
+        Examples: "/" , "/cv.html" , "/menu/currentresearch.html" , "/menu/"
         {%- endcomment -%}
-        {% assign current = page.url | relative_url | replace: 'index.html','' %}
+        {% assign current = page.url | replace: 'index.html','' %}
+        {% assign current_slash = current %}
+        {% unless current == '/' %}
+          {% assign current_slash = current | append: '/' %}
+        {% endunless %}
 
         {% for item in site.data.settings.menu %}
           {% assign path = item.path | default: '' %}
-          {% capture base_href %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
+          {% capture base_path %}{% if path != '' %}/{{ path }}{% endif %}{% endcapture %}
 
           {% if item.submenu %}
-
-            {%- comment -%} Is any child exactly active? {%- endcomment -%}
+            {%- comment -%} Check if any child matches exactly {%- endcomment -%}
             {% assign sub_active = false %}
             {% for subitem in item.submenu %}
               {% assign subpath = subitem.path | default: path %}
-              {% capture subhref_raw %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
-              {% assign subhref = subhref_raw | relative_url | replace: 'index.html','' %}
-              {% assign subhref_alt = subhref | append: '/' %}
-              {% if current == subhref or current == subhref_alt %}
+              {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+              {% if current == subhref or current_slash == subhref %}
                 {% assign sub_active = true %}
               {% endif %}
             {% endfor %}
 
             <div class="dropdown">
               {% if item.url %}
-                {% capture href_raw %}{{ base_href }}/{{ item.url }}{% endcapture %}
-                {% assign href = href_raw | relative_url | replace: 'index.html','' %}
-                {% assign href_alt = href | append: '/' %}
-                {% assign is_parent_active = (current == href or current == href_alt) or sub_active %}
+                {% capture parent_href %}{{ base_path }}/{{ item.url }}{% endcapture %}
+                {% assign is_parent_active = (current == parent_href or current_slash == parent_href) or sub_active %}
                 <a
                   class="menu-link parent-link has-sub{% if is_parent_active %} active{% endif %}"
-                  href="{{ href | relative_url }}"
+                  href="{{ parent_href | relative_url }}"
                   {% if is_parent_active %}aria-current="page"{% endif %}
                 >
                   {{ item.name }} <span class="caret" aria-hidden="true">▾</span>
@@ -58,10 +56,8 @@
               <div class="dropdown-content" role="menu">
                 {% for subitem in item.submenu %}
                   {% assign subpath = subitem.path | default: path %}
-                  {% capture subhref_raw %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
-                  {% assign subhref = subhref_raw | relative_url | replace: 'index.html','' %}
-                  {% assign subhref_alt = subhref | append: '/' %}
-                  {% assign is_active_child = current == subhref or current == subhref_alt %}
+                  {% capture subhref %}{% if subpath != '' %}/{{ subpath }}{% endif %}/{{ subitem.url }}{% endcapture %}
+                  {% assign is_active_child = (current == subhref or current_slash == subhref) %}
                   <a
                     role="menuitem"
                     href="{{ subhref | relative_url }}"
@@ -76,10 +72,8 @@
 
           {% else %}
             {% if item.url %}
-              {% capture href_raw %}{{ base_href }}/{{ item.url }}{% endcapture %}
-              {% assign href = href_raw | relative_url | replace: 'index.html','' %}
-              {% assign href_alt = href | append: '/' %}
-              {% assign is_active = current == href or current == href_alt %}
+              {% capture href %}{{ base_path }}/{{ item.url }}{% endcapture %}
+              {% assign is_active = (current == href or current_slash == href) %}
               <a
                 class="menu-link{% if is_active %} active{% endif %}"
                 href="{{ href | relative_url }}"
@@ -113,7 +107,7 @@
   apply();
   (mq.addEventListener ? mq.addEventListener('change', apply) : mq.addListener(apply));
 
-  // Close menu after tapping a link on mobile
+  // Close after tapping a link on mobile
   document.addEventListener('click', function (e) {
     if (e.target.closest('.menu-content a') && window.matchMedia('(max-width: 760px)').matches) {
       d.open = false;
