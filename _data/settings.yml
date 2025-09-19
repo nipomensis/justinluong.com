@@ -42,7 +42,6 @@ menu:
       url:  'getinvolved.html'
     - name: 'Resources'          #Last subpage
       url:  'resources.html'
-    url: 'grassnet.html'
 
     
   - name: 'People'
