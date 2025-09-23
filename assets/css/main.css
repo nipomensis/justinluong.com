@@ -654,3 +654,91 @@ th, td {
 .fa-rss-square:hover {
 	color: #ff6600;
 }
+/* ========================================================
+   Slideshow (reusable)
+   ======================================================== */
+.slideshow{
+  position: relative;
+  max-width: 960px;
+  margin: 1.25rem auto;
+}
+.slideshow .slides{
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;           /* nice backdrop while loading */
+}
+.slideshow .slide{
+  display: none;
+  margin: 0;
+  position: relative;
+}
+.slideshow .slide.is-active{ display: block; }
+.slideshow .slide img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.slideshow .slide figcaption{
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: .5rem .75rem;
+  color: #fff;
+  background: rgba(0,0,0,.55);
+  font-size: .9rem;
+}
+
+/* Prev/Next buttons */
+.slideshow .nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 2.25rem; height: 2.25rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(0,0,0,.45);
+  color: #fff;
+  cursor: pointer;
+}
+.slideshow .nav:hover,
+.slideshow .nav:focus{
+  background: rgba(0,0,0,.7);
+}
+.slideshow .prev{ left: .5rem; }
+.slideshow .next{ right: .5rem; }
+
+/* Dots */
+.slideshow .dots{
+  display: flex;
+  gap: .4rem;
+  justify-content: center;
+  margin-top: .5rem;
+}
+.slideshow .dots button{
+  width: .65rem; height: .65rem;
+  border: 0;
+  border-radius: 999px;
+  background: #d0d0d0;
+  cursor: pointer;
+}
+.slideshow .dots button[aria-selected="true"]{
+  background: var(--accent);
+}
+
+/* Pause/Play */
+.slideshow .pause{
+  position: absolute;
+  top: .5rem; right: .5rem;
+  z-index: 2;
+  border: 0;
+  padding: .25rem .5rem;
+  border-radius: .5rem;
+  background: rgba(255,255,255,.92);
+  color: #222;
+}
+
+/* Motion prefs */
+@media (prefers-reduced-motion: reduce){
+  .slideshow .slides, .slideshow .slide{ transition: none !important; }
+}
