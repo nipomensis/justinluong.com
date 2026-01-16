@@ -4,6 +4,51 @@ title: Grassland Restoration Practitioners
 permalink: /menu/Grasslandrestorationpractitioners.html
 
 practitioners:
+  - name: "Adam Canter"
+    role: "Natural Resource Director"
+    location: "Wiyot Tribe"
+    headshot: "Grasslandrestoration/AdamCanter_pic.JPG"
+    headshot_alt: "Adam Canter"
+
+    bio: Adam Canter is a native of southern Appalachia and Humboldt State University Botany alumni (08) and current Luong Rangeland Ecology Lab graduate student working as the Natural Resource Director for the Wiyot Tribe within their ancestral territory around the Humboldt Bay area.  Adam’s focus areas include the identification and protection of ethnobotanical sites within North Coast prairie and scrub systems and championing the use of culturally important plants where appropriate in ecological restoration projects. Adam helps to oversee the fledging Wiyot Native Plant Nursery seed collection efforts and works with Tribal administration to facilitate Indigenous land return and coastal prairie ecocultural restoration projects. Adam is currently working on a coastal prairie restoration experiment at the Table Bluff Reservation looking at cultural fire and pretreatment influences on the reintroduction of six culturally important grassland species.
+
+    tags:
+      - "Tribal Restoration"
+      - "Rangeland Restoration"
+
+    links:
+      - label: "Wiyot Tribe Natural Resources"
+        url: "https://www.wiyot.us/101/Natural-Resources"
+        primary: true
+
+  - name: Jim Jensen
+    role: "Land Steward"
+    location: "All Hands Ecology/Cypress Grove and Tomales Bay Preserves"
+
+    bio: Jim joined All Hands Ecology in January of 2021, bringing his local expertise and familiarity with the area from growing up on a sixth-generation family ranch near Tomales. Jim manages the physical operations and land stewardship at Cypress Grove Preserve and All Hands Ecology’s Tomales Bay properties. Previously, Jim was the Stewardship Manager for the Marin Agricultural Land Trust where he spent eight years supporting conservation and stewardship on working farms and ranches across Marin. Jim also played an active role in establishing strategic partnerships to incentivize stream habitat restoration and carbon farm plans throughout West Marin. He holds a bachelor’s degree in forestry and natural resources with a minor in rangeland resources management from California Polytechnic State University, San Luis Obispo. He is an Associate Rangeland Manager with the Cal-Pac Society for Range Management, is a Fibershed producer member, and serves on the MALT Board. When Jim is not at the office or in the field, he can be found spending time with his family, tending a flock of sheep, stewarding, and working on the family ranch.
+
+    tags:
+      - "Land Stewardship"
+      - "Stream Habitat Restoration"
+   
+    links:
+      - label: "Cypress Grove and Tomales Bay Preserves"
+        url: "https://www.allhandsecology.org/cypress-grove-preserve/"
+        primary: true
+
+  - name: "Wayne Chapman"
+    role: "Nursery/Project manager"
+    location: "Cheadle Center - UCSB"
+    headshot: "Grasslandrestoration/Wayne Chapman.png"
+    headshot_alt: "Wayne Chapman"
+
+    bio:
+      Wayne received a B.A. in Environmental Studies in 1998 from UCSB and has worked in habitat restoration at the Cheadle Center since that time, specializing in habitat restoration, native plant propagation, local ecotypes, rare plants, endangered species recovery, and more. For the last 8 years he has been leading efforts on habitat improvements for and conservation of burrowing owls in the area.
+
+    tags:
+      - "Habitat Restoration"
+      - "Wildlife Conservation"
+      - "Native Plants"
   - name: "Julia Michaels"
     role: "Restoration Ecologist & Designer"
     location: "Hedgerow Farms"
