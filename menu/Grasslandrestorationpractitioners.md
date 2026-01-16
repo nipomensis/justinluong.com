@@ -52,7 +52,7 @@ practitioners:
   - name: "Julia Michaels"
     role: "Restoration Ecologist & Designer"
     location: "Hedgerow Farms"
-    headshot: "Grasslanrestoration/Julia Michaels 2022.jpg"
+    headshot: "Grasslandrestoration/Julia Michaels 2022.jpg"
     headshot_alt: "Julia Michaels"
 
     bio: Julia Michaels completed her PhD in Ecology at UC Davis where she focused her research on strategies for restoring native CA vernal pool wetlands. Prior to joining Hedgerow Farms, Julia taught at Sacramento State and in the Biology Department at Reed College. Julia loves working at Hedgerow Farms because it is her favorite way to connect with the public about the fascinating world of native plants, and to recruit individuals to help us restore native ecosystems one project at a time.
