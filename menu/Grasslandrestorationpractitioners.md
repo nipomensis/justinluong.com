@@ -4,6 +4,28 @@ title: Grassland Restoration Practitioners
 permalink: /menu/Grasslandrestorationpractitioners.html
 
 practitioners:
+  - name: "Scott Butterfield"
+    role: "Lead Scientist at The Nature Conservancy in California"
+    location: "Land Program"
+    headshot: "Grasslandrestoration/Scottbutterfield.jpeg"
+    headshot_alt: "H. Scott Butterfield"
+
+    bio: In The Nature Conservancy's California Chapter, Scott serves as a Lead Scientist in the Land Program, overseeing science, stewardship, including, cattle grazing, and land protection across TNC's more than 400,000-acre grassland and oak woodland conservation estate. Scott is also the lead scientist for the Strategic Restoration Scientist in the San Joaquin Valley and TNC's lead for participation as a management partner at the Carrizo Plain National Monument.
+
+    tags:
+      - "Rangeland Restoration"
+      - "Remote Sensing"
+      - "Wildlife Monitoring"
+
+    links:
+      - label: "Website"
+        url: "https://www.scienceforconservation.org/our-team/scott-butterfield"
+        primary: true
+
+      - label: "Biography"
+        url: "https://www.scienceforconservation.org/our-team/scott-butterfield"
+        primary: true
+        
   - name: "Adam Canter"
     role: "Natural Resource Director"
     location: "Wiyot Tribe"
@@ -21,21 +43,6 @@ practitioners:
         url: "https://www.wiyot.us/101/Natural-Resources"
         primary: true
 
-  - name: Jim Jensen
-    role: "Land Steward"
-    location: "All Hands Ecology/Cypress Grove and Tomales Bay Preserves"
-
-    bio: Jim joined All Hands Ecology in January of 2021, bringing his local expertise and familiarity with the area from growing up on a sixth-generation family ranch near Tomales. Jim manages the physical operations and land stewardship at Cypress Grove Preserve and All Hands Ecology’s Tomales Bay properties. Previously, Jim was the Stewardship Manager for the Marin Agricultural Land Trust where he spent eight years supporting conservation and stewardship on working farms and ranches across Marin. Jim also played an active role in establishing strategic partnerships to incentivize stream habitat restoration and carbon farm plans throughout West Marin. He holds a bachelor’s degree in forestry and natural resources with a minor in rangeland resources management from California Polytechnic State University, San Luis Obispo. He is an Associate Rangeland Manager with the Cal-Pac Society for Range Management, is a Fibershed producer member, and serves on the MALT Board. When Jim is not at the office or in the field, he can be found spending time with his family, tending a flock of sheep, stewarding, and working on the family ranch.
-
-    tags:
-      - "Land Stewardship"
-      - "Stream Habitat Restoration"
-   
-    links:
-      - label: "Cypress Grove and Tomales Bay Preserves"
-        url: "https://www.allhandsecology.org/cypress-grove-preserve/"
-        primary: true
-
   - name: "Wayne Chapman"
     role: "Nursery/Project manager"
     location: "Cheadle Center - UCSB"
@@ -49,6 +56,25 @@ practitioners:
       - "Habitat Restoration"
       - "Wildlife Conservation"
       - "Native Plants"
+  
+  - name: Jim Jensen
+    role: "Land Steward"
+    location: "All Hands Ecology/Cypress Grove and Tomales Bay Preserves"
+    headshot: "Grasslandrestoration/Jim Jensen.jpg"
+    headshot_alt: "Jim Jensen"
+
+    bio: Jim joined All Hands Ecology in January of 2021, bringing his local expertise and familiarity with the area from growing up on a sixth-generation family ranch near Tomales. Jim manages the physical operations and land stewardship at Cypress Grove Preserve and All Hands Ecology’s Tomales Bay properties. Previously, Jim was the Stewardship Manager for the Marin Agricultural Land Trust where he spent eight years supporting conservation and stewardship on working farms and ranches across Marin. Jim also played an active role in establishing strategic partnerships to incentivize stream habitat restoration and carbon farm plans throughout West Marin. He holds a bachelor’s degree in forestry and natural resources with a minor in rangeland resources management from California Polytechnic State University, San Luis Obispo. He is an Associate Rangeland Manager with the Cal-Pac Society for Range Management, is a Fibershed producer member, and serves on the MALT Board. When Jim is not at the office or in the field, he can be found spending time with his family, tending a flock of sheep, stewarding, and working on the family ranch.
+
+    tags:
+      - "Land Stewardship"
+      - "Stream Habitat Restoration"
+   
+    links:
+      - label: "Cypress Grove and Tomales Bay Preserves"
+        url: "https://www.allhandsecology.org/cypress-grove-preserve/"
+        primary: true
+
+  
   - name: "Julia Michaels"
     role: "Restoration Ecologist & Designer"
     location: "Hedgerow Farms"
@@ -59,7 +85,29 @@ practitioners:
 
     tags:
       - "Rangeland Restoration"
-    
+  - name: "Joshua Scoggin"
+    role: "Associate Ecologist"
+    location: "Hedgerow Farms / Pacific Coast Seed"
+    headshot: "Grasslandrestoration/Joshua Scoggin.JPG"
+    headshot_alt: "Joshua Scoggin"
+
+    bio: |
+      Joshua Scoggin is a production and collections data manager with NativeSeed Group, supporting Hedgerow Farms' native seed production and wildland collections. Hedgerow Farms supplies native seed for large-scale conservation and habitat restoration. His work focuses on managing production and collection data so that restoration teams receive genetically appropriate and source-identified seeds matched to project needs.
+
+    tags:
+      - "Seed Supply & Logistics"
+      - "Production & Collections Data"
+      - "Restoration Project Support"
+
+    links:
+      - label: "Pacific Coast Seed"
+        url: "https://nativeseedgroup.com/who-we-are/pacific-coast-seed?utm_source=google&utm_medium=cpc&utm_campaign=22424039451&utm_content=179259462218&utm_term=pacific%20coast%20seed&hsa_acc=6596752727&hsa_cam=22424039451&hsa_grp=179259462218&hsa_ad=747376715984&hsa_src=g&hsa_tgt=kwd-1639578945243&hsa_kw=pacific%20coast%20seed&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=22424039451&gbraid=0AAAAA_S0bXvCAF4QuuK_YtxPRucgdJkk0&gclid=CjwKCAiAmePKBhAfEiwAU3Ko3M8VcxASCk1fWXEpyfNIv9_TxWFByT1548j3zY4PqqcQK5m_iac-JRoCsBwQAvD_BwE"
+        primary: true
+
+      - label: "Hedgerow Farms"
+        url: "https://nativeseedgroup.com/who-we-are/hedgerow-farms"
+        primary: true
+          
   - name: "Marcela Tayaba"
     role: "Habitat Restoration Specialist - Enviromental Department"
     location: "Shingle Springs Band of Miwok Indians"
@@ -90,54 +138,7 @@ practitioners:
       - "Nursery Operations"
       - "Land and Water Conservation"
       - "Interagency Projects"
-
-   
         
-  - name: "Scott Butterfield"
-    role: "Lead Scientist at The Nature Conservancy in California"
-    location: "Land Program"
-    headshot: "Grasslandrestoration/Scottbutterfield.jpeg"
-    headshot_alt: "H. Scott Butterfield"
-
-    bio: |
-      In The Nature Conservancy's California Chapter, Scott serves as a Lead Scientist in the Land Program, overseeing science, stewardship, including, cattle grazing, and land protection across TNC's more than 400,000-acre grassland and oak woodland conservation estate. Scott is also the lead scientist for the Strategic Restoration Scientist in the San Joaquin Valley and TNC's lead for participation as a management partner at the Carrizo Plain National Monument.
-
-    tags:
-      - "Rangeland Restoration"
-      - "Remote Sensing"
-      - "Wildlife Monitoring"
-
-    links:
-      - label: "Website"
-        url: "https://www.scienceforconservation.org/our-team/scott-butterfield"
-        primary: true
-
-      - label: "Biography"
-        url: "https://www.scienceforconservation.org/our-team/scott-butterfield"
-        primary: true
-
-  - name: "Joshua Scoggin"
-    role: "Associate Ecologist"
-    location: "Hedgerow Farms / Pacific Coast Seed"
-    headshot: "Grasslandrestoration/Joshua Scoggin.JPG"
-    headshot_alt: "Joshua Scoggin"
-
-    bio: |
-      Joshua Scoggin is a production and collections data manager with NativeSeed Group, supporting Hedgerow Farms' native seed production and wildland collections. Hedgerow Farms supplies native seed for large-scale conservation and habitat restoration. His work focuses on managing production and collection data so that restoration teams receive genetically appropriate and source-identified seeds matched to project needs.
-
-    tags:
-      - "Seed Supply & Logistics"
-      - "Production & Collections Data"
-      - "Restoration Project Support"
-
-    links:
-      - label: "Pacific Coast Seed"
-        url: "https://nativeseedgroup.com/who-we-are/pacific-coast-seed?utm_source=google&utm_medium=cpc&utm_campaign=22424039451&utm_content=179259462218&utm_term=pacific%20coast%20seed&hsa_acc=6596752727&hsa_cam=22424039451&hsa_grp=179259462218&hsa_ad=747376715984&hsa_src=g&hsa_tgt=kwd-1639578945243&hsa_kw=pacific%20coast%20seed&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=22424039451&gbraid=0AAAAA_S0bXvCAF4QuuK_YtxPRucgdJkk0&gclid=CjwKCAiAmePKBhAfEiwAU3Ko3M8VcxASCk1fWXEpyfNIv9_TxWFByT1548j3zY4PqqcQK5m_iac-JRoCsBwQAvD_BwE"
-        primary: true
-
-      - label: "Hedgerow Farms"
-        url: "https://nativeseedgroup.com/who-we-are/hedgerow-farms"
-        primary: true
 ---
 
 
