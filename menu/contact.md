@@ -44,7 +44,7 @@ Dr. Luong invites potential postdoctoral scholars to develop and submit USDA or 
 
 This website has been built by Elias Sandoval, If this website stands out and you need web devolopment services please reach out to (eliengine.com) 
 <br>
-If there are any major bugs please feel free to reach out as well; I am the only dev working on this and sometimes things are missed.
+
 
 # GO BEARS!
 
