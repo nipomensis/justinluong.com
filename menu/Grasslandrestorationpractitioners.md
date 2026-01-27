@@ -85,6 +85,23 @@ practitioners:
 
     tags:
       - "Rangeland Restoration"
+   
+
+  - name: Devii Rao
+    role: "Livestock and Natural Resources Advisor"
+    location: "UC Cooperative Extension"
+    headshot: "Devii Rao.JPG"
+    headshot_alt: "Devii Rao"
+
+    bio: Devii Rao is the UC Cooperative Extension (UCCE) Livestock & Natural Resources Advisor serving Sonoma and Marin counties. She was with UCCE, serving San Benito, Monterey, and Santa Cruz counties for 10 years. A transfer to Sonoma County in January 2025 allowed to be closer to family. Devii did work on prescribed fire, targeted grazing, and weed control on the Central Coast. In her new counties, she anticipates developing a program that will include grazing for fuels reduction, land abandonment/land access issues, and educating the public about the ecological values of grazing.
+
+    tags:
+      - "UC Cooperative Extension"
+      - "Prescribed Fire"
+      - "Targeted Grazing"
+      - "Education"
+
+    
   - name: "Joshua Scoggin"
     role: "Associate Ecologist"
     location: "Hedgerow Farms / Pacific Coast Seed"

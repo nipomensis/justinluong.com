@@ -12,19 +12,6 @@
   tags: ["preserve", "conservation", "stewardship"]
   url: "https://www.scienceforconservation.org/products/remote-sensing-monitoring-grazed-conservation-lands"
 
-- id: dangermond
-  categories: ["planting"]
-  title: "Dangermond Preserve"
-  org: "The Nature Conservancy"
-  resource_type: "Place / Preserve"
-  location: "California"
-  summary: "Overview page for a protected area; useful background context for restoration and stewardship conversations."
-  highlights:
-    - "Conservation context"
-    - "Stewardship + research framing"
-  tags: ["preserve", "conservation", "stewardship"]
-  url: "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/dangermond-preserve/"
-
 - id: randall
   categories: ["planting"]
   title: "Randall Preserve"
@@ -89,3 +76,43 @@
     - "Decision support framing"
   tags: ["tool", "remote sensing", "monitoring"]
   url: "https://www.scienceforconservation.org/products/remote-sensing-monitoring-grazed-conservation-lands"
+
+- id: point-blue-conservation-planting
+  categories: ["planting"]
+  title: "Point Blue Climate-Smart Restoration Toolbox"
+  org: "Point Blue Conservation Science"
+  resource_type: "Tool/Approach"
+  location: "California"
+  summary: "Toolbox for selecting species for restoration in California."
+  highlights:
+    - "species selection"
+    - "plant characteristics"
+  tags: ["tool", "restoration"]
+  url: "https://grass-net.shinyapps.io/Restoration-Toolbox/"
+
+- id: usda-field-book-soil
+  categories: ["soil"]
+  title: "USDA Field Book for Describing and Sampling Soils"
+  org: "United States Department of Agriculture"
+  resource_type: "tool/approach"
+  location: "United States"
+  summary: "The USDA soils field book focuses on the description and documentation of soils in the United States"
+  highlights:
+    - "book"
+    - "soil description"
+    - "soil classification"
+  tags: ["soil science"]
+  url: "https://www.nrcs.usda.gov/resources/guides-and-instructions/field-book-for-describing-and-sampling-soils"
+
+- id: USDA-vitual-fencing-article
+  categories:
+  title: "Virtual fencing gaining some traction with USDA, private funding"
+  org: "Agri Pulse"
+  resource_type: "news//article"
+  location: " United States"
+  summary: "News article concerning increasing use of virtual fencing"
+  highlights:
+    - "vitual fencing"
+  tags:
+  url: "https://www.agri-pulse.com/articles/23881-virtual-fencing-gaining-some-traction-with-usda-private-funding"
+
