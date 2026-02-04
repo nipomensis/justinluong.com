@@ -112,6 +112,15 @@ sections:
             I am a full time student studying the management of rangelands at California Polytechnic University Humboldt. I focus on the development of sustainable rangeland management practices with an emphasis on soil health and native plant communities. I strive to restore rangeland ecosystems through native plant and soil restoration and the implementation of practices that allow the symbiotic relationship between humans and the land to return.          
             <hr>
 
+    - title: "Joshua Sharp (Lab Assistant)"
+      image:
+          name: JoshSharp.jpg
+          alt: A photo of Josh Sharp
+          style: right
+      content: |
+            Hi, I’m Josh.  I’m from the Bay Area, and I am pursuing a degree in Rangeland Resource Science with a concentration in geospatial analysis and a minor in environmental policy. Increasing environmental knowledge and ecological health is a deeply held goal of mine. I’ve been playing in and learning about the natural world my whole life.  I have eight months of land management experience, ranging from forest thinning to recreation management to fence repair. I’m secretary of the Range and Soils Club, and I’m interested in a wide range of land management career paths. In my free time, I love backpacking, botanizing, and playing music. My favorite native plant is the Santa Cruz Island buckwheat (Eriogonum arborescens).          
+            <hr>
+            
     - title: "Danielle Virnoche (Lab Assistant)"
       image:
           name: DanielleVirnoche.jpg
