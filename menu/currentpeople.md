@@ -75,6 +75,15 @@ sections:
             Hey! My name is Sean (he/they), and I’m a student assistant in the Luong Lab. I’m a Wildland Soil Science major with a Botany minor, and I came to Humboldt county in 2024 from Los Angeles County. I grew up near the San Gabriel Mountains, hiking and camping with my family, and I have a lot of curiosity about the chaparral and sagebrush ecosystems in that area. In my free time, I love cooking, drawing, painting, and sewing. Working in the lab has been awesome, and I really appreciate being exposed to all the research! My favorite plants from back home are California Buckwheat, _Eriogonum fasciculatum_, and California Sagebrush, _Artemisia californica_, and since working in the lab, my favorite grass species has become _Danthonia californica_.        
             <hr>
 
+    - title: "Marina Dunlop (Lab Assistant)"
+      image:
+          name: MarinaDunlop.jpg
+          alt: A photo of Marina Dunlop
+          style: right
+      content: |
+            Marina Dunlop is a senior at Cal Poly Humboldt, pursuing a B.S. in Rangeland Resource Sciences with an emphasis in Natural Resource Policy. Her passion for restoration and land stewardship stems from her upbringing in a rural Sierra Nevada town with strong ties to agricultural communities. Her academic journey has been diverse, encompassing studies in Marine Biology, Geography, Environmental Science Management, and Natural Resource Policy, ultimately leading her to the Rangeland Resource Sciences program. Collaborative coursework and interactions with landowners, ranchers, and restorationists have solidified her commitment to supporting land stewards by translating research into practical land use and livestock management techniques that align with individual goals and broader restoration objectives. Following graduation in Fall 2026, Marina intends to pursue a master's degree in rangeland ecology or natural resource management, with the long-term goal of lecturing at the university level to mentor future generations of ecologists and restorationists. Outside of her academic pursuits, Marina enjoys fishing, reading, experimenting with new recipes, traveling, and collecting antique furniture. Her favorite native plant is Witchgrass (_Panicum capillare_).        
+            <hr>
+
     - title: "Trinity Edwards (Lab Assistant and Undergrad Reseacher)"
       image:
           name: TrinityEdwards.heic
@@ -118,7 +127,7 @@ sections:
           alt: A photo of Josh Sharp
           style: right
       content: |
-            Hi, I’m Josh.  I’m from the Bay Area, and I am pursuing a degree in Rangeland Resource Science with a concentration in geospatial analysis and a minor in environmental policy. Increasing environmental knowledge and ecological health is a deeply held goal of mine. I’ve been playing in and learning about the natural world my whole life.  I have eight months of land management experience, ranging from forest thinning to recreation management to fence repair. I’m secretary of the Range and Soils Club, and I’m interested in a wide range of land management career paths. In my free time, I love backpacking, botanizing, and playing music. My favorite native plant is the Santa Cruz Island buckwheat (Eriogonum arborescens).          
+            Hi, I’m Josh.  I’m from the Bay Area, and I am pursuing a degree in Rangeland Resource Science with a concentration in geospatial analysis and a minor in environmental policy. Increasing environmental knowledge and ecological health is a deeply held goal of mine. I’ve been playing in and learning about the natural world my whole life.  I have eight months of land management experience, ranging from forest thinning to recreation management to fence repair. I’m secretary of the Range and Soils Club, and I’m interested in a wide range of land management career paths. In my free time, I love backpacking, botanizing, and playing music. My favorite native plant is the Santa Cruz Island buckwheat (_Eriogonum arborescens_).          
             <hr>
             
     - title: "Danielle Virnoche (Lab Assistant)"
