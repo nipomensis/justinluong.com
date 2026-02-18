@@ -7,7 +7,7 @@ practitioners:
   - name: "Emily Allen"
     role: "Restoration and Botanical Consultant"
     location: "Emily Allen Consulting -- Ukiah, CA"
-    headshot: "Emily Allen 2.jpg"
+    headshot: "Grasslandrestoration/Emily Allen 2.jpg"
     headshot_alt: "Emily Allen"
 
     bio: Emily is a restoration and botanical consultant based out of Ukiah in Mendocino County with a focus on grasslands, wetlands, and riparian areas. Her work includes restoration monitoring, rare plant surveys, and seed collecting. She received a B.S. in Environmental Biology from Westmont College in Santa Barbara, CA, and has been a board member of the California Native Grasslands Association (CNGA) since 2014 and a board member of her local California Native Plant Society (CNPS) Sanhedrin Chapter since 2018. With both nonprofits she works to connect managers, enthusiasts, and conservationists with research and resources to further protect, manage, and restore native plants and their communities.
@@ -103,7 +103,7 @@ practitioners:
   - name: Devii Rao
     role: "Livestock and Natural Resources Advisor"
     location: "UC Cooperative Extension"
-    headshot: "Devii Rao.JPG"
+    headshot: "Grasslandrestoration/Devii Rao.JPG"
     headshot_alt: "Devii Rao"
 
     bio: Devii Rao is the UC Cooperative Extension (UCCE) Livestock & Natural Resources Advisor serving Sonoma and Marin counties. She was with UCCE, serving San Benito, Monterey, and Santa Cruz counties for 10 years. A transfer to Sonoma County in January 2025 allowed to be closer to family. Devii did work on prescribed fire, targeted grazing, and weed control on the Central Coast. In her new counties, she anticipates developing a program that will include grazing for fuels reduction, land abandonment/land access issues, and educating the public about the ecological values of grazing.
