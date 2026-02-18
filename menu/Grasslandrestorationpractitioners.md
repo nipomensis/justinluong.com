@@ -4,11 +4,24 @@ title: Grassland Restoration Practitioners
 permalink: /menu/Grasslandrestorationpractitioners.html
 
 practitioners:
+  - name: "Emily Allen"
+    role: "Restoration and Botanical Consultant"
+    location: "Emily Allen Consulting -- Ukiah, CA"
+    headshot: "Emily Allen 2.jpg"
+    headshot_alt: "Emily Allen"
+
+    bio: Emily is a restoration and botanical consultant based out of Ukiah in Mendocino County with a focus on grasslands, wetlands, and riparian areas. Her work includes restoration monitoring, rare plant surveys, and seed collecting. She received a B.S. in Environmental Biology from Westmont College in Santa Barbara, CA, and has been a board member of the California Native Grasslands Association (CNGA) since 2014 and a board member of her local California Native Plant Society (CNPS) Sanhedrin Chapter since 2018. With both nonprofits she works to connect managers, enthusiasts, and conservationists with research and resources to further protect, manage, and restore native plants and their communities.
+
+    tags:
+      - "Restoration"
+      - "Rare Plants"
+      - "Native Plants"
+
   - name: "Scott Butterfield"
     role: "Lead Scientist at The Nature Conservancy in California"
     location: "Land Program"
     headshot: "Grasslandrestoration/Scottbutterfield.jpeg"
-    headshot_alt: "H. Scott Butterfield"
+    headshot_alt: "Scott Butterfield"
 
     bio: In The Nature Conservancy's California Chapter, Scott serves as a Lead Scientist in the Land Program, overseeing science, stewardship, including, cattle grazing, and land protection across TNC's more than 400,000-acre grassland and oak woodland conservation estate. Scott is also the lead scientist for the Strategic Restoration Scientist in the San Joaquin Valley and TNC's lead for participation as a management partner at the Carrizo Plain National Monument.
 
