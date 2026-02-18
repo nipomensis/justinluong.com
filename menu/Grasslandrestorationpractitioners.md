@@ -6,7 +6,7 @@ permalink: /menu/Grasslandrestorationpractitioners.html
 practitioners:
   - name: "Emily Allen"
     role: "Restoration and Botanical Consultant"
-    location: "Emily Allen Consulting -- Ukiah, CA"
+    location: "Emily Allen Consulting - Ukiah, CA"
     headshot: "Grasslandrestoration/Emily Allen 2.jpg"
     headshot_alt: "Emily Allen"
 
