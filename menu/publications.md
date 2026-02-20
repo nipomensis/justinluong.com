@@ -16,8 +16,9 @@ permalink: /menu/publications.html
 
 **21. Drought-stress in *Lupinus bicolor* leads to earlier flowering and seeding times** 
 <br>
-(2026) *Madroño*, *Accepted*. Phillipson CN, Baker EJ, Ando K, Cullear R, **Luong JC**
+(2026) *Madroño*, 73(1). Phillipson CN, Baker EJ, Ando K, Cullear R, **Luong JC**
 <br>
+<https://doi.org/10.3120/0024-9637-250031>
 <hr>
 
 **20. Growth form and lifespan of herbaceous species mediate the role of traits in short-term drought response** 
