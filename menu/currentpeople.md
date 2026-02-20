@@ -77,7 +77,7 @@ sections:
 
     - title: "Marina Dunlop (Lab Assistant)"
       image:
-          name: MarinaDunlop.jpg
+          name: MarinaDunlop.jpeg
           alt: A photo of Marina Dunlop
           style: right
       content: |
@@ -119,6 +119,15 @@ sections:
           style: right
       content: |
             I am a full time student studying the management of rangelands at California Polytechnic University Humboldt. I focus on the development of sustainable rangeland management practices with an emphasis on soil health and native plant communities. I strive to restore rangeland ecosystems through native plant and soil restoration and the implementation of practices that allow the symbiotic relationship between humans and the land to return.          
+            <hr>
+
+    - title: "Miles Pay (Lab Assistant)"
+      image:
+          name: MilesPay.jpeg
+          alt: A photo of Miles Pay
+          style: right
+      content: |
+            Miles Pay (he/him) is a freshman at Berkeley High School and a Lab Assistant in the Luong Lab. He is currently pursuing a high school degree and has an interest in environmental restoration, the law, and sustainable environmental policy. Miles is currently a writer for the Berkeley High Jacket, his high school newspaper, covering various topics relating to environmental restoration. Miles enjoys running on his cross country and track team, and is a Parliamentary debater for Berkeley High’s debate team. He lives in Berkeley with his parents, his twin brother, Julian, and his dog, Buddy. His favorite native species is the California Poppy (_Eschscholzia Californica_).        
             <hr>
 
     - title: "Joshua Sharp (Lab Assistant)"
