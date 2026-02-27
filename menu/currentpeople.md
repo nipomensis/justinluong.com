@@ -57,6 +57,15 @@ sections:
             Hi, my name is Gabriel Abundis. I am a third-year majoring in rangeland resources with a minor in botany and soils. I am from southern California and although I grew up with nature, I never truly appreciated it for what it is. I fell in love with rangelands and their role in supporting ecosystems. Currently my research focuses intently on exploring the intricate dynamics between photovoltaic cells and the delicate coastal California grasslands. I am particularly interested in the forage value of species, and holistic approaches for rangeland management. When I am not in lab, I enjoy taking my dogs on adventures and eating/cooking.        
             <hr>
 
+    - title: "Reed Blout (Lab Assistant)"
+      image:
+          name: ReedBlout.jpg
+          alt: A photo of Reed Blout
+          style: right
+      content: |
+            Hello, I am a member of the Luong lab assisting in research related to grassland management and conservation. I was born and Raised here in the Bay Area, in Pacifica, and currently am a senior at Cal graduating Spring 2026. I am finishing my undergraduate degree with a BS in Conservation and Resources studies with the Rausser college of Natural Resources with a focus on the wildland urban interface. During my time at UC Berkeley I have focused my education largely on forestry and fire ecology, as well as urban ecology and development. Outside of academics, I work as a tattooer as an owner of my own tattoo parlor in Pacifica and also at times as a guest artist at different shops throughout the country. In my spare time I enjoy traveling to different cities and national parks, hiking, plant and tree ID, producing artwork in many different styles, and snowboarding in the Sierras when the powder is fresh!          
+            
+            <hr> 
     - title: "Sage Brislen (Lab Assistant and Undergrad Researcher)"
       image:
           name: sagebrislen.JPEG
@@ -105,7 +114,7 @@ sections:
     - title: "Bailey Glashan (Lab Assistant and Undergrad Researcher)"
       image:
           name: BaileyGlashan.jpeg
-          alt: A photo of Logan Fogle
+          alt: A photo of Bailey Glashan
           style: right
       content: |
             Hi! I’m Bailey Glashan and I am a student lab assistant in the Luong lab. I am pursuing my undergraduate degree in Rangeland Resource Science here at Cal Poly Humboldt with an emphasis in entomology and minors in botany and indigenous peoples, natural resource use, and the environment. I am a transfer student from Santa Rosa Junior College and though I miss the chaparral and vernal pools we have down south, I have quickly fallen in love with the redwood forest and coastal prairie. I spent lots of time in community college conducting native bee surveys at Pepperwood Preserve and in manicured native gardens in urban areas. Currently I am working on an exciting undergraduate research project looking into how insect populations are affected by fixed solar panels. I grew up as an active 4-H member and raised livestock most of my life which gave me a passion for community and sustainable agriculture. When I’m not working or doing school work, I enjoy hiking, fishing, gardening, and listening to music.
@@ -130,6 +139,15 @@ sections:
             Miles Pay (he/him) is a freshman at Berkeley High School and a Lab Assistant in the Luong Lab. He is currently pursuing a high school degree and has an interest in environmental restoration, the law, and sustainable environmental policy. Miles is currently a writer for the Berkeley High Jacket, his high school newspaper, covering various topics relating to environmental restoration. Miles enjoys running on his cross country and track team, and is a Parliamentary debater for Berkeley High’s debate team. He lives in Berkeley with his parents, his twin brother, Julian, and his dog, Buddy. His favorite native species is the California Poppy (_Eschscholzia Californica_).        
             <hr>
 
+    - title: "Alyssa Pun (Undergrad Researcher)"
+      image:
+          name: AlyssaPun.jpg
+          alt: A photo of Alyssa Pun
+          style: right
+      content: |
+            My name is Alyssa Pun (she/her), and I am an undergraduate researcher in the Luong Lab at UC Berkeley, where I study Conservation & Resource Management. I bring over a decade of experience in habitat restoration and land management, beginning with AmeriCorps after high school, where I first fell in love with field ecology and native plants while restoring salmon habitat in the Pacific Northwest. Since then, I’ve worked with nonprofits and public agencies in the Bay Area to plan and implement restoration projects, coordinate volunteers, and engage community members in stewardship. I’m passionate about protecting natural resources through an environmental justice lens and supporting the inclusion of Traditional Ecological Knowledge in land management. I’m especially interested in strengthening the connection between research and land managers, and advancing climate-resilient management in California grasslands.  My favorite grassland plants are two clovers, _Trifolium depauperatum_ (cow bag clover, looks like an udder!) and _Trifolium microdon_ (cupcake clover).           
+            
+            <hr> 
     - title: "Joshua Sharp (Lab Assistant)"
       image:
           name: JoshSharp.jpg
