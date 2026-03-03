@@ -98,7 +98,14 @@ practitioners:
 
     tags:
       - "Rangeland Restoration"
-   
+
+  - name: Hugh McGee
+    role: "Restoration Ecologist"
+    location: "Native Ecosystems, Inc."
+    headshot: "Grasslandrestoration/Hugh McGee.png"
+    headshot_alt: "Hugh McGee"
+
+    bio: Hugh is the owner and founder of Native Ecosystems, Inc.(NEI), an ecological restoration design, planning and implementation firm based in Arcata, CA. Hugh has over 20 years of experience designing and managing ecological restoration projects throughout the western US. He has managed multiple large-scale riparian, grasslands, oak woodland, and salmonid habitat restoration projects throughout the western US with multiple private, tribal, and agency partners. He specializes in bio-engineering and native plant restoration design and implementation in riparian and grassland ecosystems. He holds a bachelor’s degree in environmental science from the University of Vermont (2002). Prior to founding NEI in 2018, he served as Ecosystem Restoration Program Director at the Mattole Restoration Council for 18 years. He has also served as the Vice President of the Society for Ecological Restoration Northwest Chapter (SER), is certified by SER as a Certified Ecological Restoration Practitioner (#1079) and holds a California State Contractors License.
 
   - name: Devii Rao
     role: "Livestock and Natural Resources Advisor"
