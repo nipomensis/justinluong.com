@@ -1,29 +1,57 @@
 # Resource Library (Soil / Planting / Seed)
-- id: The nature conservency
+- id: calflora
   categories: ["planting"]
-  title: "Dangermond Preserve"
-  org: "The Nature Conservancy"
-  resource_type: "Place / Preserve"
-  location: "California"
-  summary: "Overview page for a protected area; useful background context for restoration and stewardship conversations."
+  org: "Calflora"
+  resource_type: "Tool"
+  summary: "Database and search tool for finding plant observations in specific locations"
   highlights:
-    - "Conservation context"
-    - "Stewardship + research framing"
-  tags: ["preserve", "conservation", "stewardship"]
-  url: "https://www.scienceforconservation.org/products/remote-sensing-monitoring-grazed-conservation-lands"
+    - "Plant search"
+  url: "https://www.calflora.org/entry/wgh.html"
 
-- id: randall
+- id: calscape
   categories: ["planting"]
-  title: "Randall Preserve"
-  org: "The Nature Conservancy"
-  resource_type: "Place / Preserve"
-  location: "California"
-  summary: "Overview page for a protected area; useful for examples of land protection and restoration context."
+  title: "Calscape"
+  org: "California Native Plant Society"
+  resource_type: "Tool"
+  summary: "Native plant search, plant nursery locator, weed and pest control, and more"
   highlights:
-    - "Conservation context"
-    - "Land protection + management"
-  tags: ["preserve", "habitat", "management"]
-  url: "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/randall-preserve/"
+    - "Native plants"
+    - "Garden care"
+    - "Project planning"
+  url: "https://calscape.org/"
+
+- id: CPC seed collection
+  categories: ["seed"]
+  title: "10 Percent Rule for Rare Seed Collection"
+  org: "Center for Plant Conservation"
+  resource type: "Tool"
+  summary: "Video resource explaining 10 percent seed collection practice"
+  highlights:
+    - "Seed collection"
+  url: "https://saveplants.org/video/10-percent-rule/"
+
+- id: CPC seed longevity
+  categories: ["seed"]
+  title: "Rare Plant Seed Longevity"
+  org: "Center for Plant Conservation"
+  resource type: "Tool / Research"
+  summary: "Collection of information on rare species seed storage"
+  highlights:
+    - "Rare species"
+    - "Seed longevity"
+  url: "https://saveplants.org/seed-longevity-research/"
+
+- id: CSHEL
+  categories: ["soil"]
+  title: "Coastal Soil Horizons & Ecology Lab"
+  org: "Cal Poly San Luis Obispo"
+  resource type: "Research"
+  summary: "Lab focused on soil ecology, formation, and biodiversity"
+  highlights:
+    - "Soil science and research"
+    - "Ecology"
+    - "Art"
+  url: "https://yaminapressler.com/Website/research/Coastal+Soil+Horizons+%26+Ecology+Lab+(C-SHEL)"
 
 - id: kqed-purple-flowers
   categories: ["seed", "planting"]
@@ -81,7 +109,7 @@
   categories: ["planting"]
   title: "Point Blue Climate-Smart Restoration Toolbox"
   org: "Point Blue Conservation Science"
-  resource_type: "Tool/Approach"
+  resource_type: "Tool / Approach"
   location: "California"
   summary: "Toolbox for selecting species for restoration in California."
   highlights:
@@ -94,7 +122,7 @@
   categories: ["soil"]
   title: "USDA Field Book for Describing and Sampling Soils"
   org: "United States Department of Agriculture"
-  resource_type: "tool/approach"
+  resource_type: "Tool / Approach"
   location: "United States"
   summary: "The USDA soils field book focuses on the description and documentation of soils in the United States"
   highlights:
@@ -108,7 +136,7 @@
   categories:
   title: "Virtual fencing gaining some traction with USDA, private funding"
   org: "Agri Pulse"
-  resource_type: "news//article"
+  resource_type: "News / Article"
   location: " United States"
   summary: "News article concerning increasing use of virtual fencing"
   highlights:
