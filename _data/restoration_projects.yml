@@ -4,7 +4,7 @@
   region: "Sonoma County, CA"
   status: "Active"
   year: 2025
-  link: "/menu/restoration/bobcat-ranch.html"
+  link: "https://www.audubon.org/california/projects/bobcat-ranch"
   summary: "Willow planting + bank stabilization + monitoring."
 
 - name: "Arcata Marsh Native Planting"
@@ -22,4 +22,15 @@
   region: "Santa Barbara County, CA"
   status: "Active"
   year: 2017
-  link: 
+  link: "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/dangermond-preserve/"
+  summary: "Coastal sage scrub and oak preseve + conservation"
+
+- name: "Randall Preserve"
+  lat: 35.207121
+  lon: -118.532606
+  region: "Kern County, CA"
+  status: "Active"
+  year: 2022
+  link: "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/randall-preserve/"
+  summary: "Nature Preserve + wildlife habitat connectivity"
+
