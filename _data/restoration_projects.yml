@@ -15,3 +15,11 @@
   year: 2026
   link: "/menu/restoration/arcata-marsh.html"
   summary: "Coastal wetland edge restoration and invasives removal."
+
+- name: "Dangermond Preserve"
+  lat: 34.550433
+  lon: -120.412321
+  region: "Santa Barbara County, CA"
+  status: "Active"
+  year: 2017
+  link: 
