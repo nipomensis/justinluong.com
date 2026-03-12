@@ -61,7 +61,7 @@ permalink: /menu/publications.html
 <br>
 (2025) *American Journal of Botany* e70020. Nguyen PV, **Luong JC**, Wishingrad V, Stratton LC, Loik ME, Meyer RS. 
 <br>
-<https://doi.org/10.1002/ajb2.70020>  
+<https://doi.org/10.1002/ajb2.70020> - *cover image  
 <hr>
 
 **15. Drought and vegetation restoration lead to shifts in soil microbial diversity and co‐occurrence networks in California coastal prairie** 
@@ -118,7 +118,7 @@ permalink: /menu/publications.html
 <br>
 (2022) *Trends in Ecology and Evolution 37*(9): 777-788. Holl KD, **Luong JC**, Brancalion PHS. 
 <br>
-<https://doi.org/10.1016/j.tree.2022.05.002>  
+<https://doi.org/10.1016/j.tree.2022.05.002> - *cover image  
 [View pdf]({{site.baseurl}}/assets/pdf/Holl et al. - Biotic homogenization - 2022.pdf)  
 <hr>
 
