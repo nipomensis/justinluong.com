@@ -33,7 +33,7 @@ permalink: /menu/publications.html
 <br>
 (2026) *Nature Ecology & Evolution*, *Early Access*. Worthy SJ, **Luong JC**, Wainwright BE, IDE Network (multiple authors), & JL Funk
 <br>
-<https://doi.org/10.1038/s41559-026-02989-4>
+<https://doi.org/10.1038/s41559-026-02989-4>  
 [View pdf]({{site.baseurl}}/assets/pdf/Worthy et al Nature EE 2026.pdf)   
 <hr>
 
