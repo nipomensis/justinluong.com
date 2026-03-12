@@ -31,7 +31,7 @@ permalink: /menu/publications.html
 
 **20. Growth form and lifespan of herbaceous species mediate the role of traits in short-term drought response** 
 <br>
-(2026) *Nature Ecology & Evolution*, *Early Access*. Worthy SJ, **Luong JC**, Wainwright BE, IDE Network (multiple authors), & JL Funk
+(2026) *Nature Ecology & Evolution*, 10, 512-522. Worthy SJ, **Luong JC**, Wainwright BE, IDE Network (multiple authors), & JL Funk
 <br>
 <https://doi.org/10.1038/s41559-026-02989-4>  
 [View pdf]({{site.baseurl}}/assets/pdf/Worthy et al Nature EE 2026.pdf)   
