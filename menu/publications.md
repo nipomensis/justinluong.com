@@ -14,6 +14,15 @@ permalink: /menu/publications.html
      target="_blank" rel="noopener">View on Google Scholar</a>
 </section>
 
+
+**22. Trait-based approaches to restoration ecology: Synthesizing insights from diverse systems** 
+<br>
+(2026) *Ecological Applications*. 32(2) Briand JK, Hosler SC, Merchant TK, Vinebrooke RD, Ostertag R, Symons CC, Cadotte MW, Eviner VT, Bracken ME, Carlson RR, Henn JJ, Garbowski M, Bauer JT, **Luong JC**, Atkinson J, Hughes AR, Adams CR, Bates AE, Funk JL, Love AE, Zheng L, Galloway E, Green SJ
+<br>
+<https://doi.org/10.1038/s41559-026-02989-4>
+[View pdf]({{site.baseurl}}/assets/pdf/Worthy et al Nature EE 2026.pdf)   
+<hr>
+
 **21. Drought-stress in *Lupinus bicolor* leads to earlier flowering and seeding times** 
 <br>
 (2026) *Madroño*, 73(1). Phillipson CN, Baker EJ, Ando K, Cullear R, **Luong JC**
@@ -26,6 +35,7 @@ permalink: /menu/publications.html
 (2026) *Nature Ecology & Evolution*, *Early Access*. Worthy SJ, **Luong JC**, Wainwright BE, IDE Network (multiple authors), & JL Funk
 <br>
 <https://doi.org/10.1038/s41559-026-02989-4>
+[View pdf]({{site.baseurl}}/assets/pdf/Worthy et al Nature EE 2026.pdf)   
 <hr>
 
 **19. Assessing aggregate stability methods to inform restoration in California coastal grasslands** 
