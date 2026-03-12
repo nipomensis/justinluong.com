@@ -20,7 +20,6 @@ permalink: /menu/publications.html
 (2026) *Ecological Applications*. 32(2) Briand JK, Hosler SC, Merchant TK, Vinebrooke RD, Ostertag R, Symons CC, Cadotte MW, Eviner VT, Bracken ME, Carlson RR, Henn JJ, Garbowski M, Bauer JT, **Luong JC**, Atkinson J, Hughes AR, Adams CR, Bates AE, Funk JL, Love AE, Zheng L, Galloway E, Green SJ
 <br>
 <https://doi.org/10.1038/s41559-026-02989-4>
-[View pdf]({{site.baseurl}}/assets/pdf/Worthy et al Nature EE 2026.pdf)   
 <hr>
 
 **21. Drought-stress in *Lupinus bicolor* leads to earlier flowering and seeding times** 
