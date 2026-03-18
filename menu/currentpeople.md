@@ -78,7 +78,7 @@ sections:
             <hr> 
     - title: "Viola Davis (Lab Assistant and Undergrad Researcher)"
       image:
-          name: ViolaDavis.jpg
+          name: ViolaDavis.JPG
           alt: A photo of Viola D
           style: right
       content: |
