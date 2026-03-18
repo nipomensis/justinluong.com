@@ -1,1 +1,20 @@
+# Policy Library
 
+- id: ab-1311 
+  categories: ["biodiversity"] 
+  title: "AB 1311" 
+  org: "Assemblymember Laura Friedman (Pending)" 
+  resource_type: "Assembly Bill" 
+  location: "California" 
+  summary: "AB 1311 strengthens statewide biodiversity conservation planning by improving coordination and data sharing among California agencies responsible for protecting ecosystems and wildlife." 
+  highlights: 
+    - "Biodiversity planning" 
+    - "Agency coordination" 
+ tags: ["biodiversity", "conservation planning", "ecosystem protection"] 
+ url: "https://onedrive.live.com/personal/74df997df329f6fa/_layouts/15/Doc.aspx?sourcedoc=%7B01A208F5-912B-48DF-84A8-B11C1AE89BF4%7D&file=AB%201311.docx&action=default&mobileredirect=true" 
+
+  
+
+
+
+ 
