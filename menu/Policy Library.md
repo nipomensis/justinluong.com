@@ -14,7 +14,7 @@ A library of California state Assembly Bills, Senate Bills and Propositions rele
  <!-- Category filter (Soil / Planting / Seed) -->
   <nav class="btn-grid reslib-filters" aria-label="Filter resources by category">
     <a class="btn btn--primary" href="#" data-filter-cat="all">All</a>
-    <a class="btn btn--soft" href="#" data-filter-cat="soil">Soil</a>
+    <a class="btn btn--soft" href="#" data-filter-cat="biodiversity">Biodiversity</a>
     <a class="btn btn--soft" href="#" data-filter-cat="planting">Planting</a>
     <a class="btn btn--soft" href="#" data-filter-cat="seed">Seed</a>
   </nav>
