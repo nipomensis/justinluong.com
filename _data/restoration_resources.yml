@@ -1,5 +1,5 @@
 # Resource Library (Soil / Planting / Seed)
-  id: calflora
+- id: calflora
   categories: ["planting"]
   org: "Calflora"
   resource_type: "Tool"
@@ -8,7 +8,7 @@
     - "Plant search"
   url: "https://www.calflora.org/entry/wgh.html"
 
-  id: calscape
+- id: calscape
   categories: ["planting"]
   title: "Calscape"
   org: "California Native Plant Society"
@@ -20,7 +20,7 @@
     - "Project planning"
   url: "https://calscape.org/"
 
-  id: CPC seed collection
+- id: CPC seed collection
   categories: ["seed"]
   title: "10 Percent Rule for Rare Seed Collection"
   org: "Center for Plant Conservation"
@@ -30,7 +30,7 @@
     - "Seed collection"
   url: "https://saveplants.org/video/10-percent-rule/"
 
-  id: CPC seed longevity
+- id: CPC seed longevity
   categories: ["seed"]
   title: "Rare Plant Seed Longevity"
   org: "Center for Plant Conservation"
@@ -41,7 +41,7 @@
     - "Seed longevity"
   url: "https://saveplants.org/seed-longevity-research/"
 
-  id: CSHEL
+- id: CSHEL
   categories: ["soil"]
   title: "Coastal Soil Horizons & Ecology Lab"
   org: "Cal Poly San Luis Obispo"
@@ -53,7 +53,7 @@
     - "Art"
   url: "https://yaminapressler.com/Website/research/Coastal+Soil+Horizons+%26+Ecology+Lab+(C-SHEL)"
 
-  id: kqed-purple-flowers
+- id: kqed-purple-flowers
   categories: ["seed", "planting"]
   title: "Rare purple Californian flowers are blooming more than ever"
   org: "KQED"
@@ -66,7 +66,7 @@
   tags: ["rare plants", "outreach", "wildflowers"]
   url: "https://www.kqed.org/science/1997262/rare-purple-californian-flowers-are-blooming-more-than-ever"
 
-  id: grazing-tnc
+- id: grazing-tnc
   categories: ["soil"]
   title: "Cattle grazing (TNC CA conservation estate)"
   org: "Science for Conservation"
@@ -79,7 +79,7 @@
   tags: ["grazing", "monitoring", "rangelands"]
   url: "https://www.scienceforconservation.org/products/cattle-grazing-TNC-CA-conservation-estate"
 
-  id: uav-lidar-rdm
+- id: uav-lidar-rdm
   categories: ["soil"]
   title: "UAV LiDAR + field spectroscopy (RDM on grazing lands)"
   org: "Science for Conservation"
@@ -92,7 +92,7 @@
   tags: ["LiDAR", "spectroscopy", "remote sensing", "RDM"]
   url: "https://www.scienceforconservation.org/products/uav-lidar-field-spectroscopy-rdm-grazing-lands"
 
-  id: remote-sensing-monitoring
+- id: remote-sensing-monitoring
   categories: ["soil"]
   title: "Remote sensing for monitoring grazed conservation lands"
   org: "Science for Conservation"
@@ -105,7 +105,7 @@
   tags: ["tool", "remote sensing", "monitoring"]
   url: "https://www.scienceforconservation.org/products/remote-sensing-monitoring-grazed-conservation-lands"
 
-  id: point-blue-conservation-planting
+- id: point-blue-conservation-planting
   categories: ["planting"]
   title: "Point Blue Climate-Smart Restoration Toolbox"
   org: "Point Blue Conservation Science"
@@ -118,7 +118,7 @@
   tags: ["tool", "restoration"]
   url: "https://grass-net.shinyapps.io/Restoration-Toolbox/"
 
-  id: usda-field-book-soil
+- id: usda-field-book-soil
   categories: ["soil"]
   title: "USDA Field Book for Describing and Sampling Soils"
   org: "United States Department of Agriculture"
@@ -132,7 +132,7 @@
   tags: ["soil science"]
   url: "https://www.nrcs.usda.gov/resources/guides-and-instructions/field-book-for-describing-and-sampling-soils"
 
-  id: USDA-vitual-fencing-article
+- id: USDA-vitual-fencing-article
   categories:
   title: "Virtual fencing gaining some traction with USDA, private funding"
   org: "Agri Pulse"
@@ -143,4 +143,3 @@
     - "virtual fencing"
   tags:
   url: "https://www.agri-pulse.com/articles/23881-virtual-fencing-gaining-some-traction-with-usda-private-funding"
-
