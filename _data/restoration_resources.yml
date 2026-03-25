@@ -1,5 +1,6 @@
 # Resource Library (Soil / Planting / Seed)
-- id: calflora
+
+- id: What Grows Here
   categories: ["planting"]
   org: "Calflora"
   resource_type: "Tool"
@@ -7,8 +8,8 @@
   highlights:
     - "Plant search"
   url: "https://www.calflora.org/entry/wgh.html"
-
-- id: calscape
+  
+- id: Calscape
   categories: ["planting"]
   title: "Calscape"
   org: "California Native Plant Society"
