@@ -80,9 +80,8 @@ practitioners:
       Michelle oversees long-term ecological monitoring projects that assess how Pepperwood's 3,200-acre reserve responds to climate change and land stewardship activities. She has a deep passion for conserving California’s rich floristic diversity using science-based solutions. In 2011, she developed Pepperwood's grassland monitoring program to inform the adaptive management and restoration of over 900 acres of grassland habitat. She has a B.S. in Plant Biology from UC Davis and an M.S. in Plant Biology from Purdue University where she studied the impacts of wetland mitigation and assisted migration on the genetics and ecology of the rare California vernal pool plant, Sebastopol meadowfoam. Michelle serves on the boards of the California Native Grasslands Association (Treasurer) and the California Native Plant Society Milo Baker Chapter (Scholarship Chair). She values building relationships between land managers, ranchers, and scientists by communicating effectively, educating stakeholders, and setting clear objectives to promote native grassland diversity and health.
 
     tags:
-      - "Habitat Restoration"
-      - "Wildlife Conservation"
-      - "Native Plants"
+      - "Adaptive Management"
+      - "Grasland Monitoring"
     
   - name: Jim Jensen
     role: "Land Steward"
