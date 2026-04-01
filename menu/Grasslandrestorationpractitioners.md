@@ -69,8 +69,8 @@ practitioners:
       - "Habitat Restoration"
       - "Wildlife Conservation"
       - "Native Plants"
-        
-- name: "Michelle halbur"
+
+  - name: "Michelle halbur"
     role: "Ecology Research Manager at Pepperwood"
     location: "Sonoma County"
     headshot: "Grasslandrestoration/Michelle Halbur.JPG"
