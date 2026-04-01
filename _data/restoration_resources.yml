@@ -2,6 +2,7 @@
 
 - id: What Grows Here
   categories: ["planting"]
+  title: "What Grows Here"
   org: "Calflora"
   resource_type: "Tool"
   summary: "Database and search tool for finding plant observations in specific locations"
