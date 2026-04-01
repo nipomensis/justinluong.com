@@ -7,15 +7,6 @@
   link: "https://www.audubon.org/california/projects/bobcat-ranch"
   summary: "Willow planting + bank stabilization + monitoring."
 
-- name: "Arcata Marsh Native Planting"
-  lat: 40.8679
-  lon: -124.0971
-  region: "Humboldt County, CA"
-  status: "Planning"
-  year: 2026
-  link: "/menu/restoration/arcata-marsh.html"
-  summary: "Coastal wetland edge restoration and invasives removal."
-
 - name: "Dangermond Preserve"
   lat: 34.550433
   lon: -120.412321
