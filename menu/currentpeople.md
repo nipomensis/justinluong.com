@@ -75,16 +75,6 @@ sections:
             Hi, my name is Sage (she/her) and I’m a third-year Rangeland Resource Science major. I’m from Southern California originally where I grew up hiking, camping, and working outdoors. I’ll always have a soft spot for coastal grass and shrublands. I’m interested in range conservation particularly with wildlife, invasives, and urban sprawl. In my free time I like to collage, garden, sketch, create fiber art, I am Vice President of the Range & Soils Club, and I’m on the logging sports team. Unsurprisingly, I’m a big fan of North American sages!        
             <hr>
 
-            <hr> 
-    - title: "Viola Davis (Lab Assistant and Undergrad Researcher)"
-      image:
-          name: ViolaDavis.JPG
-          alt: A photo of Viola D
-          style: right
-      content: |
-            Hello! My name is Viola (she/her), and I'm a Senior at UC Berkeley studying Society and Environment with a minor in History. I hail from Quilcene, a small town on Washington's Olympic Peninsula, where I grew up riding horses, playing music, sailing, and adventuring in the great outdoors. During the summer, I've worked on a habitat restoration crew, doing community education on defensible space for wildfire, and teaching sailing. I'm interested in environmental policy and natural resource management, especially in the multi-use paradigm, and the future of sustainable ranching and forestry. My favorite native plant is the trailing blackberry (_Rubus ursinus_)!        
-            <hr>
-
     - title: "Sean Dillon (Lab Assistant)"
       image:
           name: SeanDillon.jpg
@@ -147,6 +137,15 @@ sections:
           style: right
       content: |
             Miles Pay (he/him) is a freshman at Berkeley High School and a Lab Assistant in the Luong Lab. He is currently pursuing a high school degree and has an interest in environmental restoration, the law, and sustainable environmental policy. Miles is currently a writer for the Berkeley High Jacket, his high school newspaper, covering various topics relating to environmental restoration. Miles enjoys running on his cross country and track team, and is a Parliamentary debater for Berkeley High’s debate team. He lives in Berkeley with his parents, his twin brother, Julian, and his dog, Buddy. His favorite native species is the California Poppy (_Eschscholzia Californica_).        
+            <hr>
+             
+    - title: "Viola Phillips Frank (Undergrad Researcher)"
+      image:
+          name: ViolaDavis.JPG
+          alt: A photo of Viola D
+          style: right
+      content: |
+            Hello! My name is Viola (she/her), and I'm a Senior at UC Berkeley studying Society and Environment with a minor in History. I hail from Quilcene, a small town on Washington's Olympic Peninsula, where I grew up riding horses, playing music, sailing, and adventuring in the great outdoors. During the summer, I've worked on a habitat restoration crew, doing community education on defensible space for wildfire, and teaching sailing. I'm interested in environmental policy and natural resource management, especially in the multi-use paradigm, and the future of sustainable ranching and forestry. My favorite native plant is the trailing blackberry (_Rubus ursinus_)!        
             <hr>
 
     - title: "Alyssa Pun (Undergrad Researcher)"
