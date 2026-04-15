@@ -69,7 +69,20 @@ practitioners:
       - "Habitat Restoration"
       - "Wildlife Conservation"
       - "Native Plants"
-  
+
+  - name: "Michelle halbur"
+    role: "Ecology Research Manager at Pepperwood"
+    location: "Sonoma County"
+    headshot: "Grasslandrestoration/Michelle Halbur.JPG"
+    headshot_alt: "Michelle Halbur"
+
+    bio:
+      Michelle oversees long-term ecological monitoring projects that assess how Pepperwood's 3,200-acre reserve responds to climate change and land stewardship activities. She has a deep passion for conserving California’s rich floristic diversity using science-based solutions. In 2011, she developed Pepperwood's grassland monitoring program to inform the adaptive management and restoration of over 900 acres of grassland habitat. She has a B.S. in Plant Biology from UC Davis and an M.S. in Plant Biology from Purdue University where she studied the impacts of wetland mitigation and assisted migration on the genetics and ecology of the rare California vernal pool plant, Sebastopol meadowfoam. Michelle serves on the boards of the California Native Grasslands Association (Treasurer) and the California Native Plant Society Milo Baker Chapter (Scholarship Chair). She values building relationships between land managers, ranchers, and scientists by communicating effectively, educating stakeholders, and setting clear objectives to promote native grassland diversity and health.
+
+    tags:
+      - "Adaptive Management"
+      - "Grasland Monitoring"
+    
   - name: Jim Jensen
     role: "Land Steward"
     location: "All Hands Ecology/Cypress Grove and Tomales Bay Preserves"
@@ -102,7 +115,7 @@ practitioners:
   - name: Hugh McGee
     role: "Restoration Ecologist"
     location: "Native Ecosystems, Inc."
-    headshot: "Grasslandrestoration/Hugh McGee.png"
+    headshot: "Grasslandrestoration/Hugh Mcgee.png"
     headshot_alt: "Hugh McGee"
 
     bio: Hugh is the owner and founder of Native Ecosystems, Inc.(NEI), an ecological restoration design, planning and implementation firm based in Arcata, CA. Hugh has over 20 years of experience designing and managing ecological restoration projects throughout the western US. He has managed multiple large-scale riparian, grasslands, oak woodland, and salmonid habitat restoration projects throughout the western US with multiple private, tribal, and agency partners. He specializes in bio-engineering and native plant restoration design and implementation in riparian and grassland ecosystems. He holds a bachelor’s degree in environmental science from the University of Vermont (2002). Prior to founding NEI in 2018, he served as Ecosystem Restoration Program Director at the Mattole Restoration Council for 18 years. He has also served as the Vice President of the Society for Ecological Restoration Northwest Chapter (SER), is certified by SER as a Certified Ecological Restoration Practitioner (#1079) and holds a California State Contractors License.
