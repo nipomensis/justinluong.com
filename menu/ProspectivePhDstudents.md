@@ -4,6 +4,15 @@ title: Ph.D. Students
 permalink: /menu/prospectivephdstudents.html
 ---
 
+<hr>
+<article class="person max-w-3xl mx-auto px-4 py-8">
+  <figure class="person-img right">
+    <img src="{{ '/assets/img/WillitsTeam2025.jpg' | relative_url }}"
+         alt="Luong Restoration and Rangeland Lab Team after finshing a day of field work in Willits, CA">
+  </figure>
+
+<p>Dear prospective graduate students,</p>
+
 <p>Thanks for your interest in my research and the Ph.D. program in Environmental Science, Policy and Management  at the <st1:PlaceType w:st="on">University</st1:PlaceType> of <st1:PlaceName w:st="on">California</st1:PlaceName>, <st1:place w:st="on"><st1:City w:st="on">Berkeley</st1:City></st1:place>. </p>
 
 <p>My research is motivated by an interest in understanding factors limiting ecosystem recovery and using this information to restore ecosystems and in promoting ecosystem multiuse and collaboration. I have worked in a broad array of California ecosystems, including rangelands (coastal prairie, interior grasslands, coastal dunes, shrublands) and integrate field community ecology approaches, ecophysiology and some social science methods that use interviews and surveys. We explore a variety of topics related to restoration outcomes and success, improving outcomes and reslience for global change factors, promoting multiuse and ecosystem service optimization, thinking about plant sourcing approaches for restoration and considering community based, engaged restoration activities. I try to have a balance of graduate students in my lab who work across a spread of these topics. I am also interested in policy issues related to implementing the results of my ecological research. Please see my <a href="https://justinluong.com/menu/justinluong.html">list of publications</a> and description of <a href="https://justinluong.com/menu/publications.html">ongoing research projects</a> for more details.</p>
