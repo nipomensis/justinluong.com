@@ -18,13 +18,15 @@ permalink: /menu/prospectivephdstudents.html
 
 <p>If you are interested in applying to the Environmental Sciences, Policy and Management Program at UCB under my sponsorship, I ask that you first send me a letter with the following information: (1) a description of your academic and work background, with particular reference to your past research experience; (2) what types of research questions (the more detail the better) you plan to address in graduate school; (3) why you want to do a Ph.D. and your ultimate career goals; and (4) why you are interested in ESPM at Berkeley and working with me in particular. This information is helpful to me in determining whether I would be an appropriate advisor for you. If I determine there is a good fit between your and my interests and experience then we can schedule for further interviews via zoom. </p>
 
+<p>UC Berkeley also has a professional program for Rangeland Ecology and Management, for which I serve as a faculty advisor. Through this program I typically accept up to two (unfunded) master's students. Please note this is not a thesis-based science master's (although there can be some flexibility), but a professional degree program centered on coursework with a culminating oral exam by committee members. The program requires 24 units of coursework, which can be completed in 1 year, although some students elect to take 2 years. Although occasional GSI (TAship) and research assistantship positions might become available to support salary and tuition remission, it is uncommon and never guaranteed. </p>
+
 <p>I hope this answers your questions regarding working with me as a graduate student. If you have specific questions about the program or the admissions process you should contact our graduate advisor at espm_gradsupport@berkeley.edu. </span></p>
 
 <p>Cordially, </p>
 
 <p style='margin-bottom:12.0pt'>Justin Luong </p>
 
-<p><a href="https://justinluong.com/">Back to Karen Holl's homepage</a>
+<p><a href="https://justinluong.com/">Back to Justin Luong's homepage</a>
 </p>
 
 </div>
