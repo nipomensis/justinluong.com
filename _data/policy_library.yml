@@ -36,3 +36,81 @@
     - "Landscape reform" 
   tags: ["water conservation", "landscape policy", "drought resilience"] 
   url: "https://onedrive.live.com/personal/74df997df329f6fa/_layouts/15/Doc.aspx?sourcedoc=%7B634AC922-7373-4483-BF1F-539D5AE6CAB3%7D&file=AB%201572.docx&action=default&mobileredirect=true" 
+
+- id: ab-1889 
+  categories: ["biodiversity"] 
+  title: "AB 1889" 
+  org: "Assemblymember Laura Friedman (2024)" 
+  resource_type: "Assembly Bill" 
+  location: "California" 
+  summary: "AB 1889 requires cities and counties to consider wildlife movement and habitat connectivity when updating their conservation planning elements." 
+  highlights: 
+    - "Wildlife corridors" 
+    - "Habitat connectivity" 
+  tags: ["habitat connectivity", "wildlife corridors", "ecosystem protection"] 
+  url: "https://onedrive.live.com/personal/74df997df329f6fa/_layouts/15/Doc.aspx?sourcedoc=%7B51B99CD6-1043-4D8C-A687-7D7C90763CF8%7D&file=AB%201889%20Policy%20Brief.docx&action=default&mobileredirect=true"
+
+- id: prop-4 
+  categories: ["conservation funding"] 
+  title: "Proposition 4" 
+  org: "California Voters (2024)" 
+  resource_type: "Ballot Proposition" 
+  location: "California" 
+  summary: "Proposition 4 allocates significant state funding toward climate resilience, ecosystem restoration, and environmental protection projects throughout California." 
+  highlights: 
+    - "Climate resilience funding" 
+    - "Ecosystem restoration" 
+  tags: ["conservation funding", "state investment", "restoration projects"] 
+  url: "https://onedrive.live.com/personal/74df997df329f6fa/_layouts/15/Doc.aspx?sourcedoc=%7BB248FDEA-240C-4013-978E-ECA8E9CA51ED%7D&file=Proposition%204.docx&action=default&mobileredirect=true" 
+
+- id: sb-1226 
+  categories: ["land management"] 
+  title: "SB 1226" 
+  org: "Senator Michael J. Machado (2003)" 
+  resource_type: "Senate Bill" 
+  location: "California" 
+  summary: "SB 1226 addresses land and water access policy in California, clarifying rights related to the use of navigable waterways for public activities." 
+  highlights: 
+    - "Water access policy" 
+    - "Public land use" 
+  tags: ["water access", "public lands", "recreation policy"] 
+  url: "https://onedrive.live.com/personal/74df997df329f6fa/_layouts/15/Doc.aspx?sourcedoc=%7BD86DFFDB-137D-484F-A04C-24E719A29A94%7D&file=SB%201226%20(in%20progress).docx&action=default&mobileredirect=true"
+
+- id: sb-147 
+  categories: ["climate"] 
+  title: "SB 147" 
+  org: "Senator Angelique Ashby (2023)" 
+  resource_type: "Senate Bill" 
+  location: "California" 
+  summary: "SB 147 promotes sustainable infrastructure and climate innovation through state-supported programs focused on reducing emissions and improving energy efficiency." 
+  highlights: 
+    - "Clean infrastructure" 
+    - "Green innovation" 
+  tags: ["climate policy", "clean infrastructure", "emissions reduction"] 
+  url: "https://onedrive.live.com/personal/74df997df329f6fa/_layouts/15/Doc.aspx?sourcedoc=%7BF1AA56EC-073D-4352-8F0E-5293B20F5B6E%7D&file=SB%20147.docx&action=default&mobileredirect=true" 
+
+- id: sb-310 
+  categories: ["wildfire"] 
+  title: "SB 310" 
+  org: "Senator Bill Dodd (2024)" 
+  resource_type: "Senate Bill" 
+  location: "California" 
+  summary: "SB 310 allows California to collaborate with Native American tribes on cultural burning while protecting trained practitioners from liability when safety rules are followed." 
+  highlights: 
+    - "Cultural burning" 
+    - "Tribal sovereignty" 
+  tags: ["cultural burning", "prescribed fire", "tribal stewardship"] 
+  url: "https://onedrive.live.com/personal/74df997df329f6fa/_layouts/15/Doc.aspx?sourcedoc=%7B8F82F721-A9E6-4576-B405-C645930EF515%7D&file=SB%20310%20Policy%20Brief.docx&action=default&mobileredirect=true"
+
+- id: sb-675 
+  categories: ["biodiversity"] 
+  title: "SB 675" 
+  org: "Senator Monique Limón (2024)" 
+  resource_type: "Senate Bill" 
+  location: "California" 
+  summary: "SB 675 strengthens statewide biodiversity protection by improving conservation planning and coordination to safeguard ecosystems and endangered species." 
+  highlights: 
+    - "Biodiversity protection" 
+    - "Conservation strategy" 
+  tags: ["biodiversity", "ecosystem protection", "conservation planning"] 
+  url: "https://onedrive.live.com/personal/74df997df329f6fa/_layouts/15/Doc.aspx?sourcedoc=%7B28E8BF57-930C-4D65-8103-654F8B59BA2E%7D&file=SB%20675%20Policy%20Brief.docx&action=default&mobileredirect=true" 
