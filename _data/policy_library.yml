@@ -10,3 +10,16 @@
     - "Agency coordination"
   tags: ["biodiversity", "conservation planning", "ecosystem protection"]
   url: "https://onedrive.live.com/personal/74df997df329f6fa/_layouts/15/Doc.aspx?sourcedoc=%7B01A208F5-912B-48DF-84A8-B11C1AE89BF4%7D&file=AB%201311.docx&action=default&mobileredirect=true"
+
+- id: ab-1319 
+  categories: ["biodiversity"] 
+  title: "AB 1319" 
+  org: "Assemblymember Nick Schultz (2025)" 
+  resource_type: "Assembly Bill" 
+  location: "California" 
+  summary: "AB 1319 strengthens protections for threatened and endangered species in       California by ensuring state safeguards remain even if federal protections are weakened." 
+  highlights: 
+    - "Endangered species protection" 
+    - "State wildlife authority" 
+  tags: ["biodiversity", "wildlife protection", "endangered species"] 
+  url: "https://onedrive.live.com/personal/74df997df329f6fa/_layouts/15/Doc.aspx?sourcedoc=%7B7FE0CEA6-570D-4B0B-ABCB-81564E646DB8%7D&file=AB%201319.docx&action=default&mobileredirect=true"
