@@ -4,12 +4,12 @@ permalink: /menu/archivedbios.html
 
 sections: 
 
-    - title: "Gabriel Abundis (Lab Assistant and Undergrad Researcher)"
-      image:
-          name: Gabriel.jpg
-          alt: A photo of Gabriel
-          style: right
-      content: |
+     - title: "Gabriel Abundis (Lab Assistant and Undergrad Researcher)"
+       image:
+           name: Gabriel.jpg
+           alt: A photo of Gabriel
+           style: right
+       content: |
             Hi, my name is Gabriel Abundis. I am a third-year majoring in rangeland resources with a minor in botany and soils. I am from southern California and although I grew up with nature, I never truly appreciated it for what it is. I fell in love with rangelands and their role in supporting ecosystems. Currently my research focuses intently on exploring the intricate dynamics between photovoltaic cells and the delicate coastal California grasslands. I am particularly interested in the forage value of species, and holistic approaches for rangeland management. When I am not in lab, I enjoy taking my dogs on adventures and eating/cooking.        
             <hr>
 
@@ -31,14 +31,13 @@ sections:
             Hi! I’m Soren and my pronouns are he/him. I’m a fourth year botany student and a student assistant in the Luong lab and the Dennis K. Walker Greenhouse. I have always had an appreciation for plants but was only interested in gardening and horticulture until coming to Cal Poly Humboldt. It was here that I discovered my passion for plant taxonomy, conservation, and lichenology. Outside of botany I enjoy reading, lapidary arts, and puzzle games!        
             <hr>
             
-    - title: "Reed Blout (Lab Assistant)"
-      image:
-          name: ReedBlout.jpg
-          alt: A photo of Reed Blout
-          style: right
-      content: |
-            Hello, I am a member of the Luong lab assisting in research related to grassland management and conservation. I was born and Raised here in the Bay Area, in Pacifica, and currently am a senior at Cal graduating Spring 2026. I am finishing my undergraduate degree with a BS in Conservation and Resources studies with the Rausser college of Natural Resources with a focus on the wildland urban interface. During my time at UC Berkeley I have focused my education largely on forestry and fire ecology, as well as urban ecology and development. Outside of academics, I work as a tattooer as an owner of my own tattoo parlor in Pacifica and also at times as a guest artist at different shops throughout the country. In my spare time I enjoy traveling to different cities and national parks, hiking, plant and tree ID, producing artwork in many different styles, and snowboarding in the Sierras when the powder is fresh!          
-            
+     - title: "Reed Blout (Lab Assistant)"
+       image:
+           name: ReedBlout.jpg
+           alt: A photo of Reed Blout
+           style: right
+       content: |
+            Hello, I am a member of the Luong lab assisting in research related to grassland management and conservation. I was born and Raised here in the Bay Area, in Pacifica, and currently am a senior at Cal graduating Spring 2026. I am finishing my undergraduate degree with a BS in Conservation and Resources studies with the Rausser college of Natural Resources with a focus on the wildland urban interface. During my time at UC Berkeley I have focused my education largely on forestry and fire ecology, as well as urban ecology and development. Outside of academics, I work as a tattooer as an owner of my own tattoo parlor in Pacifica and also at times as a guest artist at different shops throughout the country. In my spare time I enjoy traveling to different cities and national parks, hiking, plant and tree ID, producing artwork in many different styles, and snowboarding in the Sierras when the powder is fresh!               
             <hr>
 
     - title: "Sage Brislen (Lab Assistant and Undergrad Researcher)"
