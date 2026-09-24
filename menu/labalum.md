@@ -39,7 +39,7 @@ Brandon Gutierrez - Lab assistant - Cal Poly Humboldt - 2024-2025
 <hr>
 Ashley Gutierrez-Olvera - Lab assistant - Cal Poly Humboldt - 2024-2025 
 <hr>
-Logan Holey - Undergrad Researcher and Lab assistant - Cal Poly Humboldt - 2024-2026 
+Logan Holey - Undergrad Researcher and Lab assistant - Cal Poly Humboldt - 2024-2026      
 -Now a PhD Student at Kansas State with Dr. Jesse Nippert
 <hr>
 Jennie Hernandez - Lab assistant - Cal Poly Humboldt - 2024-2025      
