@@ -3,13 +3,13 @@ layout: current-research
 permalink: /menu/currentpeople.html
 
 sections: 
-    - title: "Ernesto Chavez-Velasco, M.S. (Research Ecologist)"
+    - title: "Kees Hood, PhD Student"
       image:
-          name: ErnestoLabPhoto.jpg
-          alt: A photo of Ernesto conducting field work
+          name: KeesHood.jpg
+          alt: A photo of Kees in the field
           style: right
       content: |
-            Hello, I am an research ecologist in the Luong Lab at UC Berkeley. I am particularly interested in functional ecology and understanding drivers of plant community assembly. Much of my current work sits at the intersection of plant ecology, data science, and translational ecology. Through GRASS-NET, I work on projects to better serve and understand the needs of natural resource managers and decision-makers. My goal is to leverage research data to build practical, accessible frameworks and tools for application. I received my M.S. in Natural Resources from Cal Poly Humboldt and my B.A. in Environmental Studies from UC Santa Cruz. My previous experience includes working as a restoration practitioner and educator in Point Blue’s Students and Teachers Restoring a Watershed program as well as working as a field botanist in the North Coast for the California Native Plant Society. In my spare time, I enjoy numerous outdoor activities including naturalizing and looking for rare plants and I also enjoy tinkering on my homelab. My favorite forbs are any and all heterotrophic plants, Lillies, and _Leptosyne gigantea_; my favorite grasses are _Danthonia californica_ and _Poa douglasii_.   
+            As a PhD student in the Luong lab, I’ll be studying plant-pollinator interactions in grassland restorations in California using traditional pollinator survey techniques paired with floral eDNA methods. I graduated from UC Davis in 2023, and worked a variety of field based positions before joining the lab, from surveying high intensity burn scars in the Sierra Nevadas, restoring prairie on the great plains of Nebraska, surveying rangeland plant diversity across California with Point Blue, to leading a crew monitoring long term shrub health and recruitment in the Mojave desert for the Abella lab. Outside of the lab, I enjoy botanizing on my own time, gardening, and walking around. It’s impossible to choose among the dizzying diversity of plants in California’s grasslands, but my favorites include _Asclepias californica_, _Wyethia angustifolia_, and _Caulanthus inflatus_!   
             <hr>
 
     - title: "Angelina Garcia (M.S. Student)"
@@ -30,6 +30,15 @@ sections:
             Growing up in the wilds of southern Appalachia on the VA/Tenn border I developed a love and respect for nature at a young age and have always sought to be an advocate for wild places and the species that depend on them.  Heading to college right out of high school and not knowing completely what field to go into, I earned a BA in Interdisciplinary Studies from Virginia Tech in 2003.  I quickly fell in love with field biology and research, working a series of seasonal jobs, knowing my true passion was for plants, plant communities, and ecosystems.  In 2005 I found myself in Humboldt County working with the Northern Spotted Owl and earned a BS in Botany from Humboldt State University in 2008.  I have been working for the Wiyot Tribe as their botanist and Natural Resources Director since 2014, and seek to apply the knowledge I’ve learned toward the protection of ethnobotanical sites and Tribal cultural resources, lobbying for the reinstitution of indigenous land management and the application of traditional ecological knowledge in natural resources management.  I enjoy spending time out in nature with my wonderful daughters Iris and Azalea, backpacking, botanizing, and playing the banjo.          
             <hr>
 
+    - title: "James Hart (M.S. Student)"
+      image:
+          name: JamesHart.jpeg
+          alt: A photo of Adam
+          style: right
+      content: |
+            Hello! I am a graduate student joining the Luong Lab at UC-Berkeley. Originally from Tidewater Virginia, I developed a love of plants and the outdoors during family trips to the mountains of New England. These interests led me to pursue a BA in Conservation Biology from the University of Wisconsin-Madison, where I spent many hours in the campus greenhouses escaping the Midwest winter and studying pine seedling responses to drought. After college I worked various seasonal positions and took part in two terms as an AmeriCorps member, one in the Palouse region of eastern Washington State and one in the Sierra Nevada Mountains. After working most recently as a conservation ecologist with the non-profit Pollinator Partnership, I'm excited to further explore my interests in plant ecology and the use of native seed in restoration. In my free time, I'm usually cooking, playing music, or working on something at the makerspace I'm part of. My favorite native plants are _Chamaebatia foliolosa_ and _Quercus douglasii_.          
+            <hr>
+
     - title: "Lee Minicuci (M.S. Student, primarily advised by Dr. Kerry Byrne)"
       image:
           name: LeeMinicuci.jpg
@@ -38,6 +47,15 @@ sections:
       content: |
             Hello! My name is Lee. I'm a first-year natural resources grad student here. I grew up in New Jersey and have spent nearly all of my academic and professional career there, graduating from Rutgers University with a degree in Ecology, Evolution, and Natural Resources in 2017. I have a wide variety of interests in ecology and I'm fortunate to have been able to work in roles that allowed me to explore all of those interests from songbird point counts and banding to assessing forest plant communities, rare plant surveys, fire ecology, and the applications of terrestrial LiDAR. In my spare time I love hiking, mountain biking, and looking for cool plants and birds along the way. I’m still getting to know the California flora, so my favorite plants are from back home in the east, but my favorite forb is _Anemonoides quinquefolia_ and my favorite grass is _Elymus hystrix_.                      
              <hr> 
+
+    - title: "Ernesto Chavez-Velasco, M.S. (Research Ecologist)"
+      image:
+          name: ErnestoLabPhoto.jpg
+          alt: A photo of Ernesto conducting field work
+          style: right
+      content: |
+            Hello, I am an research ecologist in the Luong Lab at UC Berkeley. I am particularly interested in functional ecology and understanding drivers of plant community assembly. Much of my current work sits at the intersection of plant ecology, data science, and translational ecology. Through GRASS-NET, I work on projects to better serve and understand the needs of natural resource managers and decision-makers. My goal is to leverage research data to build practical, accessible frameworks and tools for application. I received my M.S. in Natural Resources from Cal Poly Humboldt and my B.A. in Environmental Studies from UC Santa Cruz. My previous experience includes working as a restoration practitioner and educator in Point Blue’s Students and Teachers Restoring a Watershed program as well as working as a field botanist in the North Coast for the California Native Plant Society. In my spare time, I enjoy numerous outdoor activities including naturalizing and looking for rare plants and I also enjoy tinkering on my homelab. My favorite forbs are any and all heterotrophic plants, Lillies, and _Leptosyne gigantea_; my favorite grasses are _Danthonia californica_ and _Poa douglasii_.   
+            <hr>
  
     - title: "Tonia Brito-Bersi (Lab Manager and GRASS-Net Coordinator)"
       image:
