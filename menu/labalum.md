@@ -30,6 +30,9 @@ Logan Fogle - Lab assistant - Cal Poly Humboldt - 2025-2026
 <hr>
 Jordan Freitas - Lab assistant - Cal Poly Humboldt - 2024-2025   
 <hr>
+Kenia Gomez - Undergrad Researcher - Cal Poly Humboldt - 2024-2026        
+-Now works at the California Botanical Garden
+<hr>
 Hazel Goode - Lab assistant - Cal Poly Humboldt - 2024-2025  
 <hr>
 Brandon Gutierrez - Lab assistant - Cal Poly Humboldt - 2024-2025 
