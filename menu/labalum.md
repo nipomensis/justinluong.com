@@ -5,13 +5,28 @@ permalink: /menu/labalum.html
 ---
  
 <br>
-Claudia Alfaro-Hernandez - Undergrad Researcher and Lab assistant - Cal Poly Humboldt - 2023-2026 
+Gabriel Abundis - Undergrad Researcher and Lab assistant - Cal Poly Humboldt - 2023-2026 
+<hr>
+Claudia Alfaro-Hernandez - Undergrad Researcher and Lab assistant - Cal Poly Humboldt - 2023-2026  
+-Now works as a soil scientist for NRCS
 <hr>
 Elena Bewick - Lab assistant - Cal Poly Humboldt - 2024-2025 
 <hr>
 Soren Biel - Undergrad Researcher and Lab assistant - Cal Poly Humboldt - 2024-2026 
 <hr>
+Reed Blout - Lab assistant - UC Berkeley - 2026 
+<hr>
+Sage Brislen - Undergrad Researcher and Lab assistant - Cal Poly Humboldt - 2024-2026 
+<hr>
+Antonette (Tonia) Brito-Bersi (they/them) - Lab Manager and GRASS Net Coordinator - Cal Poly Humboldt - 2023-2026 
+<hr>
+Sage Brislen - Undergrad Researcher and Lab assistant - Cal Poly Humboldt - 2024-2026 
+<hr>
+Trinity Edwards - Undergrad Researcher and Lab assistant - Cal Poly Humboldt - 2024-2026 
+<hr>
 Cody Ellis - Lab assistant - Cal Poly Humboldt - 2024   
+<hr>
+Logan Fogle - Lab assistant - Cal Poly Humboldt - 2025-2026 
 <hr>
 Jordan Freitas - Lab assistant - Cal Poly Humboldt - 2024-2025   
 <hr>
@@ -20,6 +35,9 @@ Hazel Goode - Lab assistant - Cal Poly Humboldt - 2024-2025
 Brandon Gutierrez - Lab assistant - Cal Poly Humboldt - 2024-2025 
 <hr>
 Ashley Gutierrez-Olvera - Lab assistant - Cal Poly Humboldt - 2024-2025 
+<hr>
+Logan Holey - Undergrad Researcher and Lab assistant - Cal Poly Humboldt - 2024-2026 
+-Now a PhD Student at Kansas State with Dr. Jesse Nippert
 <hr>
 Jennie Hernandez - Lab assistant - Cal Poly Humboldt - 2024-2025      
 <hr>
@@ -32,12 +50,18 @@ Julie Meyers - Lab assistant - Cal Poly Humboldt - 2025-2026
 Elias Sandoval - Lab assistant and web designer - Cal Poly Humboldt - 2025-2026      
 <hr>
 Max Shea - Undergraduate Researcher and Lab assistant - Cal Poly Humboldt - 2024-2026      
+-Now a consulting botanist.
 <hr>
 Jennifer Salguero - Lab assistant - Cal Poly Humboldt - 2024-2026      
 <hr>
+Josh Sharp - Lab assistant - Cal Poly Humboldt - 2025-2026 
+<hr>
 Paul Stiles - Undergraduate Researcher and Restoration Assistant - Cal Poly Humboldt - 2024-2025        
+-Now works as a consulting biologist at SHN.
 <hr>
 Derek Tremaine - Lab assistant - Cal Poly Humboldt - 2024-2025        
+<hr>
+Danielle Virnoche - Lab assistant - Cal Poly Humboldt - 2026 
 <hr>
 Nicholas Verhey - Lab assistant - Cal Poly Humboldt - 2025      
 <hr>
