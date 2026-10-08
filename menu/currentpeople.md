@@ -57,7 +57,16 @@ sections:
             Hello, I am an research ecologist in the Luong Lab at UC Berkeley. I am particularly interested in functional ecology and understanding drivers of plant community assembly. Much of my current work sits at the intersection of plant ecology, data science, and translational ecology. Through GRASS-NET, I work on projects to better serve and understand the needs of natural resource managers and decision-makers. My goal is to leverage research data to build practical, accessible frameworks and tools for application. I received my M.S. in Natural Resources from Cal Poly Humboldt and my B.A. in Environmental Studies from UC Santa Cruz. My previous experience includes working as a restoration practitioner and educator in Point Blue’s Students and Teachers Restoring a Watershed program as well as working as a field botanist in the North Coast for the California Native Plant Society. In my spare time, I enjoy numerous outdoor activities including naturalizing and looking for rare plants and I also enjoy tinkering on my homelab. My favorite forbs are any and all heterotrophic plants, Lillies, and _Leptosyne gigantea_; my favorite grasses are _Danthonia californica_ and _Poa douglasii_.   
             <hr>
 
-    - title: "Sean Dillon (Lab Assistant)"
+    - title: "Lilly Cobb (Lab Assistant)"
+      image:
+          name: LillyCobb.jpg
+          alt: A photo of Lilly Cobb
+          style: right
+      content: |
+            Hello! My name is Lilly. I am a sophomore at UC Berkeley pursuing an undergraduate degree in Molecular Environmental Biology with a concentration in Animal Health and Behavior. I am from the Bay Area, where I grew up hiking, scuba diving, and riding horses. I am fortunate to have worked in roles involving wildlife rehabilitation, aquatic restoration and protection, public education concerning animal welfare and health, and teaching relationship-based horsemanship. I am particularly interested in natural resource management relating to working lands conservation, sustainable ranching, and wildlife protection. My favorite native plant is _Quercus garryana_.         
+            <hr>
+
+    - title: "Sean Dillon (Lab Assistant and Undergrad Researcher)"
       image:
           name: SeanDillon.jpg
           alt: A photo of Sean Dillon
@@ -76,6 +85,15 @@ sections:
             
             <hr>
 
+    - title: "Ayla Parsons (Lab Assistant)"
+      image:
+          name: AylaParsons.jpeg
+          alt: A photo of Ayla Parsons
+          style: right
+      content: |
+            Hello! My name is Ayla (she/her), and I’m a Lab Assistant in the Luong lab. I’m a sophomore here at UC Berkeley, pursuing degrees in Molecular Environmental Biology and Forestry. I grew up nearby in Pleasanton, California, where I spent much of my time hiking and adventuring in nature, and where I grew a major appreciation for oak savannas and woodlands. I’m especially interested in plant genetics, forestry (and trees in general), and prescribed fire. Since coming to Berkeley, I’ve enjoyed doing habitat restoration work supporting native plants and reducing fire risk, as well as doing forestry work like prescribed burns. I’m also a horticultural volunteer at the Berkeley Botanical Gardens, where I get to spend my days surrounded by plants. When I’m not working, I love climbing, painting, and playing folk songs on guitar. My favorite native plants are the Coast Live Oak (_Quercus agrifolia_) and the Arroyo Lupine (_Lupinus succulentus_)!        
+            <hr>
+            
     - title: "Miles Pay (Lab Assistant)"
       image:
           name: MilesPay.jpeg
@@ -103,6 +121,15 @@ sections:
             My name is Alyssa Pun (she/her), and I am an undergraduate researcher in the Luong Lab at UC Berkeley, where I study Conservation & Resource Management. I bring over a decade of experience in habitat restoration and land management, beginning with AmeriCorps after high school, where I first fell in love with field ecology and native plants while restoring salmon habitat in the Pacific Northwest. Since then, I’ve worked with nonprofits and public agencies in the Bay Area to plan and implement restoration projects, coordinate volunteers, and engage community members in stewardship. I’m passionate about protecting natural resources through an environmental justice lens and supporting the inclusion of Traditional Ecological Knowledge in land management. I’m especially interested in strengthening the connection between research and land managers, and advancing climate-resilient management in California grasslands.  My favorite grassland plants are two clovers, _Trifolium depauperatum_ (cow bag clover, looks like an udder!) and _Trifolium microdon_ (cupcake clover).           
             
             <hr> 
+
+    - title: "Jenny Tse (Lab Assistant)"
+      image:
+          name: JennyTse.jpeg
+          alt: A photo of Jenny Tse
+          style: right
+      content: |
+Hi! I’m Jenny, and I’m currently a sophomore at UC Berkeley studying molecular environmental biology. I’m from SF and love going to the beach by my house to watch the sunset. I have helped restore parts of Golden Gate Park and worked as a junior zoologist for three years at the San Francisco Zoo, where I cared for a wide variety of animals from across the world. Among the animals I worked with, my favorites were the American kestrel, European legless lizard, and blue-tongued skinks. In my free time, I enjoy traveling, reading, and listening to music. My favorite native plant is the bush mallow.        
+            <hr>
 
     - title: "Kai Zerbo (Lab Assistant)"
       image:
