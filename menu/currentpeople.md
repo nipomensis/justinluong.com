@@ -128,7 +128,7 @@ sections:
           alt: A photo of Jenny Tse
           style: right
       content: |
-Hi! I’m Jenny, and I’m currently a sophomore at UC Berkeley studying molecular environmental biology. I’m from SF and love going to the beach by my house to watch the sunset. I have helped restore parts of Golden Gate Park and worked as a junior zoologist for three years at the San Francisco Zoo, where I cared for a wide variety of animals from across the world. Among the animals I worked with, my favorites were the American kestrel, European legless lizard, and blue-tongued skinks. In my free time, I enjoy traveling, reading, and listening to music. My favorite native plant is the bush mallow.        
+            Hi! I’m Jenny, and I’m currently a sophomore at UC Berkeley studying molecular environmental biology. I’m from SF and love going to the beach by my house to watch the sunset. I have helped restore parts of Golden Gate Park and worked as a junior zoologist for three years at the San Francisco Zoo, where I cared for a wide variety of animals from across the world. Among the animals I worked with, my favorites were the American kestrel, European legless lizard, and blue-tongued skinks. In my free time, I enjoy traveling, reading, and listening to music. My favorite native plant is the bush mallow.        
             <hr>
 
     - title: "Kai Zerbo (Lab Assistant)"
