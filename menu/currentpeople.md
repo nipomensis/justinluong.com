@@ -75,6 +75,15 @@ sections:
             Hey! My name is Sean (he/they), and I’m a student assistant in the Luong Lab. I’m a Wildland Soil Science major with a Botany minor, and I came to Humboldt county in 2024 from Los Angeles County. I grew up near the San Gabriel Mountains, hiking and camping with my family, and I have a lot of curiosity about the chaparral and sagebrush ecosystems in that area. In my free time, I love cooking, drawing, painting, and sewing. Working in the lab has been awesome, and I really appreciate being exposed to all the research! My favorite plants from back home are California Buckwheat, _Eriogonum fasciculatum_, and California Sagebrush, _Artemisia californica_, and since working in the lab, my favorite grass species has become _Danthonia californica_.        
             <hr>
  
+    - title: "Jenna Gibson (Lab Assistant)"
+      image:
+          name: JennaGibson.png
+          alt: A photo of Jenna Gibson
+          style: right
+      content: |
+            Hi! My name is Jenna, and I'm a 3rd year student studying Molecular Environmental Biology with a concentration in Biodiversity. I've lived all over California, but have spent most of my life in the Sacramento area, where I like to ride my bike around the surrounding oak grasslands. Since coming to Berkeley, I've had the opportunity to work at the Oakland Zoo caring for a variety of species and volunteer at a wildlife rehabilitation center. I'm grateful to learn more about California's grasslands in the lab, and I'm excited to further explore my interest in restoration ecology! My favorite native plant is Pacific Madrone (_Arbutus menziesii_)!         
+            <hr>
+
     - title: "Bailey Glashan (Lab Assistant and Undergrad Researcher)"
       image:
           name: BaileyGlashan.jpeg
@@ -84,6 +93,16 @@ sections:
             Hi! I’m Bailey Glashan and I am a student lab assistant in the Luong lab. I am pursuing my undergraduate degree in Rangeland Resource Science here at Cal Poly Humboldt with an emphasis in entomology and minors in botany and indigenous peoples, natural resource use, and the environment. I am a transfer student from Santa Rosa Junior College and though I miss the chaparral and vernal pools we have down south, I have quickly fallen in love with the redwood forest and coastal prairie. I spent lots of time in community college conducting native bee surveys at Pepperwood Preserve and in manicured native gardens in urban areas. Currently I am working on an exciting undergraduate research project looking into how insect populations are affected by fixed solar panels. I grew up as an active 4-H member and raised livestock most of my life which gave me a passion for community and sustainable agriculture. When I’m not working or doing school work, I enjoy hiking, fishing, gardening, and listening to music.
             
             <hr>
+ 
+    - title: "Nicole Hadisenjaya (Lab Assistant)"
+      image:
+          name: NicoleHadisenjaya.jpg
+          alt: A photo of Nicole Hadisenjaya
+          style: right
+      content: |
+            Hello, my name is Nicole and I'm a fourth year Environmental Sciences major at UC Berkeley. I grew up in Indonesia and transferred from community college in Seattle. I'm generally interested in learning about how climate change and human activity impact different ecosystems and communities, as well as understanding how we can use that knowledge to uplift communities that need it the most. My first introduction to grasslands is through learning about global food systems and how grazing has been a big part of that revolution. This then piqued my interest on grassland ecosystems and how different changes could affect processes and relationships within this ecosystem. In my free time, I like to read, discover new movies and TV shows, as well as explore new places around the Berkeley area! My favorite native plant is steppe screw moss :)         
+            <hr>
+
 
     - title: "Ayla Parsons (Lab Assistant)"
       image:
