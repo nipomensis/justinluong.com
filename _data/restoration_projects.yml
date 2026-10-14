@@ -1,7 +1,7 @@
 - name: "Bobcat Ranch Riparian Restoration"
-  lat: 38.5142
-  lon: -122.2791
-  region: "Sonoma County, CA"
+  lat: 38.514
+  lon: -122.033
+  region: "Yolo County, CA"
   status: "Active"
   year: 2025
   link: "https://www.audubon.org/california/projects/bobcat-ranch"
