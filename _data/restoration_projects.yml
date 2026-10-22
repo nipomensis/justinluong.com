@@ -1,3 +1,5 @@
+
+
 - name: "Bobcat Ranch Riparian Restoration"
   lat: 38.514
   lon: -122.033
@@ -5,7 +7,15 @@
   status: "Active"
   year: 2025
   link: "https://www.audubon.org/california/projects/bobcat-ranch"
-  summary: "Willow planting + bank stabilization + monitoring."
+  summary: "Willow planting + bank stabilization + monitoring"
+
+- name: "Cypress Grove preserve"
+  lat: 38.169343
+  long: -122.90091
+  region: "Marin County, CA"
+  year: 1989
+  link: "https://www.allhandsecology.org/cypress-grove-preserve/"
+  Summary: "Native grass plug planting; prescribed conservation burns and targeted grazing for shrub encroachment
 
 - name: "Dangermond Preserve"
   lat: 34.550433
@@ -15,6 +25,46 @@
   year: 2017
   link: "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/dangermond-preserve/"
   summary: "Coastal sage scrub and oak preseve + conservation"
+  
+- name: "Fort Bragg Coastal Trail Phase 1"
+  lat: 39.451491
+  long: -123.81198
+  region: "Mendocino County, CA"
+  year: 2016
+  link:
+  summary: "Old lumber mill remediation with soil amendments, native plug planting (grasses, forbs and shrubs) and native seeding efforts primarily executed for bluff erosion mitigation and to open coastal access"
+  
+- name: "Fort Bragg Coastal Trail Phase 2"
+  lat: 39.445999
+  long: -123.81347
+  region: "Mendocino County, CA"
+  year: 2015
+  link:
+  summary: "Old lumber mill remediation with soil amendments, native plug planting (grasses, forbs and shrubs) and native seeding efforts primarily executed for bluff erosion mitigation and to open coastal access"
+
+- name: "Occidental Arts and Ecology Center Grasslands"
+  lat: 38.415391
+  long: -122.95992
+  region: "Sonoma County, CA"
+  year: 2005
+  link: "https://oaec.org/"
+  Summary: 
+
+- name: "Paradise Ridge Restoration"
+  lat: 40.290235
+  long: -124.327677
+  region: "Humboldt County, CA"
+  year: 2005
+  link: "https://mattole.org/"
+  summary: "Native grass plug planting"
+
+- name: "Prosper Ridge Restoration"
+  lat: 40.105661
+  long: -124.044785 
+  region: "Humboldt County, CA"
+  year: 2013
+  link: "https://mattole.org/"
+  summary: "Native grass plug planting and conifer encroachment management; burn piles and native forb seeding"
 
 - name: "Randall Preserve"
   lat: 35.207121
