@@ -13,6 +13,7 @@
   lat: 38.169343
   lon: -122.90091
   region: "Marin County, CA"
+  status: "Ongoing and implemented projects"
   year: 1989
   link: "https://www.allhandsecology.org/cypress-grove-preserve/"
   Summary: "Native grass plug planting; prescribed conservation burns and targeted grazing for shrub encroachment"
@@ -30,6 +31,7 @@
   lat: 39.451491
   lon: -123.81198
   region: "Mendocino County, CA"
+  status: "Implemented"
   year: 2016
   link: ""
   summary: "Old lumber mill remediation with soil amendments, native plug planting (grasses, forbs and shrubs) and native seeding efforts primarily executed for bluff erosion mitigation and to open coastal access"
@@ -38,6 +40,7 @@
   lat: 39.445999
   lon: -123.81347
   region: "Mendocino County, CA"
+  status: "Implemented"
   year: 2015
   link: ""
   summary: "Old lumber mill remediation with soil amendments, native plug planting (grasses, forbs and shrubs) and native seeding efforts primarily executed for bluff erosion mitigation and to open coastal access"
@@ -46,6 +49,7 @@
   lat: 38.415391
   lon: -122.95992
   region: "Sonoma County, CA"
+  status: "Active"
   year: 2005
   link: "https://oaec.org/"
   Summary: 
@@ -54,6 +58,7 @@
   lat: 40.290235
   lon: -124.327677
   region: "Humboldt County, CA"
+  status: "Implemented"
   year: 2005
   link: "https://mattole.org/"
   summary: "Native grass plug planting"
@@ -62,6 +67,7 @@
   lat: 40.105661
   lon: -124.044785 
   region: "Humboldt County, CA"
+  status: "Implemented"
   year: 2013
   link: "https://mattole.org/"
   summary: "Native grass plug planting and conifer encroachment management; burn piles and native forb seeding"
