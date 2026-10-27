@@ -9,9 +9,9 @@
   link: "https://www.audubon.org/california/projects/bobcat-ranch"
   summary: "Willow planting + bank stabilization + monitoring"
 
-- name: "Cypress Grove preserve"
+- name: "Cypress Grove Preserve"
   lat: 38.169343
-  long: -122.90091
+  lon: -122.90091
   region: "Marin County, CA"
   year: 1989
   link: "https://www.allhandsecology.org/cypress-grove-preserve/"
@@ -28,7 +28,7 @@
   
 - name: "Fort Bragg Coastal Trail Phase 1"
   lat: 39.451491
-  long: -123.81198
+  lon: -123.81198
   region: "Mendocino County, CA"
   year: 2016
   link:
@@ -36,7 +36,7 @@
   
 - name: "Fort Bragg Coastal Trail Phase 2"
   lat: 39.445999
-  long: -123.81347
+  lon: -123.81347
   region: "Mendocino County, CA"
   year: 2015
   link:
@@ -44,7 +44,7 @@
 
 - name: "Occidental Arts and Ecology Center Grasslands"
   lat: 38.415391
-  long: -122.95992
+  lon: -122.95992
   region: "Sonoma County, CA"
   year: 2005
   link: "https://oaec.org/"
@@ -52,7 +52,7 @@
 
 - name: "Paradise Ridge Restoration"
   lat: 40.290235
-  long: -124.327677
+  lon: -124.327677
   region: "Humboldt County, CA"
   year: 2005
   link: "https://mattole.org/"
@@ -60,7 +60,7 @@
 
 - name: "Prosper Ridge Restoration"
   lat: 40.105661
-  long: -124.044785 
+  lon: -124.044785 
   region: "Humboldt County, CA"
   year: 2013
   link: "https://mattole.org/"
