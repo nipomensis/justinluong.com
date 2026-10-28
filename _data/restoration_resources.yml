@@ -135,7 +135,7 @@
   summary: "Introduction to native grasses, with additional guides for planting and identifying weeds"
   highlights:
   tags: ["native grasses", "planting guides"]
-  url:"https://hastingsreserve.org/natural-history/native-grasslands/"
+  url: "https://hastingsreserve.org/natural-history/native-grasslands/"
 
 - id: uav-lidar-rdm
   categories: ["soil"]
