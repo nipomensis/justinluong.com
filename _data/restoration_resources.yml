@@ -22,6 +22,51 @@
     - "Project planning"
   url: "https://calscape.org/"
 
+- id: How to manage and restore coastal prairie
+  categories:
+  title: "How to Manage and Restore Coastal Prairie"
+  org: "California Native Grasslands Association"
+  resource_type: "Restoration guide"
+  summary: "Review of grassland ecology, disturbance, and how to approach species-specific management"
+  hightlights:
+    - "Disturbance in grasslands"
+    - "Manging coastal prairie"
+    - "Plant ecology"
+  url: "https://cnga.org/PrairieManagement"
+    
+- id: Grass ID app
+  categories:
+  title: "California Grass Identification App"
+  resource_type: "Tool"
+  summary: "App for identifying grasses and grass-likes that commonly occur in California"
+  hightlights:
+    - "Grass identification"
+  url: "https://www.californiagrasses.com/"
+
+- id: UC EcoRestore
+  categories: ["planting", "restoration"]
+  title: "UC EcoRestore Portal"
+  org: "University of California, Davis"
+  resource_type: "Restoration guide"
+  summary: "Guidelines for planning successful restoration efforts in many ecosystem types, including seed selection, navigating challenges like drought, and setting project goals." 
+  highlights:
+    - "Species selection guides"
+    - "Drought-ready restoration"
+    - "Restoration in diverse ecosystems"
+  url: "https://restoration.ucdavis.edu/ecorestore"
+
+- id: Annual grassland restoration
+  categories: ["planting", "restoration"]
+  title: "Restoration Manual for Annual Grassland Systems in California"
+  org: "University of California Agriculture and Natural Resources"
+  resource_type: "Restoration Manual"
+  summary: "80 page manual for grassland restoration in california, focusing on species selection based on ecotype"
+  highlights:
+    - "Species selection workflows"
+    - "Region-specific restoration"
+  url: "https://cdn.wildapricot.com/76181/resources/Documents/Resources/Restoration%20Resources/Grassland_Restoration%20Manual.pdf?version=1497971554000&Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLndpbGRhcHJpY290LmNvbS83NjE4MS9yZXNvdXJjZXMvRG9jdW1lbnRzL1Jlc291cmNlcy9SZXN0b3JhdGlvbiUyMFJlc291cmNlcy9HcmFzc2xhbmRfUmVzdG9yYXRpb24lMjBNYW51YWwucGRmP3ZlcnNpb249MTQ5Nzk3MTU1NDAwMCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzIyMzY1MH0sIklwQWRkcmVzcyI6eyJBV1M6U291cmNlSXAiOiIwLjAuMC4wLzAifX19XX0_&Signature=Dfqhz-F12YTIKvzZffXFrH8Cj~pBwkdWqmibz-BpTWwxSnkwoLXK1KZvLI7mYLEj6HIejw4MpuuBf1qRxvnfUKRNt6KDh7yq70ReMqZdWySKR7k~0Jyguo-OEsGr-bVB1cfjzPGnBZR8wnMdnOCxTj5izR~HpFsS1pA0QA7Xvgft8vZQqG4T3d6-grkju2~uV6IHLrwymISk9h41q5YmVkYHPfhhLZMbbwZkqsHCofV~C0bAgeEuEuSAeNaVeiayJcmmVVCYv4DOwwV8Ian6uiQzGg4eMroxhFzdubQExjrbz~x5nVfuhXHHYEX7TKVVIeqAnp-S-Hn2oI9jW8HdBQ__&Key-Pair-Id=K27MGQSHTHAGGF"
+  
+
 - id: CPC seed collection
   categories: ["seed"]
   title: "10 Percent Rule for Rare Seed Collection"
@@ -80,6 +125,17 @@
     - "Monitoring + stewardship"
   tags: ["grazing", "monitoring", "rangelands"]
   url: "https://www.scienceforconservation.org/products/cattle-grazing-TNC-CA-conservation-estate"
+
+- id: Hastings
+  categories: ["planting"]
+  title: "Native Grasslands of Coastal California"
+  org: "Hastings Natural History Reserve"
+  resource_type: "Digital information packet"
+  location: "California"
+  summary: "Introduction to native grasses, with additional guides for planting and identifying weeds"
+  highlights:
+  tags: ["native grasses", "planting guides"]
+  url:"https://hastingsreserve.org/natural-history/native-grasslands/"
 
 - id: uav-lidar-rdm
   categories: ["soil"]
