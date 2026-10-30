@@ -150,6 +150,15 @@ sections:
             Hi! I’m Jenny, and I’m currently a sophomore at UC Berkeley studying molecular environmental biology. I’m from SF and love going to the beach by my house to watch the sunset. I have helped restore parts of Golden Gate Park and worked as a junior zoologist for three years at the San Francisco Zoo, where I cared for a wide variety of animals from across the world. Among the animals I worked with, my favorites were the American kestrel, European legless lizard, and blue-tongued skinks. In my free time, I enjoy traveling, reading, and listening to music. My favorite native plant is the bush mallow.        
             <hr>
 
+    - title: "Dylan Wu (Lab Assistant)"
+      image:
+          name: DylanWu.jpg
+          alt: A photo of Dylan Wu
+          style: right
+      content: |
+            Hi!  My name is Dylan and I am a current junior majoring in Ecosystem Management and Forestry, and Conservation and Resource Studies.  I’m from San Francisco and enjoy fishing and herping around the Bay Area. I particularly love salamanders and snakes, my favorites being the California giant salamander (_Dicamptodon ensatus_), and the rubber boa (_Charina bottae_).  My first exposure to habitat restoration was through a youth internship with the Golden Gate National Parks Conservancy.  My favorite native plant is the coast redwood (_Sequoia sempervirens_).  It might not be the most original pick, but some of my favorite times have been spent in and around redwood groves.  I also love swimming when I can, and teaching swimming when I’m home in SF.        
+            <hr>
+
     - title: "Kai Zerbo (Lab Assistant)"
       image:
           name: kaizerbo.jpg
